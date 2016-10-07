@@ -6,5 +6,5 @@ Hey Friend. We noticed you’re using an ad blocker. We hate ads too — and you
 
 ## Comps
 
-- [Screenshot](img/ab-msg-comp.png): Homepage w/ Ad Blocker Message (static)
+- [Screenshot](img/ab-msg-comp-dashboard.png): Dashboard w/ Ad Blocker Message (static)
 - [HTML/CSS](https://jgagne.github.io/gym-enhancements/ab-msg/ab-msg-comp/index.html): Ad Blocker Message (responsive)
