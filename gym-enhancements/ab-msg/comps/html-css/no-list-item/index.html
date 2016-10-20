@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ad Blocker Message (No List Item w/ Close Symbol)</title>
+  <meta name="author" content="Justin Gagne">
+
+<style>
+
+html {
+	font: 100%/1 sans-serif;
+}
+
+body {
+  margin: 0;
+  }
+
+#ab-msg {
+	background: #ebebeb;
+  }
+
+#ab-msg figure {
+  position: relative;
+	max-width: 42em;
+	padding: 1.6em;
+	margin: 0 auto;
+}
+
+#ab-msg figure img {
+  display: block;
+  max-width: 100%;
+  margin: -.2em auto 1.2em;
+}
+
+#ab-msg figcaption {
+  margin-top: 0;
+  }
+
+#ab-msg figcaption ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  }
+
+#ab-msg figcaption li {
+  color: #222;
+  }
+
+/*
+#ab-msg figcaption li:first-child {
+  margin-right: 1em;
+  }
+
+#ab-msg figcaption li:last-child {
+  list-style: disc;
+  padding-left: .2em;
+  margin-left: 1em;
+  }
+ */
+
+#ab-msg * + * {
+	margin-top: .65em;
+}
+
+#ab-msg p {
+	font: 1em/1.4 "Helvetica Neue", Helvetica, sans-serif;
+	margin: 0;
+}
+
+#ab-msg p em {
+  letter-spacing: .005em;
+}
+
+#ab-msg-closed:target:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  margin: -1px;
+}
+
+.close-ab-msg {
+  visibility: hidden;
+  }
+
+.close-ab-msg:before {
+  position: absolute;
+  top: .8em;
+  right: .8em;
+  content: "✕";
+  font-weight: bold;
+  line-height: 1.2;
+  visibility: visible;
+  margin: 0 .2em 0 0;
+  }
+
+em + .close-ab-msg {
+  margin-left: .2em;
+  }
+
+#ab-msg a {
+  color: #f8971d;
+  text-decoration: none;
+  }
+
+#ab-msg a:hover,
+#ab-msg a:focus {
+  text-decoration: underline;
+  }
+
+@media (min-width: 30em) {
+
+#ab-msg figure img {
+  float: left;
+}
+
+#ab-msg figcaption {
+  margin-left: 8em;
+  }
+}
+
+@media (min-width: 36em) {
+
+  span.br {
+    display: block;
+  }
+
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="ab-msg">
+  <figure id="ab-msg-closed">
+    <img alt="Intercom Services Blocked" srcset="../img/intercom-blocked.svg" src="../img/intercom-blocked.png">
+    <figcaption>
+      <ul>
+        <li>
+          <p>
+          <strong><span class="br">Hey Friend. We noticed you’re using an ad blocker.</span> We hate ads too — and you won’t find any ads here either.</strong>
+          </p>
+        </li>
+        <li>
+          <p>
+          But it’s also blocking Intercom, a service that we use to provide user support and to deliver notifications about Gymnasium features and content.
+          </p>
+        </li>
+        <li>
+          <p>
+          <em>Please whitelist us or disable blocking for this site so that you can get the full Gymnasium experience.</em> <a class="close-ab-msg" href="#ab-msg-closed">Close</a>
+          </p>
+        </li>
+      </ul>
+      </figcaption>
+  </figure>
+</div>
+
+</body>
+</html>
