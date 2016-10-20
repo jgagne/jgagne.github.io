@@ -19,6 +19,7 @@ Hey Friend. We noticed you’re using an ad blocker. We hate ads too — and you
 - [Ad Blocker Message w/ Close Text](comps/screenshots/ab-msg-comp-close-text.png)
 - [Ad Blocker Message w/ Close Symbol](comps/screenshots/ab-msg-comp-close-symbol.png)
 - [Ad Blocker Message w/ No List Item & Close Symbol](comps/screenshots/ab-msg-comp-no-li-close-symbol.png)
+- [Ad Blocker Message w/o Style, Only Structure](comps/screenshots/ab-msg-comp-no-style-only-structure.png)
 
 ### Icon (Asset)
 
