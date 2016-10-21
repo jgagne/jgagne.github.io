@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet prefetch" href="../css/fonts.css">
-  <title>Ad Blocker Message (Banner Alert / Re-structured/styled)</title>
+  <title>Ad Blocker Message (Sidebar Alert)</title>
   <meta name="author" content="Justin Gagne">
 
 <style>
@@ -17,22 +17,20 @@ body {
   margin: 0;
   }
 
-#ab-msg {
-	background: #ebebeb;
-  }
-
 #ab-msg figure {
   position: relative;
+  max-width: 12.35em;
   color: #222;
-	max-width: 42em;
-	padding: 1.6em;
-	margin: 0 auto;
+	background: #ebebeb;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	padding: 1.2em;
+	margin: 1.5em auto;
 }
 
 #ab-msg figure img {
-  display: block;
   max-width: 100%;
-  margin: -.2em auto 1.2em;
+  margin: 0 0 1.2em;
 }
 
 #ab-msg figcaption {
@@ -40,8 +38,7 @@ body {
   }
 
 #ab-msg h2 {
-  font: 900 2em/1.2 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
-  text-align: center;
+  font: 900 1.5em/1.2 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
   text-transform: uppercase;
   margin-top: -.15em;
   margin-bottom: 0;
@@ -101,30 +98,6 @@ em + .close-ab-msg {
 #ab-msg a:focus {
   text-decoration: underline;
   }
-
-@media (min-width: 40em) {
-
-#ab-msg h2 {
-  max-width: 75%;
-}
-
-}
-
-@media (min-width: 34em) {
-
-#ab-msg h2 {
-  text-align: left;
-  }
-
-#ab-msg img {
-  float: left;
-}
-
-#ab-msg figcaption {
-  margin-left: 8em;
-  }
-
-}
 
 </style>
 
