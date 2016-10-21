@@ -13,6 +13,7 @@ Hey Friend. We noticed you’re using an ad blocker. We hate ads too — and you
 - [Revision A / Banner Alert](https://jgagne.github.io/gym-enhancements/ab-msg/comps/html-css/rev-a/index.html)
 - [Revision B / Banner Alert (Re-structured/styled)](https://jgagne.github.io/gym-enhancements/ab-msg/comps/html-css/rev-b/index.html)
 - [Revision C / Sidebar Alert](https://jgagne.github.io/gym-enhancements/ab-msg/comps/html-css/rev-c/index.html)
+- [Revision D / Sidebar Alert (Centered Icon)](https://jgagne.github.io/gym-enhancements/ab-msg/comps/html-css/rev-d/index.html)
 
 #### Behavior
 
@@ -28,6 +29,7 @@ Hey Friend. We noticed you’re using an ad blocker. We hate ads too — and you
 - [Revision A / Banner Alert](comps/screenshots/ab-msg-comp-rev-a.png)
 - [Revision B / Banner Alert (Re-structured/styled)](comps/screenshots/ab-msg-comp-rev-b.png)
 - [Revision C / Sidebar Alert](comps/screenshots/ab-msg-comp-rev-c.png)
+- [Revision D / Sidebar Alert (Centered Icon)](comps/screenshots/ab-msg-comp-rev-d.png)
 
 #### Behavior
 
