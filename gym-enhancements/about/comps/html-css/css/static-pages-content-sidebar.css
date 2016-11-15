@@ -2,17 +2,10 @@
 
 .col-md-9  {
   padding-top: 1.2em;
+  padding-right: 1.2em;
   padding-bottom: 2em;
   margin-top: -1.2em;
   margin-bottom: -2em;
-}
-
-@media (min-width: 62em) {
-
-  .col-md-9 {
-    border-right: 1px dashed #ccc;
-  }
-
 }
 
 .main-content-static h2 {
@@ -20,7 +13,7 @@
 }
 
 .main-content-static p {
-  margin-right: 5%;
+  margin-right: 3.5%;
 }
 
 .main-content-static p.hero-text {
@@ -75,11 +68,14 @@
 
 .sidebar-static {
  padding: 0 1.2em 2.6em;
-
  margin: 1.2em -.8em -2em;
 }
 
 @media (min-width: 62em) {
+
+  .col-md-9 {
+    border-right: 1px dashed #ccc;
+  }
 
   .sidebar-static {
     padding-top: 1.2em;
