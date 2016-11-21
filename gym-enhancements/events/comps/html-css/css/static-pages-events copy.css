@@ -1,0 +1,198 @@
+.events-banner-title-datetime {
+  color: #fff;
+  background: #d73158;
+  padding: 2.2em;
+  margin: 2em -2.2em 1.6em;
+}
+
+.events-banner-title-datetime * {
+  text-align: center;
+  }
+
+.events-banner-title-datetime h1 {
+  margin: 0;
+}
+
+.events-banner-title-datetime .guests {
+  font-size: 1.8em;
+  text-transform: none;
+  margin: .6em 0 0;
+}
+
+.events-banner-title-datetime .datetime {
+  font-size: 1.2em;
+  color: #fff;
+  margin: 1.2em 0 0;
+}
+
+/*
+.events-banner-cta {
+  background: #444;
+  padding: 1em;
+}
+ */
+
+/* events / registration form */
+
+#events-registration-form {
+  color: #222;
+  }
+
+#events-registration-form fieldset {
+  border: 0;
+  margin: 1em 0 0;
+  }
+
+#events-registration-form fieldset legend {
+  font: bold .8em/1.2 brandon-grotesque, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  border: 0;
+  margin: 0;
+  }
+
+#events-registration-form fieldset ul {
+  list-style: none;
+  padding-left: 0;
+  }
+
+#events-registration-form fieldset li {
+  font-size: 1em;
+  margin: .5em 0;
+  }
+
+#events-registration-form label {
+  font: bold .8em/1.3 brandon-grotesque, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  }
+
+#events-registration-form fieldset input,
+#events-registration-form textarea {
+  display: block;
+  width: 100%;
+  font: normal .75em/1.2 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: none;
+  border: 1px solid #ccc;
+  border-bottom: 2px solid #f8971d;
+  }
+
+#events-registration-form textarea {
+  line-height: 1.4;
+  margin-bottom: 2em;
+  }
+
+#events-registration-form p.small-print {
+  line-height: 1.2;
+  margin-bottom: 1.2em;
+  }
+
+#events-registration-form p.small-print small {
+  line-height: 1.2;
+  }
+
+#events-registration-form .gym-button b {
+  vertical-align: baseline;
+  }
+
+
+/* main content / layout */
+
+.col-md-9  {
+  padding-top: 1.2em;
+  padding-bottom: 2em;
+  margin-top: -1.2em;
+  margin-bottom: -2em;
+}
+
+.main-content-static {
+  }
+
+.main-content-static h2 {
+  font-size: 1.2em;
+}
+
+.main-content-static p {
+  margin-right: 3.5%;
+}
+
+.main-content-static p.hero-text {
+  font: normal 1.6em/1.4 brandon-grotesque, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  word-spacing: 0.032em;
+  margin: .67em 0;
+}
+
+/* main content / video */
+
+.w-75 {
+  max-width: 36em;
+  margin-top: 1.072em;
+}
+
+@media (min-width: 62em) {
+
+  .w-75 {
+    width: 75%;
+  }
+
+}
+
+.iframe-video-holder {
+  position: relative;
+  height: 0;
+  background: #222;
+  overflow: hidden;
+}
+
+/* 16x9 aspect ratio */
+.ratio-16-9 {
+  padding-bottom: 56.25%;
+}
+
+/* 4x3 aspect ratio */
+.ratio-4-3 {
+  padding-bottom: 75%;
+}
+
+.iframe-video-holder iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: none transparent;
+  border: 0;
+}
+
+/* sidebar / static */
+
+.sidebar-static {
+ padding: 0 1.2em 2.6em;
+ margin: 1.2em -.8em -2em;
+}
+
+@media (min-width: 62em) {
+
+  .col-md-9 {
+    padding-right: 2.2em;
+    border-right: 1px dashed #ccc;
+  }
+
+  .sidebar-static {
+    padding-top: 1.2em;
+    margin-top: -1.2em;
+    margin-right: -2.2em;
+  }
+
+}
+
+.sidebar-static h1 {
+  font-size: 1.2em !important;
+}
+
+.sidebar-static p {
+  font-size: 1em !important;
+}
+
+.sidebar-static figure {
+  display: inline-block;
+  margin-top: 1.2em;
+}
