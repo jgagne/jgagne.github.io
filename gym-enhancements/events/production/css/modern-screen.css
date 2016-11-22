@@ -120,13 +120,13 @@ main h3 {
 .event-header {
   margin-top: -.2em;
   margin-left: -.3em;
-  margin-bottom: 1.4em;
+  margin-bottom: 1.3em;
   }
 
 @media (min-width: 39em) {
 
 .event-header {
-  margin-bottom: 2.2em;
+  margin-bottom: 2em;
   }
 
 }
