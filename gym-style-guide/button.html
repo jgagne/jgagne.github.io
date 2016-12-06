@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Button / Style Guide / Gymnaisum</title>
+  <meta name="author" content="Justin Gagne, Aquent Gymnasium">
+  <link rel="stylesheet" href="css/fonts.css">
+
+<style>
+
+/* general layout */
+
+body {
+  width: 90%;
+  max-width: 60em;
+  margin: 1em auto;
+  }
+
+hr {
+  height: 0;
+  border: 0;
+  margin: 1em 0;
+  }
+
+label {
+  display: inline-block;
+  font: .85em/1.2 "Helvetica Neue", Helvetica, sans-serif;
+  color: #444;
+  vertical-align: middle;
+  padding: 1em 2.75em 1.1em 1em;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  margin: .625em 0;
+  cursor: pointer;
+  }
+
+label code {
+  font-size: 1.2em;
+  font-weight: bold;
+  }
+
+input {
+  border: 1px solid #ddd;
+  margin-right: 3.75em;
+  margin-left: -3.25em;
+  cursor: pointer;
+  }
+
+code {
+  font-family: monospace, monospace;
+  font-size: 1em;
+  color: #222;
+  line-height: 1.2;
+  }
+
+.markup {
+  display: none;
+  }
+
+#toggle-markup:checked ~ *,
+#toggle-markup:checked ~ * .markup {
+   	display: block;
+		}
+
+.toggle-bg {
+  padding: 3em;
+  margin-top: 1em;
+  }
+
+#toggle-bg-ebebeb:checked ~ .toggle-bg {
+   	background: #ebebeb;
+		}
+
+#toggle-bg-666666:checked ~ .toggle-bg {
+   	background: #666666;
+		}
+
+#toggle-bg-444444:checked ~ .toggle-bg {
+  background: #444444;
+  }
+
+#toggle-bg-222222:checked ~ .toggle-bg {
+   	background: #222222;
+		}
+
+/* gym-button */
+
+.gym-button {
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  background: #f8971d;
+  padding: 1em 2em;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  }
+
+.gym-btn-full-width {
+  display: block;
+  }
+
+.gym-btn-max-width {
+  max-width: 30em;
+  }
+
+.gym-button:hover {
+  background: #a6a6a6;
+  }
+
+.gym-button:focus,
+.gym-button:active {
+  background: #939393;
+  }
+
+.gym-button b {
+  font: bold 1.4em/1.4 brandon-grotesque, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: .02em;
+  vertical-align: baseline;
+  }
+
+</style>
+
+</head>
+<body>
+
+<label for="toggle-bg-ebebeb">
+  <code>#ebebeb</code> (Light Gray)
+</label>
+<input id="toggle-bg-ebebeb" class="toggle" type="checkbox">
+
+<label for="toggle-bg-666666">
+  <code>#666666</code> (Medium Gray)
+</label>
+<input id="toggle-bg-666666" class="toggle" type="checkbox">
+
+<label for="toggle-bg-444444">
+  <code>#444444</code> (Dark Gray)
+</label>
+<input id="toggle-bg-444444" class="toggle" type="checkbox">
+
+<label for="toggle-bg-222222">
+<code>#222222</code> (Darker Gray)</label>
+<input id="toggle-bg-222222" class="toggle" type="checkbox">
+
+<label for="toggle-markup">
+  <code>markup</code> (HTML/CSS)
+</label>
+<input id="toggle-markup" class="toggle" type="checkbox">
+
+
+<div class="toggle-bg">
+
+  <a class="gym-button" href="#"><b>Log in</b></a>
+
+<pre class="markup">
+<code>
+&lt;a class="gym-button" href="#"&gt;&lt;b&gt;Log in&lt;/b&gt;&lt;/a&gt;
+</code>
+</pre>
+
+<hr>
+
+  <a class="gym-button gym-btn-full-width" href="#"><b>Learn More</b></a>
+
+<pre class="markup">
+<code>
+&lt;a class="gym-button gym-btn-full-width" href="#"&gt;&lt;b&gt;Learn More&lt;/b&gt;&lt;/a&gt;
+</code>
+</pre>
+
+<hr>
+
+  <a class="gym-button gym-btn-max-width" href="#"><b>Learn More With Aquent Gymnasium Full Courses and Gym Shorts</b></a>
+
+<pre class="markup">
+<code>
+&lt;a class="gym-button gym-btn-max-width" href="#"&gt;&lt;b&gt;Learn More With Aquent Gymnasium Full Courses and Gym Shorts&lt;/b&gt;&lt;/a&gt;
+</code>
+</pre>
+
+</div>
+
+<hr>
+
+<pre class="markup">
+<code>
+/* gym-button */
+
+.gym-button {
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  background: #f8971d;
+  padding: 1em 2em;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  }
+
+.gym-btn-full-width {
+  display: block;
+  }
+
+.gym-btn-max-width {
+  max-width: 36em;
+  }
+
+.gym-button:hover {
+  background: #a6a6a6;
+  }
+
+.gym-button:focus,
+.gym-button:active {
+  background: #939393;
+  }
+
+.gym-button b {
+  font: bold 1.4em/1 brandon-grotesque, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: .02em;
+  vertical-align: baseline;
+  }
+</code>
+</pre>
+
+</body>
+</html>
