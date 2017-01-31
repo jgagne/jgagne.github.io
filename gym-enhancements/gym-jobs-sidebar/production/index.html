@@ -1,0 +1,1752 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if lte IE 9]><html class="ie ie9 lte9" lang="en"><![endif]-->
+<!--[if !IE]><!--><html lang="en"><!--<![endif]-->
+<head dir="ltr">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+      <title>
+       Courses | Gymnasium
+      </title>
+
+
+      <script type="text/javascript">
+        /* immediately break out of an iframe if coming from the marketing website */
+        (function(window) {
+          if (window.location !== window.top.location) {
+            window.top.location = window.location;
+          }
+        })(this);
+      </script>
+
+
+
+  <script type="text/javascript" src="https://thegymnasium.com/static/js/i18n/en/djangojs.b28203373cc1.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="https://thegymnasium.com/static/gymnasium/images/favicon.f729730b6e79.ico" />
+
+
+
+
+    <link href="https://thegymnasium.com/static/gymnasium/css/lms-style-vendor.a0d47e130e81.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+    <link href="https://thegymnasium.com/static/gymnasium/css/lms-main-v1.d3abab7d91bf.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+    <script type="text/javascript" src="https://thegymnasium.com/static/gymnasium/js/lms-main_vendor.46d6a8c02600.js" charset="utf-8"></script>
+
+
+
+    <script type="text/javascript" src="https://thegymnasium.com/static/gymnasium/js/lms-application.c4f05cb3b364.js" charset="utf-8"></script>
+
+
+
+  <script>
+    window.baseUrl = "https://thegymnasium.com/static/";
+    (function (require) {
+      require.config({
+          baseUrl: window.baseUrl
+      });
+    }).call(this, require || RequireJS.require);
+  </script>
+  <script type="text/javascript" src="https://thegymnasium.com/static/lms/js/require-config.667a9b347d82.js"></script>
+
+    <script type="text/javascript">
+        (function (require) {
+          require.config({
+              paths: {
+                'js/courseware/courseware_factory': 'js/courseware/courseware_factory.79c507070080',
+'draggabilly': 'js/vendor/draggabilly.26caba6f7187',
+'js/courseware/toggle_element_visibility': 'js/courseware/toggle_element_visibility.e564e0ed228c',
+'js/courseware/course_home_events': 'js/courseware/course_home_events.4e8915731e7d',
+'js/courseware/link_clicked_events': 'js/courseware/link_clicked_events',
+'edxicons': 'edx-pattern-library/js/edx-icons.a9ab01bc44bf',
+'moment': 'js/vendor/moment-with-locales.min.cf6d65fe3e48',
+'js/student_profile/views/learner_profile_factory': 'js/student_profile/views/learner_profile_factory.a37af816bdc9',
+'jquery.url': 'js/vendor/url.min.0098a9ff3d53',
+'js/student_account/logistration_factory': 'js/student_account/logistration_factory.f3eba77aab43',
+'js/groups/views/cohorts_dashboard_factory': 'js/groups/views/cohorts_dashboard_factory.65bc243bc330',
+'afontgarde': 'edx-pattern-library/js/afontgarde.f6413e623704',
+'js/courseware/accordion_events': 'js/courseware/accordion_events.1bf82c871285',
+'js/bookmarks/views/bookmark_button': 'js/bookmarks/views/bookmark_button.f9d16d58a9d8',
+'js/views/message_banner': 'js/views/message_banner.13d853dc7834'
+            }
+          });
+        }).call(this, require || RequireJS.require);
+    </script>
+
+
+
+    <script type="text/javascript" src="https://thegymnasium.com/static/gymnasium/js/lms-modules.47eeba5c2874.js" charset="utf-8"></script>
+
+
+
+
+
+
+
+
+
+<meta property="og:url" content="http://thegymnasium.com/" />
+<meta property="og:title" content="Aquent Gymnasium" />
+<meta property="og:image" content="https://thegymnasium.com/static/gymnasium/images/social-share-400.f9715ec47ea8.png" />
+<meta property="og:description" content="At Aquent Gymnasium, we offer free online courses focused on HTML and CSS, responsive design, UX design, and an array of front-end development tools." />
+<meta property="og:keywords" content="free online courses" />
+
+
+<!-- insert typekit font references -->
+<script src="//use.typekit.net/rhf0qta.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+
+<!-- bootstrap! -->
+<!-- local reference for offline testing only -->
+<!-- <link rel="stylesheet" href="https://thegymnasium.com/static/gymnasium/css/bootstrap.e60e9bcfcac0.css" > -->
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+
+<script src="https://thegymnasium.com/static/gymnasium/js/prism.19f6a94bf245.js"> </script>
+<script src="https://thegymnasium.com/static/gymnasium/js/cookiebanner.1f4136cf4977.js" id="cookiebanner"
+	data-link="#f89820"
+	data-message="We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. Find out more about how we use cookies in our"
+	data-linkmsg="Privacy Policy."
+	data-moreinfo="/privacy">
+</script>
+
+<script>
+  var CLOUDWALL_ENV = "my";
+</script>
+
+<script src="https://thegymnasium.com/static/gymnasium/js/gymnasium.js"> </script>
+
+
+<script>
+  // check for unsupported browsers; display warning message if an old browser
+  // is in use
+
+  $(function(){
+    // This function returns Internet Explorer's major version number,
+    // or 0 for others. It works by finding the "MSIE " string and
+    // extracting the version number following the space, up to the decimal
+    // point, ignoring the minor version number
+    // for more info, see: https://support.microsoft.com/en-us/kb/167820
+    function msieversion()
+    {
+      var ua = window.navigator.userAgent
+      var msie = ua.indexOf ( "MSIE " )
+
+      if ( msie > 0 )      // If Internet Explorer, return version number
+         return parseInt (ua.substring (msie+5, ua.indexOf (".", msie )))
+      else                 // If another browser, return 0
+         return 0
+    }
+
+    function displayBrowserWarning()
+    {
+      $('#browserWarning').show();
+    }
+
+    var ieversion = msieversion();
+    // make sure that we are using IE > 9
+    if (ieversion > 0 && ieversion < 11)
+    {
+      displayBrowserWarning();
+    }
+
+  });
+
+
+	//this is a nonsense hack to make courseware subnavigation look like
+	//what we want it to look like until we move to Cypress
+	//TODO: Unhackify this.
+	$(function(){
+		$('.course-tabs li a b:contains("Course")').each(function(idx, value){
+			value.innerHTML = "Lessons";
+		});
+
+		$('.course-tabs li a b:contains("Home")').each(function(idx,value){
+			value.innerHTML = "Syllabus";
+		});
+
+    // make sure lessons tab comes first
+    var syllabusTab = $('.course-tabs li:contains("Lessons")');
+    $(syllabusTab).prependTo(
+      $(syllabusTab).parent()
+    );
+
+		$('.course-tabs li a:contains("Forum")').each(function(idx,value){
+			//TODO: Unhack this silly logic to hide forum tab for gym shorts
+
+			//we're looking at the href property of this anchor to see if it contains
+			//a course link that has "Gym/00" in it.  All gym shorts start with "0"
+			//so that should hide this link. Note that this does _not_ disable
+			//forums... those pages will still exist, but we won't like to them.
+			if ($(value).attr("href").toLowerCase().indexOf("gym/0") > 0)
+			{
+				$(value).parent().hide();
+			}
+		})
+
+		$('.course-tabs li:contains("Progress")').hide();
+		$('.course-tabs').show();
+	});
+</script>
+
+<!-- eloqua tracking code -->
+<script type="text/javascript">
+    var _elqQ = _elqQ || [];
+  _elqQ.push(['elqSetSiteId', '386085125']);
+    _elqQ.push(['elqTrackPageView']);
+
+    (function () {
+        function async_load() {
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+            s.src = '//img04.en25.com/i/elqCfg.min.js';
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        }
+        if (window.addEventListener) window.addEventListener('DOMContentLoaded', async_load, false);
+        else if (window.attachEvent) window.attachEvent('onload', async_load);
+    })();
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-684147-51', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<!-- dummy Segment -->
+<script type="text/javascript">
+  var analytics = {
+    track: function() { return; },
+    trackLink: function() { return; },
+    pageview: function() { return; },
+    page: function() { return; }
+  };
+</script>
+<!-- end dummy Segment -->
+
+
+  <meta name="path_prefix" content="">
+  <meta name="google-site-verification" content="_mipQ4AtZQDNmbtOkwehQDOgCxUUV2fb_C0b6wbiRHY" />
+
+
+
+</head>
+
+<body class="ltr  lang_en">
+
+
+<div id="page-prompt"></div>
+  <div class="window-wrap" dir="ltr">
+    <a class="nav-skip" href="#main">Skip to main content</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <header class="global" aria-label="Global Navigation">
+    <nav id="primary-nav" class="black-background container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="navbar">
+            <div class="nav navbar navbar-nav navbar-left">
+                      <span>
+                        <a class="gym-button cta cta-register" href="/register"><b>Sign up for an account</b></a>
+                      </span>
+            </div>
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav navbar-right">
+
+
+                <li><a href="http://www.aquent.com" target="_blank" alt="Aquent" class="gym-nav-icon-container"> <i class="gym-nav-icon aquent-icon"></i></a></li>
+                <li><a href="http://www.vitamintalent.com" target="_blank" alt="Vitamin T" class="gym-nav-icon-container"> <i class="gym-nav-icon vitamin-t-icon"></i></a></li>
+
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <nav id="secondary-nav" class="container-fluid">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 navbar navbar-default">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#secondary-nav-items">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">
+
+  <img class="gymnasium-logo" src="https://thegymnasium.com/static/gymnasium/images/gymnasiumLogo.png" alt="Home Page" />
+
+              </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="secondary-nav-items">
+              <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="/courses">Catalog</a></li>
+                <li><a href="/careers">Career Center</a></li>
+
+                  <li>
+                        <a class="gym-button" href="/login"><b>Log in</b></a>
+                  </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="wrapper-msg urgency-high" id="browserWarning" style="display:none;">
+        <div class="msg">
+            <div class="msg-content">
+                <h1>Improve your Gymnasium experience</h1>
+                <div class="copy">
+                    <p>It looks like you’re using an unsupported browser. To get the most out of your Gymnasium experience, we recommend that you use
+                      <a href="https://www.google.com/chrome/index.html" target="_blank">Chrome</a>,
+                      <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a>, or
+                      <a href="http://www.apple.com/safari/" target="_blank">Safari</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </header>
+
+<!-- PRODUCTION PRODUCTION PRODUCTION -->
+<!--
+<div class="container-fluid system-status-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="system-status" id="system-status">
+            <h1>WE HAVE A TIMEOUT HERE!</h1>
+            <p>
+              <strong>
+                We are currently experiencing technical difficulties. <a href="https://gymnasium.github.io" target="_blank">Click here for more information…</a>
+              </strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ -->
+
+<section id="forgot-password" class="modal" aria-hidden="true">
+  <div class="dialog" role="dialog" aria-labelledby="email-settings-title">
+
+    <button class="close-modal" tabindex="1" data-dismiss="modal">
+      <b class="close-modal-content gym-button">
+        Dismiss
+      </b>
+    </button>
+
+    <form id="pwd_reset_form" action="/password_reset/" method="post" data-remote="true">
+      <fieldset>
+        <legend>
+          <b role="heading">
+            Password Reset
+          </b>
+
+          <span class="sr">,
+            window open
+          </span>
+        </legend>
+
+
+        <ul class="list-input">
+            <label>
+              <b>Your E-mail Address*</b>
+            </label>
+            <input type="email" name="email" id="pwd_reset_email" aria-required="true" placeholder="username@domain.com" required>
+          </li>
+        </ul>
+        <p>
+          This is the e-mail address you used to register with Gymnasium
+        </p>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div id="error_message"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <button class="gym-button" tabindex="2" name="submit" type="submit" id="submit-password-reset-button">
+              <b>
+                Reset My Password
+              </b>
+            </button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+
+    <div class="row confirmation-message" hidden>
+      <legend>
+        <b role="heading">
+          Check your email
+        </b>
+      </legend>
+      <div class="col-md-12">
+        <p>We've e-mailed you instructions for setting your password to the e-mail address you submitted. You should be receiving it shortly.</p>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+<script type="text/javascript">
+  (function() {
+
+    $('#pwd_reset_form').validate();
+
+    $('#forgot-password').on('show.bs.modal', function(){
+      //$('.confirmation-message').hide();
+      //$('#pwd_reset_form').show();
+    });
+
+    $('#submit-password-reset-button').click(function(){
+      //$('.confirmation-message').show();
+      //$('#pwd_reset_form').hide();
+    });
+
+    $(document).delegate('#pwd_reset_form', 'ajax:success', function(data, json, xhr) {
+      if(json.success) {
+        $("#pwd_reset_form").html(json.value);
+      } else {
+        if($('#pwd_error').length == 0) {
+          $('#error_message').html('<div id="pwd_error" class="modal-form-error error">Email address is incorrect or there is no account registered with this email address.</div>');
+        }
+        $('#pwd_error').stop().css("display", "block");
+      }
+    });
+
+  })(this)
+</script>
+
+
+
+
+
+
+
+
+
+<script async>
+  $(function(){
+    var button = document.getElementById("dropdown");
+
+    $(button).click(function(){
+      var menu = document.getElementById("dropdown-menu");
+
+      var caret=$(button).children('.caret');
+
+      if (menu.style.display !== "inline") {
+          menu.style.display = "inline";
+          $(caret).hide();
+      }
+      else {
+        menu.style.display = "none";
+        $(caret).show();
+      }
+    });
+  })
+</script>
+
+
+    <div class="content-wrapper" id="content">
+
+
+
+
+
+
+
+
+
+
+
+<section class="find-courses" id="gym-catalog">
+
+  <div class="course-title container-fluid">
+    <header class="container">
+      <div class="row">
+        <h1>Catalog</h1>
+      </div>
+    </header>
+  </div>
+
+  <div class="container course-menu">
+    <div class="row">
+      <ul>
+        <li>
+          <a href="#full">Full Courses</a>
+        </li>
+        <li>
+          <a href="#gymshorts">Gym Shorts</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <main id="main" class="container" aria-label="Content" tabindex="-1">
+    <div class="catalog-content row">
+      <div class="">
+        <div class="col-md-9 course-overview">
+          <section class="courses-container">
+
+            <h1 id="full">
+              Full Courses
+            </h1>
+            <p class="hero">
+                All our full courses are taught by experienced practitioners and focused on in-demand skills and technologies. Each includes 3 to 6 hours of video instruction, quizzes, assignments, a final exam, and certification when you pass!
+            </p>
+            <div class="courses no-course-discovery" role="region" aria-label="List of Courses">
+              <ul class="courses-listing">
+                <!-- course card underscore template is loaded here if course_discovery is set to true-->
+
+                <!-- otherwise we use the following loop -->
+
+
+
+
+<li class="course-item" data-course-id="001">
+  <article class="row">
+    <figure class="col-md-4">
+      <a href="/courses/GYM/001/0/about">
+        <img class="img-responsive" src="https://thegymnasium.com/c4x/GYM/001/asset/gym-001.png" alt="001 Defeating Busy Cover Image" />
+      </a>
+      <figcaption>
+        <a href="/courses/GYM/001/0/about" class="gym-button"><b>Learn More</b></a>
+      </figcaption>
+    </figure>
+    <div class="col-md-8 course-description">
+      <header>
+        <h1>Defeating Busy</h1>
+      </header>
+      <p>
+        Learn how to estimate, plan, track, and manage your time in order to complete projects. Being busy isn’t a bad thing, but not being in control of your own time is.
+
+<div class="row">
+  <div class="col-md-6">
+    <dl>
+      <dt>Skills Covered</dt>
+      <dd><span>Project estimation</span></dd>
+      <dd><span>Time tracking</span></dd>
+      <dd><span>Team/client communication skills</span></dd>
+      <dd><span>And more…</span></dd>
+    </dl>
+  </div>
+
+  <div class="col-md-6">
+    <dl>
+      <dt>This course is for </dt>
+      <dd><span>Designers</span></dd>
+      <dd><span>Developers</span></dd>
+      <dd><span>Anyone with a deadline</span></dd>
+    </dl>
+  </div>
+
+</div>
+      </p>
+    </div>
+  </article>
+</li>
+
+
+
+
+<li class="course-item" data-course-id="002">
+  <article class="row">
+    <figure class="col-md-4">
+      <a href="/courses/GYM/002/0/about">
+        <img class="img-responsive" src="https://thegymnasium.com/c4x/GYM/002/asset/gym-002.png" alt="002 Introducing Node.js Cover Image" />
+      </a>
+      <figcaption>
+        <a href="/courses/GYM/002/0/about" class="gym-button"><b>Learn More</b></a>
+      </figcaption>
+    </figure>
+    <div class="col-md-8 course-description">
+      <header>
+        <h1>Introducing Node.js</h1>
+      </header>
+      <p>
+        Learn the basics of Node.js by building a sample "social profile" form.
+
+<div class="row">
+  <div class="col-md-6">
+    <dl>
+      <dt>Skills Covered</dt>
+      <dd><span>Installing a Node.js server</span></dd>
+      <dd><span>Dynamic rendering with the Express view engine</span></dd>
+      <dd><span>Working with JSON data</span></dd>
+      <dd><span>And much more...</span></dd>
+    </dl>
+  </div>
+
+  <div class="col-md-6">
+    <dl>
+      <dt>This course is for </dt>
+      <dd><span>Front-End Developers</span></dd>
+      <dd><span>Back-End Developers</span></dd>
+      <dd><span>JavaScript Developers and Programmers</span></dd>
+    </dl>
+  </div>
+
+</div>
+      </p>
+    </div>
+  </article>
+</li>
+
+
+
+
+<li class="course-item" data-course-id="003">
+  <article class="row">
+    <figure class="col-md-4">
+      <a href="/courses/GYM/003/0/about">
+        <img class="img-responsive" src="https://thegymnasium.com/c4x/GYM/003/asset/gym-003.png" alt="003 Grid Layout in Bootstrap 3 Cover Image" />
+      </a>
+      <figcaption>
+        <a href="/courses/GYM/003/0/about" class="gym-button"><b>Learn More</b></a>
+      </figcaption>
+    </figure>
+    <div class="col-md-8 course-description">
+      <header>
+        <h1>Grid Layout in Bootstrap 3</h1>
+      </header>
+      <p>
+        Get up to speed with the Twitter Bootstrap's grid layout system and learn how to build a responsive layout that looks great on multiple screen sizes and devices.
+
+<div class="row">
+  <div class="col-md-6">
+    <dl>
+      <dt>Skills Covered</dt>
+      <dd><span>Bootstrap basics</span></dd>
+      <dd><span>Prototyping with Bootstrap</span></dd>
+      <dd><span>Responsive layout</span></dd>
+      <dd><span>And more…</span></dd>
+    </dl>
+  </div>
+
+  <div class="col-md-6">
+    <dl>
+      <dt>This course is for </dt>
+      <dd><span>Web Designers</span></dd>
+      <dd><span>Front-End Developers</span></dd>
+      <dd><span>UX Designers</span></dd>
+    </dl>
+  </div>
+
+</div>
+      </p>
+    </div>
+  </article>
+</li>
+
+
+
+
+<li class="course-item" data-course-id="004">
+  <article class="row">
+    <figure class="col-md-4">
+      <a href="/courses/GYM/004/0/about">
+        <img class="img-responsive" src="https://thegymnasium.com/c4x/GYM/004/asset/gym-004.png" alt="004 Creating A Wordpress Theme Cover Image" />
+      </a>
+      <figcaption>
+        <a href="/courses/GYM/004/0/about" class="gym-button"><b>Learn More</b></a>
+      </figcaption>
+    </figure>
+    <div class="col-md-8 course-description">
+      <header>
+        <h1>Creating A Wordpress Theme</h1>
+      </header>
+      <p>
+        Learn how to convert your HTML/CSS design into a WordPress website. Discover how to set up a local development environment, and add WordPress tags to your design.
+
+<div class="row">
+  <div class="col-md-6">
+    <dl>
+      <dt>Skills Covered</dt>
+      <dd><span>Intermediate HTML/CSS</span></dd>
+      <dd><span>WordPress themes</span></dd>
+      <dd><span>WordPress tags</span></dd>
+      <dd><span>And more…</span></dd>
+    </dl>
+  </div>
+
+  <div class="col-md-6">
+    <dl>
+      <dt>This course is for </dt>
+      <dd><span>Developers</span></dd>
+      <dd><span>Designers with coding chops</span></dd>
+      <dd><span>WordPress beginners</span></dd>
+    </dl>
+  </div>
+
+</div>
+      </p>
+    </div>
+  </article>
+</li>
+
+
+
+
+<li class="course-item" data-course-id="005">
+  <article class="row">
+    <figure class="col-md-4">
+      <a href="/courses/GYM/005/0/about">
+        <img class="img-responsive" src="https://thegymnasium.com/c4x/GYM/005/asset/gym-005-updated-bandage.png" alt="005 Introducing Sketch for UX and UI Cover Image" />
+      </a>
+      <figcaption>
+        <a href="/courses/GYM/005/0/about" class="gym-button"><b>Learn More</b></a>
+      </figcaption>
+    </figure>
+    <div class="col-md-8 course-description">
+      <header>
+        <h1>Introducing Sketch for UX and UI</h1>
+      </header>
+      <p>
+        <strong>This course was revised in Winter 2016 with new content.</strong>
+Learn how to use Sketch tools and features in order to build a interactive prototype for a mobile website.
+
+<div class="row">
+  <div class="col-md-6">
+    <dl>
+      <dt>Skills Covered</dt>
+      <dd><span>Sketch fundamentals</span></dd>
+      <dd><span>Building static wireframes and prototypes</span></dd>
+      <dd><span>Interactive prototyping</span></dd>
+      <dd><span>And more…</span></dd>
+    </dl>
+  </div>
+
+  <div class="col-md-6">
+    <dl>
+      <dt>This course is for </dt>
+      <dd><span>UX Designers</span></dd>
+      <dd><span>Web Designers</span></dd>
+      <dd><span>Front-End Developers</span></dd>
+    </dl>
+  </div>
+
+</div>
+      </p>
+    </div>
+  </article>
+</li>
+
+
+
+
+<li class="course-item" data-course-id="100">
+  <article class="row">
+    <figure class="col-md-4">
+      <a href="/courses/GYM/100/0/about">
+        <img class="img-responsive" src="https://thegymnasium.com/c4x/GYM/100/asset/gym-100.png" alt="100 Coding for Designers Cover Image" />
+      </a>
+      <figcaption>
+        <a href="/courses/GYM/100/0/about" class="gym-button"><b>Learn More</b></a>
+      </figcaption>
+    </figure>
+    <div class="col-md-8 course-description">
+      <header>
+        <h1>Coding for Designers</h1>
+      </header>
+      <p>
+        Learn HTML and CSS and become the Web Designer that Developers love. Professional design experience is a prerequisite, but no prior web or coding experience is necessary.
+
+<div class="row">
+  <div class="col-md-6">
+    <dl>
+      <dt>Skills Covered</dt>
+      <dd><span>HTML basics</span></dd>
+      <dd><span>CSS basics</span></dd>
+      <dd><span>Bootstrap basics</span></dd>
+      <dd><span>And more...</span></dd>
+    </dl>
+  </div>
+
+  <div class="col-md-6">
+    <dl>
+      <dt>This course is for </dt>
+      <dd><span>Designers</span></dd>
+      <dd><span>Creatives</span></dd>
+      <dd><span>Copy Editors</span></dd>
+      <dd><span>Anyone struggling with HTML</span></dd>
+    </dl>
+  </div>
+
+</div>
+      </p>
+    </div>
+  </article>
+</li>
+
+
+
+
+<li class="course-item" data-course-id="101">
+  <article class="row">
+    <figure class="col-md-4">
+      <a href="/courses/GYM/101/0/about">
+        <img class="img-responsive" src="https://thegymnasium.com/c4x/GYM/101/asset/gym-101.png" alt="101 Responsive Web Design Cover Image" />
+      </a>
+      <figcaption>
+        <a href="/courses/GYM/101/0/about" class="gym-button"><b>Learn More</b></a>
+      </figcaption>
+    </figure>
+    <div class="col-md-8 course-description">
+      <header>
+        <h1>Responsive Web Design</h1>
+      </header>
+      <p>
+        In this course, you’ll learn best practices for building <strong>responsive</strong> websites that adapt to different devices and user behaviors.
+
+<div class="row">
+  <div class="col-md-6">
+    <dl>
+      <dt>Skills Covered</dt>
+      <dd><span>HTML5 and CSS3</span></dd>
+      <dd><span>Responsive layout</span></dd>
+      <dd><span>Mobile First strategies</span></dd>
+      <dd><span>And more…</span></dd>
+    </dl>
+  </div>
+
+  <div class="col-md-6">
+    <dl>
+      <dt>This course is for </dt>
+      <dd><span>Designers with coding chops</span></dd>
+      <dd><span>Front-End Developers</span></dd>
+
+    </dl>
+  </div>
+
+</div>
+      </p>
+    </div>
+  </article>
+</li>
+
+
+
+
+<li class="course-item" data-course-id="102">
+  <article class="row">
+    <figure class="col-md-4">
+      <a href="/courses/GYM/102/0/about">
+        <img class="img-responsive" src="https://thegymnasium.com/c4x/GYM/102/asset/gym-102.png" alt="102 jQuery Building Blocks Cover Image" />
+      </a>
+      <figcaption>
+        <a href="/courses/GYM/102/0/about" class="gym-button"><b>Learn More</b></a>
+      </figcaption>
+    </figure>
+    <div class="col-md-8 course-description">
+      <header>
+        <h1>jQuery Building Blocks</h1>
+      </header>
+      <p>
+        Learn five easy techniques for adding interactivity to your web pages. By the end, you’ll be able to add features and style to your web apps-from simple animations to complex dynamic content.
+
+<div class="row">
+  <div class="col-md-6">
+    <dl>
+      <dt>Skills Covered</dt>
+      <dd><span>Navigation, animation, and server interaction</span></dd>
+      <dd><span>JavaScript</span></dd>
+      <dd><span>HTML/CSS</span></dd>
+      <dd><span>And more…</span></dd>
+    </dl>
+  </div>
+
+  <div class="col-md-6">
+    <dl>
+      <dt>This course is for </dt>
+      <dd><span>Designers with coding chops</span></dd>
+      <dd><span>Front-End Developers</span></dd>
+      <dd><span>JavaScript Developers</span></dd>
+    </dl>
+  </div>
+
+</div>
+      </p>
+    </div>
+  </article>
+</li>
+
+
+
+
+<li class="course-item" data-course-id="103">
+  <article class="row">
+    <figure class="col-md-4">
+      <a href="/courses/GYM/103/0/about">
+        <img class="img-responsive" src="https://thegymnasium.com/c4x/GYM/103/asset/gym-103.png" alt="103 UX Fundamentals Cover Image" />
+      </a>
+      <figcaption>
+        <a href="/courses/GYM/103/0/about" class="gym-button"><b>Learn More</b></a>
+      </figcaption>
+    </figure>
+    <div class="col-md-8 course-description">
+      <header>
+        <h1>UX Fundamentals</h1>
+      </header>
+      <p>
+        Learn how to apply user-centered design principles to improve your website and mobile app design. A must-take course for anyone working in web design and development.
+
+<div class="row">
+  <div class="col-md-6">
+    <dl>
+      <dt>Skills Covered</dt>
+      <dd><span>User research</span></dd>
+      <dd><span>Wireframing and prototyping</span></dd>
+      <dd><span>User testing</span></dd>
+      <dd><span>And more…</span></dd>
+    </dl>
+  </div>
+
+  <div class="col-md-6">
+    <dl>
+      <dt>This course is for </dt>
+      <dd><span>Web Designers</span></dd>
+      <dd><span>Creatives</span></dd>
+      <dd><span>UX Designers</span></dd>
+      <dd><span>Anyone who works on UX projects</span></dd>
+    </dl>
+  </div>
+
+</div>
+      </p>
+    </div>
+  </article>
+</li>
+
+
+
+
+<li class="course-item" data-course-id="104">
+  <article class="row">
+    <figure class="col-md-4">
+      <a href="/courses/GYM/104/0/about">
+        <img class="img-responsive" src="https://thegymnasium.com/c4x/GYM/104/asset/gym-104.png" alt="104 JavaScript Foundations Cover Image" />
+      </a>
+      <figcaption>
+        <a href="/courses/GYM/104/0/about" class="gym-button"><b>Learn More</b></a>
+      </figcaption>
+    </figure>
+    <div class="col-md-8 course-description">
+      <header>
+        <h1>JavaScript Foundations</h1>
+      </header>
+      <p>
+        Learn the fundamentals of programming with JavaScript and get started on the road to its mastery.
+
+<div class="row">
+  <div class="col-md-6">
+    <dl>
+      <dt>Skills Covered</dt>
+      <dd><span>JavaScript</span></dd>
+      <dd><span>Programming basics</span></dd>
+      <dd><span>The interaction between JavaScript and HTML</span></dd>
+      <dd><span>And more…</span></dd>
+    </dl>
+  </div>
+
+  <div class="col-md-6">
+    <dl>
+      <dt>This course is for </dt>
+      <dd><span>Designers with coding chops</span></dd>
+      <dd><span>Front-End Developers</span></dd>
+      <dd><span>jQuery Developers</span></dd>
+    </dl>
+  </div>
+
+</div>
+      </p>
+    </div>
+  </article>
+</li>
+
+
+
+
+<li class="course-item" data-course-id="105">
+  <article class="row">
+    <figure class="col-md-4">
+      <a href="/courses/GYM/105/0/about">
+        <img class="img-responsive" src="https://thegymnasium.com/c4x/GYM/105/asset/gym-105.png" alt="105 Writing for Web & Mobile Cover Image" />
+      </a>
+      <figcaption>
+        <a href="/courses/GYM/105/0/about" class="gym-button"><b>Learn More</b></a>
+      </figcaption>
+    </figure>
+    <div class="col-md-8 course-description">
+      <header>
+        <h1>Writing for Web & Mobile</h1>
+      </header>
+      <p>
+        Learn how to write compelling content through meaningful audience research and find the right words to attract and engage users.
+
+<div class="row">
+  <div class="col-md-6">
+    <dl>
+      <dt>Skills Covered</dt>
+      <dd><span>Online writing strategies</span></dd>
+      <dd><span>Content-first UX design</span></dd>
+      <dd><span>Audience research</span></dd>
+      <dd><span>And more…</span></dd>
+    </dl>
+  </div>
+
+  <div class="col-md-6">
+    <dl>
+      <dt>This course is for </dt>
+      <dd><span>Copy Editors</span></dd>
+      <dd><span>Marketers</span></dd>
+      <dd><span>Web Designers</span></dd>
+      <dd><span>Content Strategists</span></dd>
+    </dl>
+  </div>
+
+</div>
+      </p>
+    </div>
+  </article>
+</li>
+
+
+
+
+<li class="course-item" data-course-id="006">
+  <article class="row">
+    <figure class="col-md-4">
+      <a href="/courses/GYM/006/0/about">
+        <img class="img-responsive" src="https://thegymnasium.com/c4x/GYM/006/asset/gym-006.png" alt="006 Introduction To Git And GitHub Cover Image" />
+      </a>
+      <figcaption>
+        <a href="/courses/GYM/006/0/about" class="gym-button"><b>Learn More</b></a>
+      </figcaption>
+    </figure>
+    <div class="col-md-8 course-description">
+      <header>
+        <h1>Introduction To Git And GitHub</h1>
+      </header>
+      <p>
+        Learn the basics of version control and get a high-level overview of both Git and GitHub. Perfect for someone with little to no first-hand experience with either.
+
+<div class="row">
+  <div class="col-md-6">
+    <dl>
+      <dt>Skills Covered</dt>
+      <dd><span>Version control</span></dd>
+      <dd><span>Project workflow</span></dd>
+      <dd><span>Collaborative coding</span></dd>
+      <dd><span>And more...</span></dd>
+    </dl>
+  </div>
+
+  <div class="col-md-6">
+    <dl>
+      <dt>This course is for </dt>
+      <dd><span>Developers</span></dd>
+      <dd><span>Designers</span></dd>
+      <dd><span>Digital Creatives</span></dd>
+    </dl>
+  </div>
+
+</div>
+      </p>
+    </div>
+  </article>
+</li>
+
+
+
+
+<li class="course-item" data-course-id="007">
+  <article class="row">
+    <figure class="col-md-4">
+      <a href="/courses/GYM/007/0/about">
+        <img class="img-responsive" src="https://thegymnasium.com/c4x/GYM/007/asset/gym-007.png" alt="007 Structuring and Organizing HTML5 Forms Cover Image" />
+      </a>
+      <figcaption>
+        <a href="/courses/GYM/007/0/about" class="gym-button"><b>Learn More</b></a>
+      </figcaption>
+    </figure>
+    <div class="col-md-8 course-description">
+      <header>
+        <h1>Structuring and Organizing HTML5 Forms</h1>
+      </header>
+      <p>
+        Learn some of the latest standards and thinking around coding HTML forms using the new HTML5 tags and attributes.
+
+
+<div class="row">
+  <div class="col-md-6">
+    <dl>
+      <dt>Skills Covered</dt>
+      <dd><span>Web Forms</span></dd>
+      <dd><span>HTML</span></dd>
+      <dd><span>CSS</span></dd>
+    </dl>
+  </div>
+
+  <div class="col-md-6">
+    <dl>
+      <dt>This course is for </dt>
+      <dd><span>Developers</span></dd>
+      <dd><span>Designers</span></dd>
+      <dd><span>Digital Creatives</span></dd>
+    </dl>
+  </div>
+
+</div>
+      </p>
+    </div>
+  </article>
+</li>
+
+
+
+
+<li class="course-item" data-course-id="008">
+  <article class="row">
+    <figure class="col-md-4">
+      <a href="/courses/GYM/008/0/about">
+        <img class="img-responsive" src="https://thegymnasium.com/c4x/GYM/008/asset/gym-008.png" alt="008 Advanced Rapid Prototyping With Axure Cover Image" />
+      </a>
+      <figcaption>
+        <a href="/courses/GYM/008/0/about" class="gym-button"><b>Learn More</b></a>
+      </figcaption>
+    </figure>
+    <div class="col-md-8 course-description">
+      <header>
+        <h1>Advanced Rapid Prototyping With Axure</h1>
+      </header>
+      <p>
+        Learn how to use the conditional logic features in Axure in order to quickly create an interactive prototype.
+
+<div class="row">
+  <div class="col-md-6">
+    <dl>
+      <dt>Skills Covered</dt>
+      <dd><span>Interactive prototyping</span></dd>
+      <dd><span>Basic programming logic</span></dd>
+      <dd><span>User flows</span></dd>
+      <dd><span>And more…</span></dd>
+    </dl>
+  </div>
+
+  <div class="col-md-6">
+    <dl>
+      <dt>This course is for </dt>
+      <dd><span>UX Designers</span></dd>
+      <dd><span>Interactive Designers</span></dd>
+      <dd><span>Information Architects</span></dd>
+    </dl>
+  </div>
+
+</div>
+      </p>
+    </div>
+  </article>
+</li>
+
+
+
+
+<li class="course-item" data-course-id="009">
+  <article class="row">
+    <figure class="col-md-4">
+      <a href="/courses/GYM/009/0/about">
+        <img class="img-responsive" src="https://thegymnasium.com/c4x/GYM/009/asset/Drupal-retina.png" alt="009 Creating A Drupal 8 Theme Cover Image" />
+      </a>
+      <figcaption>
+        <a href="/courses/GYM/009/0/about" class="gym-button"><b>Learn More</b></a>
+      </figcaption>
+    </figure>
+    <div class="col-md-8 course-description">
+      <header>
+        <h1>Creating A Drupal 8 Theme</h1>
+      </header>
+      <p>
+        This course will teach you how to create themes for Drupal 8. Specifically, you will learn how to install a local development environment for Drupal 8, and use the new TWIG templating engine to customize the structure and style of your theme.
+
+<div class="row">
+  <div class="col-md-6">
+    <dl>
+      <dt>Skills Covered</dt>
+      <dd><span>Intermediate HTML/CSS</span></dd>
+      <dd><span>Drupal theming</span></dd>
+      <dd><span>TWIG syntax</span></dd>
+      <dd><span>And more…</span></dd>
+    </dl>
+  </div>
+
+  <div class="col-md-6">
+    <dl>
+      <dt>This course is for </dt>
+      <dd><span>Developers</span></dd>
+      <dd><span>Designers with coding chops</span></dd>
+      <dd><span>Drupal 8 beginners</span></dd>
+    </dl>
+  </div>
+
+</div>
+      </p>
+    </div>
+  </article>
+</li>
+
+
+
+
+<li class="course-item" data-course-id="107">
+  <article class="row">
+    <figure class="col-md-4">
+      <a href="/courses/GYM/107/0/about">
+        <img class="img-responsive" src="https://thegymnasium.com/c4x/GYM/107/asset/gym-107.png" alt="107 Modern Web Design Cover Image" />
+      </a>
+      <figcaption>
+        <a href="/courses/GYM/107/0/about" class="gym-button"><b>Learn More</b></a>
+      </figcaption>
+    </figure>
+    <div class="col-md-8 course-description">
+      <header>
+        <h1>Modern Web Design</h1>
+      </header>
+      <p>
+        This course will prepare you to be a front-end developer by walking you through the process of building a simple, responsive website using HTML, CSS and JavaScript.
+
+<div class="row">
+  <div class="col-md-6">
+    <dl>
+      <dt>Skills Covered</dt>
+      <dd><span>HTML Markup</span></dd>
+      <dd><span>Using CSS as a design tool</span></dd>
+      <dd><span>Adding interactivity with JavaScript</span></dd>
+      <dd><span>And more…</span></dd>
+    </dl>
+  </div>
+
+  <div class="col-md-6">
+    <dl>
+      <dt>This course is for </dt>
+      <dd><span>Aspiring Front-End Developers</span></dd>
+      <dd><span>Designers</span></dd>
+      <dd><span>Creatives</span></dd>
+    </dl>
+  </div>
+
+</div>
+      </p>
+    </div>
+  </article>
+</li>
+              </ul>
+            </div>
+
+            <h1 id="gymshorts">
+              Gym Shorts
+            </h1>
+            <p class="hero">
+              Gym Shorts are short, snackable courses that all last under an hour. Like our longer courses, they are practical, taught by experienced practitioners, and focused on in-demand skills and technologies.
+            </p>
+            <ul class="listing-courses" id="gym-shorts-list">
+
+            </ul>
+
+
+          </section>
+        </div>
+      <div class="col-md-3 sidebar">
+
+<article id="gym-jobs">
+
+  <style>
+
+  .courses-container #full {
+    margin-top: -2em;
+    }
+
+	.gym-button {
+		display: inline-block;
+		color: #fff;
+		line-height: 0;
+		background: #f8971d;
+		border-radius: 2px;
+		padding: .8em 1.2em;
+		}
+
+	.gym-button b {
+	  font: bold 1.4em/1.1 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+	  letter-spacing: .025em;
+	  vertical-align: baseline;
+	  }
+
+	.gym-button:hover {
+		color: #fff;
+		text-decoration: none;
+		background: #a6a6a6;
+		}
+
+  .gym-button:focus,
+  .gym-button:active {
+    background: #939393;
+    }
+
+  #gym-jobs header {
+    margin-top: .875em;
+    margin-bottom: .2em;
+    }
+
+	#gym-jobs header h2 {
+		font: 900 1.7em/1.2 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+		color: #222;
+		letter-spacing: .06em;
+		word-spacing: .04em;
+		text-transform: uppercase;
+		margin-top: 0;
+		margin-bottom: .4em;
+		}
+
+	#gym-jobs header p {
+	  font: normal 1.3em/1.3 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+	  color: #222;
+	  letter-spacing: 0.01em;
+	  margin-top: 0;
+	  margin-bottom: 0;
+	  }
+
+	#field-market {
+	  margin: 0;
+	  }
+
+	.find-courses .sidebar .job-board {
+	  padding: 0;
+	  border-top: 0;
+	  margin: 1.2em 0;
+	  }
+
+	#find-work-search a:hover,
+	#find-work-search a:focus {
+	  border-bottom: 0;
+	  }
+
+	#market {
+	  display: block;
+	  width: 100%;
+	  font-size: 1em;
+	  margin: 1em 0;
+	  }
+
+  #find-jobs-job-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1.2em;
+    }
+
+  .job-list-container {
+    margin: 0 1em;
+    }
+
+  .job-list .row {
+    font: 1em/1.15 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border-bottom: 1px solid #ccc;
+    }
+
+  .job-list .row:first-child {
+    border-top: 1px solid #ccc;
+    }
+
+  .job-list a {
+    display: block;
+    position: relative;
+    color: #f8971d;
+    padding: .5em 1.5em .5em .5em;
+    transition: .2s padding-left ease-in-out;
+    }
+
+  .job-list a:hover,
+  .job-list a:focus {
+    padding-left: 1em;
+    }
+
+  .job-list a:hover:before {
+    display: inline-block;
+    position: absolute;
+    top: 0; bottom: 0;
+    right: .5em;
+    font: 1em/1 monospace, monospace;
+    color: #444;
+    content: "→";
+    height: 0;
+    line-height: 0;
+    margin: auto;
+    }
+
+  a:hover .job-title,
+  a:focus .job-title {
+    text-decoration: underline;
+    }
+
+  .job-post {
+    line-height: 1.2;
+    }
+
+  .job-list-container a {
+    font-weight: bold;
+    }
+
+  .view-all-jobs {
+    padding: 0;
+    }
+
+  #gym-jobs .view-all-jobs:hover,
+  #gym-jobs .view-all-jobs:focus {
+    text-decoration: underline;
+    }
+
+  .job-market {
+    display: block;
+    font-style: normal;
+		font: bold .8125em/1 "Helvetica Neue", Helvetica, sans-serif;
+    color: #444;
+		letter-spacing: .02em;
+    white-space: nowrap;
+    margin-top: .4em;
+    margin-bottom: .25em;
+    }
+
+  #view-jobs-button {
+    font-size: 85%;
+    max-width: 32em;
+    width: 100%;
+    border: 0;
+    padding: 1em;
+    cursor: pointer;
+    }
+
+  #view-jobs-button b {
+    font-size: 1.8em;
+    }
+
+  .job-board,
+  .job-list {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    }
+
+  #gym-jobs p.viewing-jobs-in {
+    font: bold 1em/1 "Helvetica Neue", Helvetica, sans-serif;
+    color: #222;
+    letter-spacing: .02em
+    }
+
+  #gym-jobs footer {
+    color: #939393;
+    padding-top: 1em;
+    border-top: 1px dashed #ccc;
+    margin-top: 1em;
+    }
+
+  #gym-jobs footer p {
+    color: #939393;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 0;
+    }
+
+  #gym-jobs footer small {
+    font-size: .8125em;
+    }
+
+  </style>
+
+<header>
+  <h2>Gym Jobs</h2>
+  <p>Find work that best fits your skills, in your area.</p>
+</header>
+
+<form method="get" id="find-work-search" class="">
+  <div class="field select row" id="field-market">
+    <label class="visuallyhidden" id="choose-location" for="market">Select the Nearest Location</label>
+    <div class="">
+      <select id="market" name="market" class="form-control" required="" aria-required="true">
+            <option disabled="">Select A Location:</option>
+            <option disabled="">——————</option>
+          <optgroup label="USA">
+            <option value="23">Atlanta</option>
+            <option value="60">Austin</option>
+            <option value="46">Baltimore</option>
+            <option value="102">Boise</option>
+            <option value="10" selected="">Boston</option>
+            <option value="61">Charlotte</option>
+            <option value="14">Chicago</option>
+            <option value="34">Connecticut</option>
+            <option value="22">Dallas</option>
+            <option value="27">Denver</option>
+            <option value="24">Detroit</option>
+            <option value="826">Houston</option>
+            <option value="58">Indianapolis</option>
+            <option value="13">Los Angeles</option>
+            <option value="33">Miami</option>
+            <option value="20">Minneapolis</option>
+            <option value="807">Moline</option>
+            <option value="30">New Jersey</option>
+            <option value="11">New York City</option>
+            <option value="51">Northern Virginia</option>
+            <option value="32">Ohio</option>
+            <option value="19">Orange County</option>
+            <option value="72">Orlando</option>
+            <option value="18">Philadelphia</option>
+            <option value="31">Phoenix</option>
+            <option value="41">Portland, OR</option>
+            <option value="803">Raleigh/Durham</option>
+            <option value="73">Rhode Island</option>
+            <option value="78">Richmond</option>
+            <option value="16">San Diego</option>
+            <option value="12">San Francisco</option>
+            <option value="17">Seattle</option>
+            <option value="15">Silicon Valley</option>
+            <option value="37">St. Louis</option>
+            <option value="68">Tampa</option>
+            <option value="25">Washington, DC</option>
+            <option value="881">Wisconsin</option>
+          </optgroup>
+            <option disabled="">——————</option>
+          <optgroup label="Canada">
+            <option value="40">Toronto</option>
+            <option value="47">Vancouver</option>
+          </optgroup>
+            <option disabled="">——————</option>
+          <optgroup label="France">
+            <option value="35">Paris</option>
+          </optgroup>
+            <option disabled="">——————</option>
+          <optgroup label="UK">
+            <option value="29">London</option>
+          </optgroup>
+            <option disabled="">——————</option>
+          <optgroup label="Netherlands">
+            <option value="43">Amsterdam</option>
+          </optgroup>
+            <option disabled="">——————</option>
+          <optgroup label="Australia">
+            <option value="36">Melbourne</option>
+            <option value="39">Sydney</option>
+          </optgroup>
+            <option disabled="">——————</option>
+          <optgroup label="Japan">
+            <option value="92">Fukuoka</option>
+            <option value="79">Nagoya</option>
+            <option value="64">Osaka</option>
+            <option value="44">Tokyo</option>
+          </optgroup>
+      </select>
+    </div>
+    <button class="gym-button" id="view-jobs-button"><b>View Jobs</b></button>
+  </div>
+  <section class="job-board">
+    <p class="viewing-jobs-in">Viewing jobs in <var class="job-location"> <var id="find-jobs-market-name">Boston</var></var>…</p>
+
+    <div class="job-list-container">
+      <ul class="job-list" id="find-jobs-job-list">
+        <li class="row">
+          <a href="https://aquent.com/find-work/113419?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=homepagejobs"><div class="job-post"><b class="job-title">Junior Front End Developer</b><em class="job-market"> Boston, MA</em></div></a>
+        </li>
+        <li class="row">
+          <a href="https://aquent.com/find-work/113409?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=homepagejobs"><div class="job-post"><b class="job-title">Marketing Coordinator</b><em class="job-market"> Woonsocket, RI</em></div></a>
+        </li>
+        <li class="row">
+          <a href="https://aquent.com/find-work/113397?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=homepagejobs"><div class="job-post"><b class="job-title">Freelance Production Designer</b><em class="job-market"> Weston, MA</em></div></a>
+        </li>
+        <li class="row">
+          <a href="https://aquent.com/find-work/113356?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=homepagejobs"><div class="job-post"><b class="job-title">UX Content Strategist</b><em class="job-market"> Boston, MA</em></div></a>
+        </li>
+        <li class="row">
+          <a href="https://aquent.com/find-work/113386?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=homepagejobs"><div class="job-post"><b class="job-title">Online Content Coordinator</b><em class="job-market"> Boston, MA</em></div></a>
+        </li>
+      </ul>
+
+      <div class="row">
+        <div class="">
+          <a href="http://aquent.com/find-work/?utm_source=gymnasium&amp;utm_medium=web&amp;utm_campaign=homepagejobs&amp;utm_content=viewall" class="view-all-jobs">
+            View all jobs in <var class="job-location">Boston</var> →
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</form>
+
+<footer role="note">
+<p><small><b>Gym Jobs</b> is powered by <a href="https://aquent.com/find-work/">Aquent</a>, a leading talent agency, and maker of awesomely free courses from <a href="https://thegymnasium.com">Gymnasium</a>.</small></p>
+</footer>
+</article>
+
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
+
+<script type="text/javascript">
+  $(function(){
+    var checkForCourses = setInterval(function(){
+      if ($("li.course-item").length > 0)
+      {
+        clearInterval(checkForCourses);
+        sortCourses();
+      }
+    }, 25);
+
+    var sortCourses = function () {
+      //move courses whose IDs start with a 0 to the Gym Shorts list
+      $("li.course-item[data-course-id^='0']").appendTo('#gym-shorts-list');
+
+      //hide beta Courses
+      $("li.course-item").each(function(idx, elem){
+        var course_title = $(elem).find("h1")[0].innerHTML.toLowerCase().trim();
+
+        if (course_title.indexOf("beta") == 0)
+        {
+          $(elem).remove();
+        }
+      });
+    }
+  })
+</script>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="wrapper-footer">
+  <footer class="container">
+    <div class="row">
+      <nav>
+        <div class="col-md-4">
+          <a href="/">
+            <img class="gymnasium-logo"  src="https://thegymnasium.com/static/gymnasium/images/gymnasiumLogo.png" alt="Aquent Gymnasium" >
+          </a>
+        </div>
+        <div class="col-md-4">
+          <ol class="list-inline text-center footer-link-list">
+            <li><a href="https://medium.com/gymnasium" target="_blank">Blog</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/support">Support</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+          </ol>
+          <div class="copyright">&copy; 2017 Aquent Gymnasium</div>
+        </div>
+      </nav>
+
+      <div class="built-on col-md-4 text-center">
+        <span>
+          <a href="http://openedx.org" target="_blank">
+            <img
+              src="https://files.edx.org/openedx-logos/edx-openedx-logo-tag-light.png"
+              width="150" height="50" alt="Powered by Open edX" />
+          </a>
+
+        </span>
+      </div>
+    </div>
+    <div class="row">
+
+    </div>
+  </footer>
+</div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+  <script type="text/javascript" src="https://thegymnasium.com/static/js/vendor/noreferrer.aa62a3e70ffa.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://thegymnasium.com/static/js/utils/navigation.17df676f9045.js" charset="utf-8"></script>
+
+</body>
+</html>
+
+
+
+<!-- Performance beacon for onload times -->
+

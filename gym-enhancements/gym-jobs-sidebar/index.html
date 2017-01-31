@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/resets.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <style>
+
+  body {
+    margin: 1em;
+    }
+
+  a {
+		color: #f8971d;
+		text-decoration: none;
+		}
+
+	a:hover,
+	a:focus {
+		color: #f8971d;
+		text-decoration: underline;
+		}
+
+	a:active {
+	  outline: none;
+	  }
+
+	.gym-button {
+		display: inline-block;
+		color: #fff;
+		line-height: 0;
+		background: #f8971d;
+		border-radius: 2px;
+		padding: .8em 1.2em;
+		}
+
+	.gym-button b {
+	  font: bold 1.4em/1.1 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+	  letter-spacing: .025em;
+	  vertical-align: baseline;
+	  }
+
+	.gym-button:hover {
+		color: #fff;
+		text-decoration: none;
+		background: #a6a6a6;
+		}
+
+  .gym-button:focus,
+  .gym-button:active {
+    background: #939393;
+    }
+
+	#gym-jobs header h2 {
+		font: 900 1.5em/1.2 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+		color: #222;
+		letter-spacing: .06em;
+		word-spacing: .04em;
+		text-transform: uppercase;
+		margin-top: 0;
+		margin-bottom: .3em;
+		}
+
+	#gym-jobs header p {
+	  font: normal 1.2em/1.3 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+	  color: #222;
+	  letter-spacing: 0.01em;
+	  margin-top: 0;
+	  }
+
+	#market {
+	  display: block;
+	  width: 100%;
+	  font-size: 1em;
+	  margin: 1em 0;
+	  }
+
+  .job-list {
+    list-style: none;
+    padding-left: 0;
+    }
+
+  .job-list .row {
+    font: 1em/1.2 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border-bottom: 1px solid #ccc;
+    }
+
+  .job-list .row:first-child {
+    border-top: 1px solid #ccc;
+    }
+
+  .job-list a {
+    display: block;
+    position: relative;
+    color: #f8971d;
+    padding: .5em 1.5em .5em .5em;
+    text-decoration: none;
+    transition: .3s padding-left ease-in-out;
+    }
+
+  .job-list a:hover,
+  .job-list a:focus {
+    !color: #fff;
+    !background: #f8971d;
+    padding-left: 1.25em;
+    }
+
+  .job-list a:hover:before {
+    display: inline-block;
+    position: absolute;
+    top: 0; bottom: 0;
+    right: .5em;
+    font: 1em/1 monospace, monospace;
+    color: #444;
+    content: "→";
+    height: 0;
+    line-height: 0;
+    margin: auto;
+    }
+
+  a:hover .job-title,
+  a:focus .job-title {
+    text-decoration: underline;
+    }
+
+  .job-market {
+    display: block;
+    font-style: normal;
+		font: bold .8125em/1 "Helvetica Neue", Helvetica, sans-serif;
+    color: #444;
+		letter-spacing: .02em;
+		vertical-align: -2px;
+    white-space: nowrap;
+    margin-top: .2em;
+    }
+
+  #view-jobs-button {
+    max-width: 32em;
+    width: 100%;
+    border: 0;
+    padding: 1em;
+    cursor: pointer;
+    }
+
+  #view-jobs-button b {
+    font-size: 1.8em;
+    }
+
+  .job-board,
+  .job-list {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    }
+
+  .viewing-jobs-in {
+    font: bold .8125em/1 "Helvetica Neue", Helvetica, sans-serif;
+    color: #222;
+    letter-spacing: .02em
+    }
+
+  #gym-jobs footer {
+    color: #939393;
+    padding-top: 1em;
+    border-top: 1px dashed #ccc;
+    margin-top: 1em;
+    }
+
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find Work Sidebar</title>
+  <meta name="author" content="Justin Gagne">
+</head>
+<body>
+
+<article id="gym-jobs">
+
+<header>
+  <h2>Gym Jobs</h2>
+  <p>Find work that best fits your skills, in your area.</p>
+</header>
+
+<form method="get" id="find-work-search" class="">
+  <div class="field select row" id="field-market">
+    <label class="visuallyhidden" id="choose-location" for="market">Select the Nearest Location</label>
+    <div class="">
+      <select id="market" name="market" class="form-control" required="" aria-required="true">
+            <option disabled="">Select A Location:</option>
+            <option disabled="">——————</option>
+          <optgroup label="USA">
+            <option value="23">Atlanta</option>
+            <option value="60">Austin</option>
+            <option value="46">Baltimore</option>
+            <option value="102">Boise</option>
+            <option value="10" selected="">Boston</option>
+            <option value="61">Charlotte</option>
+            <option value="14">Chicago</option>
+            <option value="34">Connecticut</option>
+            <option value="22">Dallas</option>
+            <option value="27">Denver</option>
+            <option value="24">Detroit</option>
+            <option value="826">Houston</option>
+            <option value="58">Indianapolis</option>
+            <option value="13">Los Angeles</option>
+            <option value="33">Miami</option>
+            <option value="20">Minneapolis</option>
+            <option value="807">Moline</option>
+            <option value="30">New Jersey</option>
+            <option value="11">New York City</option>
+            <option value="51">Northern Virginia</option>
+            <option value="32">Ohio</option>
+            <option value="19">Orange County</option>
+            <option value="72">Orlando</option>
+            <option value="18">Philadelphia</option>
+            <option value="31">Phoenix</option>
+            <option value="41">Portland, OR</option>
+            <option value="803">Raleigh/Durham</option>
+            <option value="73">Rhode Island</option>
+            <option value="78">Richmond</option>
+            <option value="16">San Diego</option>
+            <option value="12">San Francisco</option>
+            <option value="17">Seattle</option>
+            <option value="15">Silicon Valley</option>
+            <option value="37">St. Louis</option>
+            <option value="68">Tampa</option>
+            <option value="25">Washington, DC</option>
+            <option value="881">Wisconsin</option>
+          </optgroup>
+            <option disabled="">——————</option>
+          <optgroup label="Canada">
+            <option value="40">Toronto</option>
+            <option value="47">Vancouver</option>
+          </optgroup>
+            <option disabled="">——————</option>
+          <optgroup label="France">
+            <option value="35">Paris</option>
+          </optgroup>
+            <option disabled="">——————</option>
+          <optgroup label="UK">
+            <option value="29">London</option>
+          </optgroup>
+            <option disabled="">——————</option>
+          <optgroup label="Netherlands">
+            <option value="43">Amsterdam</option>
+          </optgroup>
+            <option disabled="">——————</option>
+          <optgroup label="Australia">
+            <option value="36">Melbourne</option>
+            <option value="39">Sydney</option>
+          </optgroup>
+            <option disabled="">——————</option>
+          <optgroup label="Japan">
+            <option value="92">Fukuoka</option>
+            <option value="79">Nagoya</option>
+            <option value="64">Osaka</option>
+            <option value="44">Tokyo</option>
+          </optgroup>
+      </select>
+    </div>
+    <button class="gym-button" id="view-jobs-button"><b>View Jobs</b></button>
+  </div>
+  <section class="job-board">
+    <div class="viewing-jobs-in">Viewing jobs in <var class="job-location"> <var id="find-jobs-market-name">Boston</var></var>…</div>
+
+    <div class="job-list-container">
+      <ul class="job-list" id="find-jobs-job-list">
+        <li class="row">
+          <a href="https://aquent.com/find-work/113419?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=homepagejobs"><div class="job-post"><b class="job-title">Junior Front End Developer</b><em class="job-market"> Boston, MA</em></div></a>
+        </li>
+        <li class="row">
+          <a href="https://aquent.com/find-work/113409?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=homepagejobs"><div class="job-post"><b class="job-title">Marketing Coordinator</b><em class="job-market"> Woonsocket, RI</em></div></a>
+        </li>
+        <li class="row">
+          <a href="https://aquent.com/find-work/113397?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=homepagejobs"><div class="job-post"><b class="job-title">Freelance Production Designer</b><em class="job-market"> Weston, MA</em></div></a>
+        </li>
+        <li class="row">
+          <a href="https://aquent.com/find-work/113356?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=homepagejobs"><div class="job-post"><b class="job-title">UX Content Strategist</b><em class="job-market"> Boston, MA</em></div></a>
+        </li>
+        <li class="row">
+          <a href="https://aquent.com/find-work/113386?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=homepagejobs"><div class="job-post"><b class="job-title">Online Content Coordinator</b><em class="job-market"> Boston, MA</em></div></a>
+        </li>
+      </ul>
+
+      <div class="row">
+        <div class="">
+          <a href="http://aquent.com/find-work/?utm_source=gymnasium&amp;utm_medium=web&amp;utm_campaign=homepagejobs&amp;utm_content=viewall" class="text-center view-all-jobs">
+            View all jobs in <var class="job-location">Boston</var> →
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</form>
+
+<footer role="note">
+<p><small><b>Gym Jobs</b> is powered by <a href="https://aquent.com/find-work/">Aquent</a>, a leading talent agency, and makers of <a href="https://thegymnasium.com">Gymnasium</a>.</small></p>
+</footer>
+
+</article>
+
+</body>
+</html>
