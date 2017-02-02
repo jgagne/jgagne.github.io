@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <!--[if lte IE 9]><html class="ie ie9 lte9" lang="en"><![endif]-->
 <!--[if !IE]><!--><html lang="en"><!--<![endif]-->
@@ -1322,8 +1314,6 @@ Learn how to use Sketch tools and features in order to build a interactive proto
         </div>
       <div class="col-md-3 sidebar">
 
-<article id="job-board">
-
   <style>
 
   .courses-container #full {
@@ -1379,11 +1369,11 @@ Learn how to use Sketch tools and features in order to build a interactive proto
 	  margin-bottom: 0;
 	  }
 
-	#field-market {
+	#job-board #field-market {
 	  margin: 0;
 	  }
 
-	.find-courses .sidebar .job-board {
+	.find-courses .sidebar #job-board .job-board {
 	  padding: 0;
 	  border-top: 0;
 	  margin: 1.2em 0;
@@ -1401,43 +1391,45 @@ Learn how to use Sketch tools and features in order to build a interactive proto
 	  margin: 1em 0;
 	  }
 
+  #job-board .job-list-container {
+    margin: 0 1em;
+    }
+
   #find-jobs-job-list {
     list-style: none;
     padding-left: 0;
     margin-top: 1.2em;
     }
 
-  .job-list-container {
-    margin: 0 1em;
-    }
-
-  .job-list .row {
+  #job-board .job-list .row {
     font: 1em/1.15 "Helvetica Neue", Helvetica, Arial, sans-serif;
     border-bottom: 1px solid #ccc;
     }
 
-  .job-list .row:first-child {
+  #job-board .job-list .row:first-child {
     border-top: 1px solid #ccc;
     }
 
-  .job-list a {
+  #job-board .job-list a {
     display: block;
     position: relative;
     color: #f8971d;
-    padding: .5em 1.5em .5em .5em;
+    height: auto;
+    padding: .5em 1.5em .5em 0;
+    overflow: hidden;
     transition: .2s padding-left ease-in-out;
     }
 
-  .job-list a:hover,
-  .job-list a:focus {
+  #job-board .job-list a:hover,
+  #job-board .job-list a:focus {
     padding-left: 1em;
     }
 
-  .job-list a:hover:before {
+  #job-board .job-list a:hover:before {
     display: inline-block;
     position: absolute;
     top: 0; bottom: 0;
-    right: .5em;
+    right: 0;
     font: 1em/1 monospace, monospace;
     color: #444;
     content: "→";
@@ -1446,20 +1438,21 @@ Learn how to use Sketch tools and features in order to build a interactive proto
     margin: auto;
     }
 
-  a:hover .job-title,
-  a:focus .job-title {
+  #job-board a:hover .job-title,
+  #job-board a:focus .job-title {
     text-decoration: underline;
     }
 
-  .job-post {
+  #job-board .job-post {
     line-height: 1.2;
+    text-transform: capitalize;
     }
 
-  .job-list-container a {
+  #job-board .job-list-container a {
     font-weight: bold;
     }
 
-  .view-all-jobs {
+  #job-board .view-all-jobs {
     padding: 0;
     }
 
@@ -1468,7 +1461,7 @@ Learn how to use Sketch tools and features in order to build a interactive proto
     text-decoration: underline;
     }
 
-  .job-market {
+  #job-board .job-market {
     display: block;
     font-style: normal;
 		font: bold .8125em/1.2 "Helvetica Neue", Helvetica, sans-serif;
@@ -1491,8 +1484,8 @@ Learn how to use Sketch tools and features in order to build a interactive proto
     font-size: 1.8em;
     }
 
-  .job-board,
-  .job-list {
+  #job-board .job-board,
+  #job-board .job-list {
     margin-top: 1em;
     margin-bottom: 1em;
     }
@@ -1521,11 +1514,27 @@ Learn how to use Sketch tools and features in order to build a interactive proto
     font-size: .8125em;
     }
 
+  /* --- resets --- */
+
+  #job-board b.col-xs-8 {
+    width: auto;
+    }
+
+  #job-board em.col-xs-4 {
+    width: 100%;
+    }
+
+  #job-board em.text-right {
+    text-align: left;
+    }
+
   </style>
 
+<article id="job-board">
+
 <header>
-  <h2>Job Coach</h2>
-  <p>Let us find work you that best fits your skills, in your area.</p>
+  <h2>Find Work</h2>
+  <p>Find work that best fits your skills, in your area.</p>
 </header>
 
 <form method="get" id="find-work-search" class="">
@@ -1612,21 +1621,7 @@ Learn how to use Sketch tools and features in order to build a interactive proto
 
     <div class="job-list-container">
       <ul class="job-list" id="find-jobs-job-list">
-        <li class="row">
-          <a href="https://aquent.com/find-work/113419?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=homepagejobs"><div class="job-post"><b class="job-title">Junior Front End Developer</b><em class="job-market"> Boston, MA</em></div></a>
-        </li>
-        <li class="row">
-          <a href="https://aquent.com/find-work/113409?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=homepagejobs"><div class="job-post"><b class="job-title">Marketing Coordinator</b><em class="job-market"> Woonsocket, RI</em></div></a>
-        </li>
-        <li class="row">
-          <a href="https://aquent.com/find-work/113397?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=homepagejobs"><div class="job-post"><b class="job-title">Freelance Production Designer</b><em class="job-market"> WarehamHarrisburg, Massachusetts</em></div></a>
-        </li>
-        <li class="row">
-          <a href="https://aquent.com/find-work/113356?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=homepagejobs"><div class="job-post"><b class="job-title">UX Content Strategist</b><em class="job-market"> Boston, MA</em></div></a>
-        </li>
-        <li class="row">
-          <a href="https://aquent.com/find-work/113386?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=homepagejobs"><div class="job-post"><b class="job-title">Online Content Coordinator</b><em class="job-market"> Boston, MA</em></div></a>
-        </li>
+
       </ul>
 
       <div class="row">
@@ -1642,7 +1637,7 @@ Learn how to use Sketch tools and features in order to build a interactive proto
 </form>
 
 <footer role="note">
-<p><small><b>Job Coach</b> is powered by <a href="https://aquent.com/find-work/">Aquent</a>, a leading talent agency, and maker of awesomely free courses from <a href="https://thegymnasium.com">Gymnasium</a>.</small></p>
+<p><small><b>Find Work</b> is powered by <a href="https://aquent.com/find-work/">Aquent</a>, a leading talent agency, and maker of awesomely free courses from <a href="https://thegymnasium.com">Gymnasium</a>.</small></p>
 </footer>
 </article>
 
