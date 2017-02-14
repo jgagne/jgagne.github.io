@@ -215,28 +215,30 @@
 
 /* viewing jobs in */
 
-#find-work p.viewing-jobs-in {
-  font: bold 1em/1 "Helvetica Neue", Helvetica, sans-serif;
+#find-work h3.viewing-jobs-in {
+  font: bold 1em/1.3 "Helvetica Neue", Helvetica, sans-serif;
   color: #222;
-  letter-spacing: .02em
+  letter-spacing: .02em;
+  text-transform: none;
+  margin-top: 0;
   }
 
 /* footer / optional */
 
-#find-work footer {
+#find-work .note {
   color: #939393;
   padding-top: 1em;
   border-top: 1px dashed #ccc;
   margin-top: 1em;
   }
 
-#find-work footer p {
+#find-work .note p {
   color: #939393;
   line-height: 1.2;
   margin-top: 0;
   margin-bottom: 0;
   }
 
-#find-work footer small {
+#find-work .note small {
   font-size: .8125em;
   }
