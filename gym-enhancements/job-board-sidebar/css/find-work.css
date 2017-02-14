@@ -69,7 +69,7 @@
   display: block;
   width: 100%;
   font-size: 1em;
-  margin: 1em 0;
+  margin: 1.2em 0;
   }
 
 /* find work loading message */
@@ -88,7 +88,7 @@
 /* find work listings */
 
 #find-work .job-list-container {
-  margin: 0 1em;
+  margin: 1.2em 1em 0;
   }
 
 #find-work .job-list-container a {
@@ -115,14 +115,14 @@
   position: relative;
   color: #f8971d;
   height: auto;
-  padding: .5em 1em .5em 0;
+  padding: .6em 1.2em .6em .6em;
   overflow: hidden;
   transition: .2s padding-left ease-in-out;
   }
 
 #find-work .job-list a:hover,
 #find-work .job-list a:focus {
-  padding-left: 1em;
+  padding-left: 1.2em;
   }
 
 #find-work .job-list a:hover:before {
@@ -150,6 +150,7 @@
   }
 
 #find-work .job-title {
+  line-height: 1.3;
   text-transform: capitalize;
   }
 
@@ -159,7 +160,7 @@
   font: bold .8125em/1.2 "Helvetica Neue", Helvetica, sans-serif;
   color: #444;
   letter-spacing: .02em;
-  margin-top: .4em;
+  margin-top: .325em;
   margin-bottom: .25em;
   }
 
@@ -182,10 +183,12 @@
 
 #find-work b.col-xs-8 {
   width: auto;
+  padding: 0;
   }
 
 #find-work em.col-xs-4 {
   width: 100%;
+  padding: 0;
   }
 
 #find-work em.text-right {
