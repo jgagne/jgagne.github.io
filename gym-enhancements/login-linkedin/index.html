@@ -734,6 +734,13 @@
         </div>
     <% } else if ( context.providers.length > 0 || context.hasSecondaryProviders ) {  %>
         <div class="login-providers">
+            <!-- start added markup -->
+            <div class="section-title lines">
+                <h2>
+                    <span class="text">Register</span>
+                </h2>
+            </div>
+            <!-- end added markup -->
             <div class="section-title lines">
                 <h2>
                     <span class="text"><%- gettext("Create an account using") %></span>
@@ -915,36 +922,46 @@
 
 /* --- general form styles (overrides) --- */
 
-form.login-form {
+.login-register form {
   border: 1px solid #ccc;
   border-radius: 2px;
   }
 
-.login-register .section-title.lines:after{
+form.register-form {
+  margin-bottom: 1.6em;
+  }
+
+.login-register .section-title.lines:after {
   background: #ccc;
   }
 
+#register .login-providers .lines:first-child:after,
 .login-form > .lines:after {
  display: none;
  }
 
  /* --- headings --- */
 
- /* sign in / or sign in with / new to gymnasium */
+ /* sign in / register (general to specific) */
+
+.login-register .section-title h2 {
+  font-family: "brandon-grotesque", "Helvetia Neue", Helvetica, sans-serif;
+  font-weight: bold;
+  }
 
 .login-form .section-title h2,
 .toggle-form .section-title h2 {
   font: bold 2.2em/1.15 "brandon-grotesque", "Helvetia Neue", Helvetica, sans-serif;
   }
 
- /* sign in */
-
+#register .login-providers .section-title:first-child h2,
 .login-form > .section-title h2 {
   font: 900 2.4em/1.15 "brandon-grotesque", "Helvetia Neue", Helvetica, sans-serif;
   text-transform: uppercase;
   text-align: left;
   }
 
+#register .login-providers .section-title.lines:first-child .text,
 .login-form > .section-title.lines .text {
   padding: 0;
   }
