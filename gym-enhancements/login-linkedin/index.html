@@ -630,7 +630,7 @@
         <h4 class="message-title"><%- gettext("Password Reset Email Sent") %></h4>
         <div class="message-copy">
             <p>
-                <%- gettext("We've sent instructions for resetting your password to the email address you provided.") %>
+                <%- gettext("We’ve sent instructions for resetting your password to the email address you provided.") %>
             </p>
         </div>
     </div>
@@ -936,7 +936,8 @@ form.register-form {
   }
 
 #register .login-providers .lines:first-child:after,
-.login-form > .lines:after {
+.login-form > .lines:after,
+.password-reset-form > .lines:after {
  display: none;
  }
 
@@ -955,14 +956,16 @@ form.register-form {
   }
 
 #register .login-providers .section-title:first-child h2,
-.login-form > .section-title h2 {
+.login-form > .section-title h2,
+.password-reset-form .section-title > h2 {
   font: 900 2.4em/1.15 "brandon-grotesque", "Helvetia Neue", Helvetica, sans-serif;
   text-transform: uppercase;
   text-align: left;
   }
 
 #register .login-providers .section-title.lines:first-child .text,
-.login-form > .section-title.lines .text {
+.login-form > .section-title.lines .text,
+.password-reset-form .section-title.lines .text {
   padding: 0;
   }
 
@@ -1012,10 +1015,33 @@ form.register-form {
   box-shadow: none;
   }
 
-/* tip */
+/* select market */
+
+#register-market {
+  font-size: 2em; /* revisit */
+  }
+
+/* tips */
 
 .login-register .form-field .tip {
   color: #444;
+  }
+
+.login-register .form-field .tip-input,
+.login-register .form-field .field-link {
+  font: normal 1em/1.15 "Helvetia Neue", Helvetica, sans-serif;
+  }
+
+.login-register .form-field .field-link {
+  font-weight: bold;
+  }
+
+/* --- message text / paragraph --- */
+
+.login-register p.action-label,
+.login-register .status p.message-copy {
+  font: normal 1.6em/1.4 "brandon-grotesque", "Helvetia Neue", Helvetica, sans-serif;
+  margin-bottom: 1em;
   }
 
 /* --- forget password link --- */
@@ -1025,6 +1051,7 @@ form.register-form {
   color: #f8971d;
   border: 0;
   margin-top: 0;
+  vertical-align: middle;
   }
 
 .login-register .form-field .forgot-password:hover,
@@ -1036,6 +1063,58 @@ form.register-form {
   font-size: 1.6em;
   font-weight: 900;
   letter-spacing: .01em;
+  }
+
+/* --- status message --- */
+
+.login-register .status {
+  padding: 1.8em;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: none;
+  }
+
+.login-register .status .message-title {
+  font: bold 2em/1.25 "brandon-grotesque", "Helvetia Neue", Helvetica, sans-serif;
+  color: #fff!important;
+  text-transform: capitalize;
+  margin-top: 0;
+  margin-bottom: .625em;
+  }
+
+.login-register .status ul {
+  margin-top: 1.4em;
+  }
+
+.login-register .status li {
+  font: bold 1em/1.5 "Helvetica Neue", Helvetica, sans-serif;
+  letter-spacing: .01em;
+  color: #fff;
+  margin-top: 1em;
+  }
+
+/* --- success --- */
+
+.login-register .submission-success {
+  background: #1c7f1f;
+  }
+
+/* --- error --- */
+
+.login-register .submission-error {
+  background: #d43f3a;
+  }
+
+.login-register .form-field label.error {
+  display: inline-block;
+  color: #fff;
+  padding: .5em;
+  background: #d43f3a;
+  border-radius: 2px;
+  }
+
+.login-register .form-field input.error {
+  border: 2px solid #d43f3a;
   }
 
 </style>
@@ -1054,13 +1133,13 @@ form.register-form {
         <h4 class="message-title">Password Reset Email Sent</h4>
         <div class="message-copy">
             <p>
-                We've sent instructions for resetting your password to the email address you provided.
+                We’ve sent instructions for resetting your password to the email address you provided.
             </p>
         </div>
     </div>
 
     <div class="status submission-error hidden">
-        <h4 class="message-title">We couldn't sign you in.</h4>
+        <h4 class="message-title">We couldn’t sign you in.</h4>
         <ul class="message-copy"></ul>
     </div>
 </div>
