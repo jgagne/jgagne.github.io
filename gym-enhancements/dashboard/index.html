@@ -1,0 +1,2215 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]><html class="ie ie9 lte9" lang="en"><![endif]-->
+<!--[if !IE]><!--><html lang="en"><!--<![endif]-->
+<head dir="ltr">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+      <title>
+       Dashboard | Gymnasium
+      </title>
+
+
+      <script type="text/javascript">
+        /* immediately break out of an iframe if coming from the marketing website */
+        (function(window) {
+          if (window.location !== window.top.location) {
+            window.top.location = window.location;
+          }
+        })(this);
+      </script>
+
+
+
+  <script type="text/javascript" src="https://thegymnasium.com/static/js/i18n/en/djangojs.b28203373cc1.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="https://thegymnasium.com/static/gymnasium/images/favicon.f729730b6e79.ico" />
+
+
+
+
+    <link href="https://thegymnasium.com/static/gymnasium/css/lms-style-vendor.a0d47e130e81.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+    <link href="https://thegymnasium.com/static/gymnasium/css/lms-main-v1.e10c943d9abb.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+    <script type="text/javascript" src="https://thegymnasium.com/static/gymnasium/js/lms-base-vendor.e8570a69987c.js" charset="utf-8"></script>
+
+
+
+    <script type="text/javascript" src="https://thegymnasium.com/static/gymnasium/js/lms-base-application.27947dff6bb9.js" charset="utf-8"></script>
+
+
+
+  <script>
+    window.baseUrl = "/static/";
+    (function (require) {
+      require.config({
+          baseUrl: window.baseUrl
+      });
+    }).call(this, require || RequireJS.require);
+  </script>
+  <script type="text/javascript" src="https://thegymnasium.com/static/lms/js/require-config.667a9b347d82.js"></script>
+
+    <script type="text/javascript">
+        (function (require) {
+          require.config({
+              paths: {
+                'js/courseware/courseware_factory': 'js/courseware/courseware_factory.79c507070080',
+'draggabilly': 'js/vendor/draggabilly.26caba6f7187',
+'js/courseware/toggle_element_visibility': 'js/courseware/toggle_element_visibility.e564e0ed228c',
+'js/courseware/course_home_events': 'js/courseware/course_home_events.4e8915731e7d',
+'js/courseware/link_clicked_events': 'js/courseware/link_clicked_events',
+'edxicons': 'edx-pattern-library/js/edx-icons.a9ab01bc44bf',
+'moment': 'js/vendor/moment-with-locales.min.cf6d65fe3e48',
+'js/student_profile/views/learner_profile_factory': 'js/student_profile/views/learner_profile_factory.a37af816bdc9',
+'jquery.url': 'js/vendor/url.min.0098a9ff3d53',
+'js/student_account/logistration_factory': 'js/student_account/logistration_factory.f3eba77aab43',
+'js/groups/views/cohorts_dashboard_factory': 'js/groups/views/cohorts_dashboard_factory.65bc243bc330',
+'afontgarde': 'edx-pattern-library/js/afontgarde.f6413e623704',
+'js/courseware/accordion_events': 'js/courseware/accordion_events.1bf82c871285',
+'js/bookmarks/views/bookmark_button': 'js/bookmarks/views/bookmark_button.f9d16d58a9d8',
+'js/views/message_banner': 'js/views/message_banner.13d853dc7834'
+            }
+          });
+        }).call(this, require || RequireJS.require);
+    </script>
+
+
+
+
+
+
+
+
+
+<meta property="og:url" content="http://thegymnasium.com/" />
+<meta property="og:title" content="Aquent Gymnasium" />
+<meta property="og:image" content="/static/gymnasium/images/social-share-400.f9715ec47ea8.png" />
+<meta property="og:description" content="At Aquent Gymnasium, we offer free online courses focused on HTML and CSS, responsive design, UX design, and an array of front-end development tools." />
+<meta property="og:keywords" content="free online courses" />
+
+
+<!-- insert typekit font references -->
+<script src="https://thegymnasium.com/use.typekit.net/rhf0qta.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+
+<!-- bootstrap! -->
+<!-- local reference for offline testing only -->
+<!-- <link rel="stylesheet" href="https://thegymnasium.com/static/gymnasium/css/bootstrap.e60e9bcfcac0.css" > -->
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+
+<script src="https://thegymnasium.com/static/gymnasium/js/prism.19f6a94bf245.js"> </script>
+<script src="https://thegymnasium.com/static/gymnasium/js/cookiebanner.1f4136cf4977.js" id="cookiebanner"
+	data-link="#f89820"
+	data-message="We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. Find out more about how we use cookies in our"
+	data-linkmsg="Privacy Policy."
+	data-moreinfo="/privacy">
+</script>
+
+<script>
+  var CLOUDWALL_ENV = "my";
+</script>
+
+<script src="https://thegymnasium.com/static/gymnasium/js/gymnasium.js"> </script>
+
+
+<script>
+  // check for unsupported browsers; display warning message if an old browser
+  // is in use
+
+  $(function(){
+    // This function returns Internet Explorer's major version number,
+    // or 0 for others. It works by finding the "MSIE " string and
+    // extracting the version number following the space, up to the decimal
+    // point, ignoring the minor version number
+    // for more info, see: https://support.microsoft.com/en-us/kb/167820
+    function msieversion()
+    {
+      var ua = window.navigator.userAgent
+      var msie = ua.indexOf ( "MSIE " )
+
+      if ( msie > 0 )      // If Internet Explorer, return version number
+         return parseInt (ua.substring (msie+5, ua.indexOf (".", msie )))
+      else                 // If another browser, return 0
+         return 0
+    }
+
+    function displayBrowserWarning()
+    {
+      $('#browserWarning').show();
+    }
+
+    var ieversion = msieversion();
+    // make sure that we are using IE > 9
+    if (ieversion > 0 && ieversion < 11)
+    {
+      displayBrowserWarning();
+    }
+
+  });
+
+
+	//this is a nonsense hack to make courseware subnavigation look like
+	//what we want it to look like until we move to Cypress
+	//TODO: Unhackify this.
+	$(function(){
+		$('.course-tabs li a b:contains("Course")').each(function(idx, value){
+			value.innerHTML = "Lessons";
+		});
+
+		$('.course-tabs li a b:contains("Home")').each(function(idx,value){
+			value.innerHTML = "Syllabus";
+		});
+
+    $('.course-tabs li a b:contains("Discussion")').each(function(idx, value) {
+      value.innerHTML = "Forum";
+    });
+
+    // make sure lessons tab comes first
+    var syllabusTab = $('.course-tabs li:contains("Lessons")');
+    $(syllabusTab).prependTo(
+      $(syllabusTab).parent()
+    );
+
+		$('.course-tabs li a:contains("Forum")').each(function(idx,value){
+			//TODO: Unhack this silly logic to hide forum tab for gym shorts
+
+			//we're looking at the href property of this anchor to see if it contains
+			//a course link that has "Gym/00" in it.  All gym shorts start with "0"
+			//so that should hide this link. Note that this does _not_ disable
+			//forums... those pages will still exist, but we won't like to them.
+			if ($(value).attr("href").toLowerCase().indexOf("gym/0") > 0)
+			{
+				$(value).parent().hide();
+			}
+		})
+
+		$('.course-tabs li:contains("Progress")').hide();
+		$('.course-tabs').show();
+	});
+</script>
+
+<!-- eloqua tracking code -->
+<script type="text/javascript">
+  var _elqQ = _elqQ || [];
+  _elqQ.push(['elqSetSiteId', '386085125']);
+  _elqQ.push(['elqTrackPageView']);
+
+  (function() {
+    function async_load() {
+      var s = document.createElement('script'); s.type ='text/javascript';
+      s.async = true; s.src = '//img.en25.com/i/elqCfg.min.js';
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+
+    if (window.addEventListener) window.addEventListener('DOMContentLoaded', async_load, false);
+    else if (window.attachEvent) window.attachEvent('onload',async_load);
+  })();
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-684147-51', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>
+  var HW_config = {
+    selector: "#headway-changelog-anchor", // CSS selector where to inject the badge
+    account: "J3mN9x" // your account ID
+  };
+</script>
+<script async src="https://thegymnasium.com/cdn.headwayapp.co/widget.js"></script>
+
+
+<script>
+
+  var __intercom_app_id__;
+  switch (CLOUDWALL_ENV) {
+    case 'cw-rc':
+    case 'cw-beta':
+      __intercom_app_id__ = 'jz17y7nd'; // test intercom app id
+      break;
+    default:
+      __intercom_app_id__ = 'oej77pbg'; // production intercom app id
+  }
+
+  window.intercomSettings = {
+    //  The current logged in user's full name
+    name: "Justin Gagne",
+    //  The current logged in user's email address.
+    email: "justin@velle.us",
+    //  The current logged in user's sign-up date as a Unix timestamp.
+    created_at: "2015-11-09T14:45:06+00:00",
+    //  The current logged in user's username.
+    user_id: "JustinGagne",
+    //prod app id
+    app_id: __intercom_app_id__,
+  };
+</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/oej77pbg';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+
+
+
+
+
+
+
+
+<!-- dummy Segment -->
+<script type="text/javascript">
+  var analytics = {
+    track: function() { return; },
+    trackLink: function() { return; },
+    pageview: function() { return; },
+    page: function() { return; }
+  };
+</script>
+<!-- end dummy Segment -->
+
+
+  <meta name="path_prefix" content="">
+  <meta name="google-site-verification" content="_mipQ4AtZQDNmbtOkwehQDOgCxUUV2fb_C0b6wbiRHY" />
+
+
+
+</head>
+
+<body class="ltr view-dashboard is-authenticated lang_en">
+
+
+<div id="page-prompt"></div>
+  <div class="window-wrap" dir="ltr">
+    <a class="nav-skip" href="#main">Skip to main content</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <header class="global" aria-label="Global Navigation">
+    <nav id="primary-nav" class="black-background container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="navbar">
+            <div class="nav navbar navbar-nav navbar-left">
+            </div>
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav navbar-right">
+
+
+                  <li>
+                    <a href="#" id="dropdown" class="logged-in-username">
+                      JustinGagne <span class="caret"></span>
+                    </a>
+                    <ul class="" id="dropdown-menu">
+                      <li><a href="https://thegymnasium.com/logout" role="menuitem">Log Out</a></li>
+                    </ul>
+                  </li>
+
+
+                <li><a href="http://www.aquent.com" target="_blank" alt="Aquent" class="gym-nav-icon-container"> <i class="gym-nav-icon aquent-icon"></i></a></li>
+                <li><a href="http://www.vitamintalent.com" target="_blank" alt="Vitamin T" class="gym-nav-icon-container"> <i class="gym-nav-icon vitamin-t-icon"></i></a></li>
+
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <nav id="secondary-nav" class="container-fluid">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 navbar navbar-default">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#secondary-nav-items">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="https://thegymnasium.com/">
+
+  <img class="gymnasium-logo" src="https://thegymnasium.com/static/gymnasium/images/gymnasiumLogo.png" alt="Home Page" />
+
+              </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="secondary-nav-items">
+              <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="https://thegymnasium.com/courses">Courses</a></li>
+                <li><a href="https://gymnasium.jobboard.io">Jobs</a></li>
+                <li><a href="https://thegymnasium.com/about">About</a></li>
+
+
+
+                      <li class="nav-global-01">
+                        <a href="https://thegymnasium.com/dashboard">Dashboard</a>
+                      </li>
+                      <li class="visible-xs">
+                        <a href="https://thegymnasium.com/logout">Log out</a>
+                      </li>
+
+
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="wrapper-msg urgency-high" id="browserWarning" style="display:none;">
+        <div class="msg">
+            <div class="msg-content">
+                <h1>Improve your Gymnasium experience</h1>
+                <div class="copy">
+                    <p>It looks like you’re using an unsupported browser. To get the most out of your Gymnasium experience, we recommend that you use
+                      <a href="https://www.google.com/chrome/index.html" target="_blank">Chrome</a>,
+                      <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a>, or
+                      <a href="http://www.apple.com/safari/" target="_blank">Safari</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </header>
+
+    <!-- PRODUCTION PRODUCTION PRODUCTION -->
+
+
+
+
+
+
+
+
+
+
+
+<script async>
+  $(function(){
+    var button = document.getElementById("dropdown");
+
+    $(button).click(function(){
+      var menu = document.getElementById("dropdown-menu");
+
+      var caret=$(button).children('.caret');
+
+      if (menu.style.display !== "inline") {
+          menu.style.display = "inline";
+          $(caret).hide();
+      }
+      else {
+        menu.style.display = "none";
+        $(caret).show();
+      }
+    });
+  })
+</script>
+
+
+    <div class="content-wrapper" id="content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/template" id="donation-tpl">
+  <div class="donation-error-msg" />
+<form class="nav-item donate-form">
+    <span class="monetary-symbol">$</span>
+    <input class="amount" type="text" name="amount" value="10" />
+    <button class="btn action-primary action-donate" type="submit" name="Donate"><%- gettext('Donate') %></button>
+</form>
+<form class="payment-form"></form>
+
+</script>
+
+<script type="text/template" id="dashboard_search_item-tpl">
+    <div class="result-excerpt"><%= excerpt %></div>
+<a class="result-link" href="<%- url %>"><%= gettext("View") %> <span class="icon fa fa-arrow-right" aria-hidden="true"></span></a>
+<span class="result-course-name"><%- course_name %>:</span>
+<span class="result-location"><%- location.join(' ▸ ') %></span>
+<span class="result-type"><%- content_type %></span>
+
+</script>
+<script type="text/template" id="dashboard_search_results-tpl">
+    <header class="search-info">
+    <a class="search-back-to-courses" href="#"><%= gettext("Back to Dashboard") %></a>
+    <h2><%= gettext("Search Results") %></h2>
+    <div class="search-count"><%= totalCountMsg %></div>
+</header>
+
+<% if (totalCount > 0 ) { %>
+
+    <ol class='search-result-list'></ol>
+
+    <% if (hasMoreResults) { %>
+        <a class="search-load-next" href="#">
+            <%= interpolate(
+                ngettext("Load next %(num_items)s result", "Load next %(num_items)s results", pageSize),
+                { num_items: pageSize },
+                true
+            ) %>
+            <span class="icon fa fa-spinner fa-spin" aria-hidden="true"></span>
+        </a>
+    <% } %>
+
+<% } else { %>
+
+    <p><%= gettext("Sorry, no results were found.") %></p>
+
+<% } %>
+
+</script>
+<script type="text/template" id="search_loading-tpl">
+    <span class="icon fa fa-spinner fa-spin" aria-hidden="true"></span> <%= gettext("Loading") %>
+
+
+</script>
+<script type="text/template" id="search_error-tpl">
+    <%= gettext("There was an error, try searching again.") %>
+
+</script>
+
+
+
+
+<div class="dashboard-notifications" tabindex="-1">
+
+</div>
+
+<div class="course-title container-fluid">
+  <header class="container">
+    <div class="row">
+      <h1>Dashboard</h1>
+    </div>
+  </header>
+</div>
+
+<style>
+
+#course-header-007,
+#course-header-100,
+#course-header-101,
+#course-header-107 {
+  background: #d73158;
+  }
+
+#course-header-002,
+#course-header-102,
+#course-header-104,
+#course-header-108 {
+  background: #764C9F;
+  }
+
+#course-header-005,
+#course-header-008,
+#course-header-103 {
+  background: #5CA5A0;
+  }
+
+#course-header-105,
+#course-header-106 {
+  background: #2C9959;
+  }
+
+.profile-sidebar details {
+  padding: 1.2em 0;
+  border-bottom: 1px dashed  #ccc;
+  margin-bottom: 2.4em;
+  }
+
+.profile-sidebar summary.gym-link {
+  display: inline-block;
+  cursor: pointer;
+  }
+
+.profile-sidebar summary.gym-link:focus {
+  outline: 0;
+  border-color: #f8971d;
+  }
+
+.find-work-comp {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  }
+
+#dashboard-main .course-item {
+ }
+
+#dashboard-main .course header img {
+  margin: -1.5em;
+  }
+
+
+/* do not include these styles */
+
+/*
+
+@media (min-width: 48em) {
+
+#my-courses {
+  }
+
+#dashboard-main .listing-courses {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: .9em 1.8em;
+  }
+
+#dashboard-main .course-item {
+  display: grid;
+  }
+
+#dashboard-main .course {
+  align-self: stretch;
+  background: #444;
+  }
+
+#dashboard-main .course header img {
+  }
+
+#dashboard-main .course-options {
+  }
+
+}
+
+ */
+
+</style>
+
+<main id="main" aria-label="Content" tabindex="-1" class="content-wrapper">
+    <section class="container course-content" id="dashboard-main">
+      <div class="row">
+        <section class="my-courses col-md-9" id="my-courses">
+
+          <header class="hero">
+            <h1>My Courses</h1>
+          </header>
+
+          <ul class="listing-courses">
+
+<li class="course-item">
+
+
+  <article class="course">
+    <header id="course-header-007">
+      <div class="row">
+        <img class="col-md-3 col-xs-12 col-sm-12 image-responsive" src="https://thegymnasium.com/c4x/GYM/007/asset/gym-007.png" alt="Structuring and Organizing HTML5 Forms Cover Image" id ="course-image-007" />
+        <div class="col-md-9 col-xs-12 col-sm-12">
+          <h1>Structuring and Organizing HTML5 Forms</h1>
+          <div class="row">
+            <section class="info col-md-12">
+              <hgroup>
+                <p class="date-block">
+
+                </p>
+              </hgroup>
+
+            </section>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="course-options">
+      <div class="row">
+        <div class="col-md-3">
+              <a href="https://thegymnasium.com/courses/GYM/007/0/info" class="gym-button"><b>Go to Class</b></a>
+        </div>
+        <ul class="col-md-9 dashboard-listing-links">
+
+            <li>
+              <a href="#unenroll-modal" class="" rel="leanModal" data-course-id="GYM/007/0" data-course-number="007"
+                onclick="
+                  document.getElementById('track-info').innerHTML='Are you sure you want to unenroll from';
+                  document.getElementById('refund-info').innerHTML='';
+                  document.getElementById('unenroll-course-name').innerHTML='Structuring and Organizing HTML5 Forms';
+                  $('#unenroll_course_id').val('GYM/007/0');
+                ">
+                Unenroll
+              </a>
+
+        </ul>
+      </div>
+    </div>
+  </article>
+</li>
+
+
+<script>
+  //note: this is legacy code from the original edx template.  Not sure what it does.  -MB
+  $( document ).ready(function() {
+
+     if("False" == "True"){
+         $( "#unregister_block_course" ).click(function() {
+             $('.disable-look-unregister').click();
+         });
+     }
+  });
+</script>
+
+<script>
+  $(function(){
+    Gymnasium.setBackgroundColorOfElementFromImage('#course-header-007', '#course-image-007');
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="course-item">
+
+
+  <article class="course">
+
+
+
+    <header id = "course-header-108">
+      <div class="row">
+        <img class="col-md-3 col-xs-12 col-sm-12 image-responsive" src="https://thegymnasium.com/asset-v1:GYM+108+0+type@asset+block@JSSG-retina-course-image.png" alt="JavaScript &amp; jQuery Survival Guide Cover Image" id ="course-image-108" />
+        <div class="col-md-9 col-xs-12 col-sm-12">
+          <h1>JavaScript &amp; jQuery Survival Guide</h1>
+          <div class="row">
+            <section class="info col-md-12">
+              <hgroup>
+                <p class="date-block">
+
+                </p>
+              </hgroup>
+
+            </section>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="course-options">
+      <div class="row">
+        <div class="col-md-3">
+              <a href="https://thegymnasium.com/courses/course-v1:GYM+108+0/info" class="gym-button"><b>Go to Class</b></a>
+        </div>
+        <ul class="col-md-9 dashboard-listing-links">
+
+            <li>
+              <a href="#unenroll-modal" class="" rel="leanModal" data-course-id="course-v1:GYM+108+0" data-course-number="108"
+                onclick="
+                  document.getElementById('track-info').innerHTML='Are you sure you want to unenroll from';
+                  document.getElementById('refund-info').innerHTML='';
+                  document.getElementById('unenroll-course-name').innerHTML='JavaScript &amp; jQuery Survival Guide';
+                  $('#unenroll_course_id').val('course-v1:GYM+108+0');
+                ">
+                Unenroll
+              </a>
+
+        </ul>
+      </div>
+    </div>
+  </article>
+</li>
+
+
+<script>
+  //note: this is legacy code from the original edx template.  Not sure what it does.  -MB
+  $( document ).ready(function() {
+
+     if("False" == "True"){
+         $( "#unregister_block_course" ).click(function() {
+             $('.disable-look-unregister').click();
+         });
+     }
+  });
+</script>
+
+<script>
+  $(function(){
+    Gymnasium.setBackgroundColorOfElementFromImage('#course-header-108', '#course-image-108');
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="course-item">
+
+
+  <article class="course">
+
+
+
+    <header id = "course-header-005">
+      <div class="row">
+        <img class="col-md-3 col-xs-12 col-sm-12 image-responsive" src="https://thegymnasium.com/c4x/GYM/005/asset/gym-005-updated-bandage.png" alt="Introducing Sketch for UX and UI Cover Image" id ="course-image-005" />
+        <div class="col-md-9 col-xs-12 col-sm-12">
+          <h1>Introducing Sketch for UX and UI</h1>
+          <div class="row">
+            <section class="info col-md-12">
+              <hgroup>
+                <p class="date-block">
+
+                </p>
+              </hgroup>
+
+            </section>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="course-options">
+      <div class="row">
+        <div class="col-md-3">
+              <a href="https://thegymnasium.com/courses/GYM/005/0/info" class="gym-button"><b>Go to Class</b></a>
+        </div>
+        <ul class="col-md-9 dashboard-listing-links">
+
+            <li>
+              <a href="#unenroll-modal" class="" rel="leanModal" data-course-id="GYM/005/0" data-course-number="005"
+                onclick="
+                  document.getElementById('track-info').innerHTML='Are you sure you want to unenroll from';
+                  document.getElementById('refund-info').innerHTML='';
+                  document.getElementById('unenroll-course-name').innerHTML='Introducing Sketch for UX and UI';
+                  $('#unenroll_course_id').val('GYM/005/0');
+                ">
+                Unenroll
+              </a>
+
+        </ul>
+      </div>
+    </div>
+  </article>
+</li>
+
+
+<script>
+  //note: this is legacy code from the original edx template.  Not sure what it does.  -MB
+  $( document ).ready(function() {
+
+     if("False" == "True"){
+         $( "#unregister_block_course" ).click(function() {
+             $('.disable-look-unregister').click();
+         });
+     }
+  });
+</script>
+
+<script>
+  $(function(){
+    Gymnasium.setBackgroundColorOfElementFromImage('#course-header-005', '#course-image-005');
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="course-item">
+
+
+  <article class="course">
+
+
+
+    <header id = "course-header-107">
+      <div class="row">
+        <img class="col-md-3 col-xs-12 col-sm-12 image-responsive" src="https://thegymnasium.com/c4x/GYM/107/asset/gym-107.png" alt="Modern Web Design Cover Image" id ="course-image-107" />
+        <div class="col-md-9 col-xs-12 col-sm-12">
+          <h1>Modern Web Design</h1>
+          <div class="row">
+            <section class="info col-md-12">
+              <hgroup>
+                <p class="date-block">
+
+                </p>
+              </hgroup>
+
+
+
+
+
+
+
+
+
+<div class="message message-status course-status-certavailable is-shown">
+  <p class="message-copy">Final grade:
+  <span class="grade-value">95%</span>.
+  </p>
+
+  <div class="wrapper-message-primary">
+    <ul class="actions actions-primary">
+    </ul>
+  </div>
+
+
+</div>
+
+
+            </section>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="course-options">
+      <div class="row">
+        <div class="col-md-3">
+              <a href="https://thegymnasium.com/courses/GYM/107/0/info" class="gym-button"><b>Go to Class</b></a>
+        </div>
+        <ul class="col-md-9 dashboard-listing-links">
+            <li>
+              <li class="action action-certificate">
+              <a href="https://www.accredible.com/10389725"
+                title="This link will open/download a PDF document">
+                My Certificate</a></li>
+            </li>
+
+            <li>
+              <a href="#unenroll-modal" class="" rel="leanModal" data-course-id="GYM/107/0" data-course-number="107"
+                onclick="
+                  document.getElementById('track-info').innerHTML='Are you sure you want to unenroll from';
+                  document.getElementById('refund-info').innerHTML='';
+                  document.getElementById('unenroll-course-name').innerHTML='Modern Web Design';
+                  $('#unenroll_course_id').val('GYM/107/0');
+                ">
+                Unenroll
+              </a>
+
+        </ul>
+      </div>
+    </div>
+  </article>
+</li>
+
+
+<script>
+  //note: this is legacy code from the original edx template.  Not sure what it does.  -MB
+  $( document ).ready(function() {
+
+     if("False" == "True"){
+         $( "#unregister_block_course" ).click(function() {
+             $('.disable-look-unregister').click();
+         });
+     }
+  });
+</script>
+
+<script>
+  $(function(){
+    Gymnasium.setBackgroundColorOfElementFromImage('#course-header-107', '#course-image-107');
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="course-item">
+
+
+  <article class="course">
+
+
+
+    <header id = "course-header-008">
+      <div class="row">
+        <img class="col-md-3 col-xs-12 col-sm-12 image-responsive" src="https://thegymnasium.com/c4x/GYM/008/asset/gym-008.png" alt="Advanced Rapid Prototyping With Axure Cover Image" id ="course-image-008" />
+        <div class="col-md-9 col-xs-12 col-sm-12">
+          <h1>Advanced Rapid Prototyping With Axure</h1>
+          <div class="row">
+            <section class="info col-md-12">
+              <hgroup>
+                <p class="date-block">
+
+                </p>
+              </hgroup>
+
+            </section>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="course-options">
+      <div class="row">
+        <div class="col-md-3">
+              <a href="https://thegymnasium.com/courses/GYM/008/0/info" class="gym-button"><b>Go to Class</b></a>
+        </div>
+        <ul class="col-md-9 dashboard-listing-links">
+
+            <li>
+              <a href="#unenroll-modal" class="" rel="leanModal" data-course-id="GYM/008/0" data-course-number="008"
+                onclick="
+                  document.getElementById('track-info').innerHTML='Are you sure you want to unenroll from';
+                  document.getElementById('refund-info').innerHTML='';
+                  document.getElementById('unenroll-course-name').innerHTML='Advanced Rapid Prototyping With Axure';
+                  $('#unenroll_course_id').val('GYM/008/0');
+                ">
+                Unenroll
+              </a>
+
+        </ul>
+      </div>
+    </div>
+  </article>
+</li>
+
+
+<script>
+  //note: this is legacy code from the original edx template.  Not sure what it does.  -MB
+  $( document ).ready(function() {
+
+     if("False" == "True"){
+         $( "#unregister_block_course" ).click(function() {
+             $('.disable-look-unregister').click();
+         });
+     }
+  });
+</script>
+
+<script>
+  $(function(){
+    Gymnasium.setBackgroundColorOfElementFromImage('#course-header-008', '#course-image-008');
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="course-item">
+
+
+  <article class="course">
+
+
+
+    <header id = "course-header-104">
+      <div class="row">
+        <img class="col-md-3 col-xs-12 col-sm-12 image-responsive" src="https://thegymnasium.com/c4x/GYM/104/asset/gym-104.png" alt="JavaScript Foundations Cover Image" id ="course-image-104" />
+        <div class="col-md-9 col-xs-12 col-sm-12">
+          <h1>JavaScript Foundations</h1>
+          <div class="row">
+            <section class="info col-md-12">
+              <hgroup>
+                <p class="date-block">
+
+                </p>
+              </hgroup>
+
+            </section>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="course-options">
+      <div class="row">
+        <div class="col-md-3">
+              <a href="https://thegymnasium.com/courses/GYM/104/0/info" class="gym-button"><b>Go to Class</b></a>
+        </div>
+        <ul class="col-md-9 dashboard-listing-links">
+
+            <li>
+              <a href="#unenroll-modal" class="" rel="leanModal" data-course-id="GYM/104/0" data-course-number="104"
+                onclick="
+                  document.getElementById('track-info').innerHTML='Are you sure you want to unenroll from';
+                  document.getElementById('refund-info').innerHTML='';
+                  document.getElementById('unenroll-course-name').innerHTML='JavaScript Foundations';
+                  $('#unenroll_course_id').val('GYM/104/0');
+                ">
+                Unenroll
+              </a>
+
+        </ul>
+      </div>
+    </div>
+  </article>
+</li>
+
+
+<script>
+  //note: this is legacy code from the original edx template.  Not sure what it does.  -MB
+  $( document ).ready(function() {
+
+     if("False" == "True"){
+         $( "#unregister_block_course" ).click(function() {
+             $('.disable-look-unregister').click();
+         });
+     }
+  });
+</script>
+
+<script>
+  $(function(){
+    Gymnasium.setBackgroundColorOfElementFromImage('#course-header-104', '#course-image-104');
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="course-item">
+
+
+  <article class="course">
+
+
+
+    <header id = "course-header-102">
+      <div class="row">
+        <img class="col-md-3 col-xs-12 col-sm-12 image-responsive" src="https://thegymnasium.com/c4x/GYM/102/asset/gym-102.png" alt="jQuery Building Blocks Cover Image" id ="course-image-102" />
+        <div class="col-md-9 col-xs-12 col-sm-12">
+          <h1>jQuery Building Blocks</h1>
+          <div class="row">
+            <section class="info col-md-12">
+              <hgroup>
+                <p class="date-block">
+
+                </p>
+              </hgroup>
+
+            </section>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="course-options">
+      <div class="row">
+        <div class="col-md-3">
+              <a href="https://thegymnasium.com/courses/GYM/102/0/info" class="gym-button"><b>Go to Class</b></a>
+        </div>
+        <ul class="col-md-9 dashboard-listing-links">
+
+            <li>
+              <a href="#unenroll-modal" class="" rel="leanModal" data-course-id="GYM/102/0" data-course-number="102"
+                onclick="
+                  document.getElementById('track-info').innerHTML='Are you sure you want to unenroll from';
+                  document.getElementById('refund-info').innerHTML='';
+                  document.getElementById('unenroll-course-name').innerHTML='jQuery Building Blocks';
+                  $('#unenroll_course_id').val('GYM/102/0');
+                ">
+                Unenroll
+              </a>
+
+        </ul>
+      </div>
+    </div>
+  </article>
+</li>
+
+
+<script>
+  //note: this is legacy code from the original edx template.  Not sure what it does.  -MB
+  $( document ).ready(function() {
+
+     if("False" == "True"){
+         $( "#unregister_block_course" ).click(function() {
+             $('.disable-look-unregister').click();
+         });
+     }
+  });
+</script>
+
+<script>
+  $(function(){
+    Gymnasium.setBackgroundColorOfElementFromImage('#course-header-102', '#course-image-102');
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="course-item">
+
+
+  <article class="course">
+
+
+
+    <header id = "course-header-106">
+      <div class="row">
+        <img class="col-md-3 col-xs-12 col-sm-12 image-responsive" src="https://thegymnasium.com/c4x/GYM/106/asset/gym-106.png" alt="Information Design And Visualization Fundamentals Cover Image" id ="course-image-106" />
+        <div class="col-md-9 col-xs-12 col-sm-12">
+          <h1>Information Design And Visualization Fundamentals</h1>
+          <div class="row">
+            <section class="info col-md-12">
+              <hgroup>
+                <p class="date-block">
+
+                </p>
+              </hgroup>
+
+            </section>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="course-options">
+      <div class="row">
+        <div class="col-md-3">
+              <a href="https://thegymnasium.com/courses/GYM/106/0/info" class="gym-button"><b>Go to Class</b></a>
+        </div>
+        <ul class="col-md-9 dashboard-listing-links">
+
+            <li>
+              <a href="#unenroll-modal" class="" rel="leanModal" data-course-id="GYM/106/0" data-course-number="106"
+                onclick="
+                  document.getElementById('track-info').innerHTML='Are you sure you want to unenroll from';
+                  document.getElementById('refund-info').innerHTML='';
+                  document.getElementById('unenroll-course-name').innerHTML='Information Design And Visualization Fundamentals';
+                  $('#unenroll_course_id').val('GYM/106/0');
+                ">
+                Unenroll
+              </a>
+
+        </ul>
+      </div>
+    </div>
+  </article>
+</li>
+
+
+<script>
+  //note: this is legacy code from the original edx template.  Not sure what it does.  -MB
+  $( document ).ready(function() {
+
+     if("False" == "True"){
+         $( "#unregister_block_course" ).click(function() {
+             $('.disable-look-unregister').click();
+         });
+     }
+  });
+</script>
+
+<script>
+  $(function(){
+    Gymnasium.setBackgroundColorOfElementFromImage('#course-header-106', '#course-image-106');
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="course-item">
+
+
+  <article class="course">
+
+
+
+    <header id = "course-header-002">
+      <div class="row">
+        <img class="col-md-3 col-xs-12 col-sm-12 image-responsive" src="https://thegymnasium.com/c4x/GYM/002/asset/gym-002.png" alt="Introducing Node.js Cover Image" id ="course-image-002" />
+        <div class="col-md-9 col-xs-12 col-sm-12">
+          <h1>Introducing Node.js</h1>
+          <div class="row">
+            <section class="info col-md-12">
+              <hgroup>
+                <p class="date-block">
+
+                </p>
+              </hgroup>
+
+            </section>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="course-options">
+      <div class="row">
+        <div class="col-md-3">
+              <a href="https://thegymnasium.com/courses/GYM/002/0/info" class="gym-button"><b>Go to Class</b></a>
+        </div>
+        <ul class="col-md-9 dashboard-listing-links">
+
+            <li>
+              <a href="#unenroll-modal" class="" rel="leanModal" data-course-id="GYM/002/0" data-course-number="002"
+                onclick="
+                  document.getElementById('track-info').innerHTML='Are you sure you want to unenroll from';
+                  document.getElementById('refund-info').innerHTML='';
+                  document.getElementById('unenroll-course-name').innerHTML='Introducing Node.js';
+                  $('#unenroll_course_id').val('GYM/002/0');
+                ">
+                Unenroll
+              </a>
+
+        </ul>
+      </div>
+    </div>
+  </article>
+</li>
+
+
+<script>
+  //note: this is legacy code from the original edx template.  Not sure what it does.  -MB
+  $( document ).ready(function() {
+
+     if("False" == "True"){
+         $( "#unregister_block_course" ).click(function() {
+             $('.disable-look-unregister').click();
+         });
+     }
+  });
+</script>
+
+<script>
+  $(function(){
+    Gymnasium.setBackgroundColorOfElementFromImage('#course-header-002', '#course-image-002');
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="course-item">
+
+
+  <article class="course">
+
+
+
+    <header id = "course-header-105">
+      <div class="row">
+        <img class="col-md-3 col-xs-12 col-sm-12 image-responsive" src="https://thegymnasium.com/c4x/GYM/105/asset/gym-105.png" alt="Writing for Web &amp; Mobile Cover Image" id ="course-image-105" />
+        <div class="col-md-9 col-xs-12 col-sm-12">
+          <h1>Writing for Web &amp; Mobile</h1>
+          <div class="row">
+            <section class="info col-md-12">
+              <hgroup>
+                <p class="date-block">
+
+                </p>
+              </hgroup>
+
+            </section>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="course-options">
+      <div class="row">
+        <div class="col-md-3">
+              <a href="https://thegymnasium.com/courses/GYM/105/0/info" class="gym-button"><b>Go to Class</b></a>
+        </div>
+        <ul class="col-md-9 dashboard-listing-links">
+
+            <li>
+              <a href="#unenroll-modal" class="" rel="leanModal" data-course-id="GYM/105/0" data-course-number="105"
+                onclick="
+                  document.getElementById('track-info').innerHTML='Are you sure you want to unenroll from';
+                  document.getElementById('refund-info').innerHTML='';
+                  document.getElementById('unenroll-course-name').innerHTML='Writing for Web &amp; Mobile';
+                  $('#unenroll_course_id').val('GYM/105/0');
+                ">
+                Unenroll
+              </a>
+
+        </ul>
+      </div>
+    </div>
+  </article>
+</li>
+
+
+<script>
+  //note: this is legacy code from the original edx template.  Not sure what it does.  -MB
+  $( document ).ready(function() {
+
+     if("False" == "True"){
+         $( "#unregister_block_course" ).click(function() {
+             $('.disable-look-unregister').click();
+         });
+     }
+  });
+</script>
+
+<script>
+  $(function(){
+    Gymnasium.setBackgroundColorOfElementFromImage('#course-header-105', '#course-image-105');
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="course-item">
+
+
+  <article class="course">
+
+
+
+    <header id = "course-header-103">
+      <div class="row">
+        <img class="col-md-3 col-xs-12 col-sm-12 image-responsive" src="https://thegymnasium.com/c4x/GYM/103/asset/gym-103.png" alt="UX Fundamentals Cover Image" id ="course-image-103" />
+        <div class="col-md-9 col-xs-12 col-sm-12">
+          <h1>UX Fundamentals</h1>
+          <div class="row">
+            <section class="info col-md-12">
+              <hgroup>
+                <p class="date-block">
+
+                </p>
+              </hgroup>
+
+            </section>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="course-options">
+      <div class="row">
+        <div class="col-md-3">
+              <a href="https://thegymnasium.com/courses/GYM/103/0/info" class="gym-button"><b>Go to Class</b></a>
+        </div>
+        <ul class="col-md-9 dashboard-listing-links">
+
+            <li>
+              <a href="#unenroll-modal" class="" rel="leanModal" data-course-id="GYM/103/0" data-course-number="103"
+                onclick="
+                  document.getElementById('track-info').innerHTML='Are you sure you want to unenroll from';
+                  document.getElementById('refund-info').innerHTML='';
+                  document.getElementById('unenroll-course-name').innerHTML='UX Fundamentals';
+                  $('#unenroll_course_id').val('GYM/103/0');
+                ">
+                Unenroll
+              </a>
+
+        </ul>
+      </div>
+    </div>
+  </article>
+</li>
+
+
+<script>
+  //note: this is legacy code from the original edx template.  Not sure what it does.  -MB
+  $( document ).ready(function() {
+
+     if("False" == "True"){
+         $( "#unregister_block_course" ).click(function() {
+             $('.disable-look-unregister').click();
+         });
+     }
+  });
+</script>
+
+<script>
+  $(function(){
+    Gymnasium.setBackgroundColorOfElementFromImage('#course-header-103', '#course-image-103');
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="course-item">
+
+
+  <article class="course">
+
+
+
+    <header id = "course-header-101">
+      <div class="row">
+        <img class="col-md-3 col-xs-12 col-sm-12 image-responsive" src="https://thegymnasium.com/c4x/GYM/101/asset/gym-101.png" alt="Responsive Web Design Cover Image" id ="course-image-101" />
+        <div class="col-md-9 col-xs-12 col-sm-12">
+          <h1>Responsive Web Design</h1>
+          <div class="row">
+            <section class="info col-md-12">
+              <hgroup>
+                <p class="date-block">
+
+                </p>
+              </hgroup>
+
+            </section>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="course-options">
+      <div class="row">
+        <div class="col-md-3">
+              <a href="https://thegymnasium.com/courses/GYM/101/0/info" class="gym-button"><b>Go to Class</b></a>
+        </div>
+        <ul class="col-md-9 dashboard-listing-links">
+
+            <li>
+              <a href="#unenroll-modal" class="" rel="leanModal" data-course-id="GYM/101/0" data-course-number="101"
+                onclick="
+                  document.getElementById('track-info').innerHTML='Are you sure you want to unenroll from';
+                  document.getElementById('refund-info').innerHTML='';
+                  document.getElementById('unenroll-course-name').innerHTML='Responsive Web Design';
+                  $('#unenroll_course_id').val('GYM/101/0');
+                ">
+                Unenroll
+              </a>
+
+        </ul>
+      </div>
+    </div>
+  </article>
+</li>
+
+
+<script>
+  //note: this is legacy code from the original edx template.  Not sure what it does.  -MB
+  $( document ).ready(function() {
+
+     if("False" == "True"){
+         $( "#unregister_block_course" ).click(function() {
+             $('.disable-look-unregister').click();
+         });
+     }
+  });
+</script>
+
+<script>
+  $(function(){
+    Gymnasium.setBackgroundColorOfElementFromImage('#course-header-101', '#course-image-101');
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="course-item">
+
+
+  <article class="course">
+
+
+
+    <header id = "course-header-100">
+      <div class="row">
+        <img class="col-md-3 col-xs-12 col-sm-12 image-responsive" src="https://thegymnasium.com/c4x/GYM/100/asset/gym-100.png" alt="Coding for Designers Cover Image" id ="course-image-100" />
+        <div class="col-md-9 col-xs-12 col-sm-12">
+          <h1>Coding for Designers</h1>
+          <div class="row">
+            <section class="info col-md-12">
+              <hgroup>
+                <p class="date-block">
+
+                </p>
+              </hgroup>
+
+            </section>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="course-options">
+      <div class="row">
+        <div class="col-md-3">
+              <a href="https://thegymnasium.com/courses/GYM/100/0/info" class="gym-button"><b>Go to Class</b></a>
+        </div>
+        <ul class="col-md-9 dashboard-listing-links">
+
+            <li>
+              <a href="#unenroll-modal" class="" rel="leanModal" data-course-id="GYM/100/0" data-course-number="100"
+                onclick="
+                  document.getElementById('track-info').innerHTML='Are you sure you want to unenroll from';
+                  document.getElementById('refund-info').innerHTML='';
+                  document.getElementById('unenroll-course-name').innerHTML='Coding for Designers';
+                  $('#unenroll_course_id').val('GYM/100/0');
+                ">
+                Unenroll
+              </a>
+
+        </ul>
+      </div>
+    </div>
+  </article>
+</li>
+
+
+<script>
+  //note: this is legacy code from the original edx template.  Not sure what it does.  -MB
+  $( document ).ready(function() {
+
+     if("False" == "True"){
+         $( "#unregister_block_course" ).click(function() {
+             $('.disable-look-unregister').click();
+         });
+     }
+  });
+</script>
+
+<script>
+  $(function(){
+    Gymnasium.setBackgroundColorOfElementFromImage('#course-header-100', '#course-image-100');
+  });
+</script>
+
+
+            </ul>
+
+        </section>
+<link rel="stylesheet" href="css/find-work.css">
+
+        <aside class="profile-sidebar col-md-3">
+          <h2>Account Details</h2>
+          <header class="profile">
+            <h1 class="user-name break-word">JustinGagne</h1>
+          </header>
+
+        <!-- add `details` element -->
+        <details>
+        <!--- add `role="heading"` attribute to `summary` element -->
+          <summary class="gym-link" role="heading">My Account</summary>
+          <section class="user-info">
+            <ul>
+              <li class="info--username">
+                  <span class="title">Full Name</span>
+                  <span class="data break-word">Justin Gagne</span>
+              </li>
+
+              <li class="info--email">
+                  <span class="title">
+                    Email
+                  </span>
+                  <span class="data break-word">
+                    jgagne@aquent.com
+                  </span>
+              </li>
+
+              <li>
+                <span><br /></span>
+              </li>
+
+              <li class="controls--account">
+                <span>
+                  Visit
+                  <a href="https://thegymnasium.com/account/settings">Account Settings</a>
+                  to update your profile or change your password.
+                </span>
+              </li>
+            </ul>
+          </section>
+        </details>
+
+        <img alt="Find Work (fpo)" src="img/find-work-comp.png" class="find-work-comp">
+
+        </aside>
+      </div>
+    </section>
+
+</main>
+
+<section id="email-settings-modal" class="modal" aria-hidden="true">
+  <div class="inner-wrapper" role="dialog" aria-labelledby="email-settings-title">
+    <button class="close-modal">
+      <span class="icon fa fa-remove" aria-hidden="true"></span>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2 id="email-settings-title">
+        Email Settings for <span id="email_settings_course_number"></span>
+        <span class="sr">,
+          window open
+        </span>
+      </h2>
+      <hr/>
+    </header>
+
+    <form id="email_settings_form" method="post">
+      <input name="course_id" id="email_settings_course_id" type="hidden" />
+      <label>Receive course emails <input type="checkbox" id="receive_emails" name="receive_emails" /></label>
+      <div class="submit">
+        <input type="submit" id="submit" value="Save Settings" />
+      </div>
+    </form>
+  </div>
+</section>
+
+<section id="password_reset_complete" class="modal" aria-hidden="true">
+  <div class="dialog" role="dialog" aria-labelledby="password-reset-email">
+
+    <button class="close-modal" tabindex="1" data-dismiss="modal">
+      <b class="close-modal-content gym-button">
+        Dismiss
+      </b>
+    </button>
+
+    <header>
+      <h2 id="password-reset-email">
+
+      </h2>
+      <hr/>
+    </header>
+    <div>
+      <form> <!-- Here for styling reasons -->
+        <fieldset>
+          <legend>
+            <b role="heading">
+              Password Reset Email Sent
+            </b>
+          </legend>
+
+          <span class="sr">,
+            window open
+          </span>
+
+          <section>
+            <p>
+              An email has been sent to
+              <b>
+                justin@velle.us
+              </b>
+              . Follow the link in the email to change your password.
+            </p>
+          </section>
+      </fieldset>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="change_email" class="modal" aria-hidden="true">
+  <div class="dialog" role="dialog" aria-labelledby="change_email_title">
+
+    <button class="close-modal" tabindex="1" data-dismiss="modal">
+      <b class="close-modal-content gym-button">
+        Dismiss
+      </b>
+    </button>
+
+    <div id="change_email_body">
+      <form id="change_email_form">
+
+        <fieldset>
+          <legend>
+            <b role="heading">
+              Change My Email
+            </b>
+          </legend>
+
+          <span class="sr">,
+            window open
+          </span>
+
+          <div id="change_email_error" class="modal-form-error"> </div>
+
+          <ul>
+            <li>
+              <label><b>Please enter your new email address:</b></label>
+              <input id="new_email_field" type="email" value="" />
+            </li>
+            <li>
+              <label><b>Please confirm your password:</b></label>
+              <input id="new_email_password" value="" type="password" />
+            </li>
+          </ul>
+
+          <div class="message">
+            <p>
+              <b>Note:</b>
+              We will send a confirmation to both
+              <b>
+                justin@velle.us
+              </b>
+              and your new email address as part of the process.
+            </p>
+          </div>
+          <div class="row">
+            <button class="gym-button col-md-4 col-md-offset-4" tabindex="2" name="submit" type="submit">
+              <b>
+                Change Email
+              </b>
+            </button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="change_name_modal" class="modal" aria-hidden="true">
+  <div class="dialog" role="dialog" aria-labelledby="change-name-title">
+
+    <button class="close-modal" tabindex="1" data-dismiss="modal">
+      <b class="close-modal-content gym-button">
+        Dismiss
+      </b>
+    </button>
+
+    <form id="change_name_form">
+    <fieldset>
+      <legend>
+        <b role="heading">
+          Change your name
+        </b>
+      </legend>
+
+      <span class="sr">,
+        window open
+      </span>
+
+      <div class="message">
+        <p>
+          <b>Note:</b>
+          To uphold the credibility of your
+          <b>
+            Gymnasium Certificate
+          </b>
+          , all name changes will be recorded.
+        </p>
+      </div>
+      <div class="error" id="change_name_error" hidden >
+
+      </div>
+      <ul>
+        <li>
+          <label>
+            <b>Enter your full name</b>,  as it will appear on your Gymnasium Certificate:
+          </label>
+          <input type="text" id="new_name_field">
+        </li>
+        <li>
+          <label>
+            <b>
+              Reason for name change:
+            </b>
+          </label>
+          <input type="text" id="name_rationale_field">
+        </li>
+      </ul>
+      <div class="message" hidden>
+        <p>We will send a confirmation to both <b class="email-current">googlebot@gmail.com</b> and your new email address as part of the process.</p>
+      </div>
+      <div class="row">
+        <button class="gym-button col-md-4 col-md-offset-4" tabindex="2" name="submit" type="submit">
+          <b>
+            Change My Name
+          </b>
+        </button>
+      </div>
+    </fieldset>
+    </form>
+
+  </div>
+</section>
+
+
+<section id="unenroll-modal" class="modal unenroll-modal" aria-hidden="true">
+  <div class="dialog" role="dialog" aria-labelledby="unenrollment-modal-title">
+    <button class="close-modal" tabindex="1" data-dismiss="modal">
+      <b class="close-modal-content gym-button">
+        Dismiss
+      </b>
+    </button>
+
+
+    <form id="unenroll_form" method="post" data-remote="true" action="/change_enrollment">
+      <fieldset>
+
+        <legend>
+          <b role="heading">
+            <span id='track-info'></span>
+            <span id="unenroll-course-name"></span>
+            <span id='unenroll_course_number' class="hidden"></span>?
+            <span id='refund-info'></span>
+          </b>
+        </legend>
+
+        <span class="sr">,
+          window open
+        </span>
+
+        <div id="unenroll_error" class="modal-form-error"></div>
+
+        <input name="course_id" id="unenroll_course_id" type="hidden"  value=""/>
+        <input name="enrollment_action" type="hidden" value="unenroll" />
+
+        <div class="row">
+          <button class="gym-button col-md-4 col-md-offset-4" tabindex="2" name="submit" type="submit" id="unenroll-button">
+            <b>
+              Unenroll
+            </b>
+          </button>
+        </div>
+
+      </fieldset>
+    </form>
+  </div>
+</section>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="wrapper-footer">
+  <footer class="container">
+    <div class="row">
+      <nav>
+        <div class="col-md-3">
+          <a href="https://thegymnasium.com/">
+            <img class="gymnasium-logo"  src="https://thegymnasium.com/static/gymnasium/images/gymnasiumLogo.png" alt="Aquent Gymnasium" >
+          </a>
+        </div>
+        <div class="col-md-6">
+          <ol class="list-inline text-center footer-link-list">
+            <li><a href="https://medium.com/gymnasium" target="_blank">Blog</a></li>
+            <li><a href="https://gymnasium.jobboard.io">Jobs</a></li>
+            <li><a href="https://thegymnasium.com/about">About</a></li>
+            <li><a href="https://thegymnasium.com/faq">FAQ</a></li>
+            <li><a href="https://thegymnasium.com/support">Support</a></li>
+            <li><a href="https://thegymnasium.com/privacy">Privacy Policy</a></li>
+            <li id="headway-changelog-anchor">
+              <a href="https://headwayapp.co/the-gymnasium-changelog" target="_blank">Changelog</a>
+            </li>
+          </ol>
+          <div class="copyright">&copy; 2017 Aquent Gymnasium</div>
+        </div>
+      </nav>
+
+      <div class="built-on col-md-3 text-center">
+        <span>
+          <a href="http://openedx.org" target="_blank">
+            <img
+              src="https://files.edx.org/openedx-logos/edx-openedx-logo-tag-light.png"
+              width="150" height="50" alt="Powered by Open edX" />
+          </a>
+
+        </span>
+      </div>
+    </div>
+    <div class="row">
+
+    </div>
+  </footer>
+</div>
+
+
+
+  </div>
+
+
+  <script src="https://thegymnasium.com/static/js/commerce/credit.3700dc2c83f2.js"></script>
+
+    <script type="text/javascript" src="https://thegymnasium.com/static/gymnasium/js/dashboard.c4a7e6f800ce.js" charset="utf-8"></script>
+
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      edx.dashboard.legacy.init({
+        dashboard: "/dashboard",
+        signInUser: "/login",
+        changeEmailSettings: "/change_email_settings"
+      });
+    });
+
+    //hide "BETA" from courses that have it in their title,
+    //and add .beta class to corresponsing <li> itm
+    $('.listing-courses li').each(function(idx, obj){
+      var beta_tag = "beta";
+      var beta_class_name="beta";
+
+      var course_title_obj = $(obj).find('h1')
+      var course_title = $(course_title_obj).text().trim();
+
+      //check to see if this course is a BETA course
+      if (course_title.toLowerCase().indexOf(beta_tag) >= 0)
+      {
+        //this is a beta Course
+        //strip the "BETA" word from the title
+        course_title = course_title.substr(beta_tag.length).trim();
+        console.log('course title is now', course_title);
+
+        course_title_obj.text(course_title);
+
+        $(obj).addClass(beta_class_name);
+
+      }
+    });
+
+    $('#unenroll-button').submit(function(){
+      var metadata = {
+        "course_id" : $('#unenroll_course_number').text(),
+        "course_name": $('#unenroll-course-name').text()
+      };
+      Intercom('trackEvent', 'unenroll', metadata);
+    });
+  </script>
+
+
+
+
+
+
+  <script type="text/javascript" src="https://thegymnasium.com/static/js/vendor/noreferrer.aa62a3e70ffa.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://thegymnasium.com/static/js/utils/navigation.17df676f9045.js" charset="utf-8"></script>
+
+</body>
+</html>
+
+
+
+<!-- Performance beacon for onload times -->
