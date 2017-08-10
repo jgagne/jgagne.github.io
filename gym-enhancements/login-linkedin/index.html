@@ -936,6 +936,7 @@ form.register-form {
   }
 
 #register .login-providers .lines:first-child:after,
+#register-form .login-providers .section-title + .lines:after,
 .login-form > .lines:after,
 .password-reset-form > .lines:after {
  display: none;
@@ -955,7 +956,15 @@ form.register-form {
   font: bold 2.2em/1.15 "brandon-grotesque", "Helvetia Neue", Helvetica, sans-serif;
   }
 
+#register .login-providers .section-title,
+#register-form .login-providers .section-title,
+.login-form > .section-title,
+.password-reset-form .section-title {
+  margin-top: 1.6em;
+  }
+
 #register .login-providers .section-title:first-child h2,
+#register-form .login-providers .section-title + .section-title h2,
 .login-form > .section-title h2,
 .password-reset-form .section-title > h2 {
   font: 900 2.4em/1.15 "brandon-grotesque", "Helvetia Neue", Helvetica, sans-serif;
@@ -964,6 +973,7 @@ form.register-form {
   }
 
 #register .login-providers .section-title.lines:first-child .text,
+#register-form .login-providers .section-title.lines + .section-title.lines .text,
 .login-form > .section-title.lines .text,
 .password-reset-form .section-title.lines .text {
   padding: 0;
@@ -1091,6 +1101,45 @@ form.register-form {
   letter-spacing: .01em;
   color: #fff;
   margin-top: 1em;
+  }
+
+/*--- create an account ---*/
+
+#register-form .login-providers .section-title:first-child {
+  display: none;
+  }
+
+#register-form .login-providers + .section-title h2 {
+  font-size: 2em;
+  }
+
+/*--- linkedin button  ---*/
+
+.login-register .login-provider {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 0 0 .2em;
+  }
+
+.login-register .login-provider.button-oa2-linkedin-oauth2 {
+  padding: 0 1em 0 0 !important;
+  border: 1px solid #0077B5;
+  border-radius: 2px;
+  }
+
+.login-register .login-provider.button-oa2-linkedin-oauth2,
+.login-register .login-provider.button-oa2-linkedin-oauth2:hover,
+.login-register .login-provider.button-oa2-linkedin-oauth2:focus,
+.login-register .login-provider.button-oa2-linkedin-oauth2:active {
+  box-shadow: none;
+  }
+
+.fa-linkedin {
+  position: static !important;
+  width: auto !important;
+  line-height: 1 !important;
+  padding: .8em .6em .8em 1em;
   }
 
 /* --- success --- */
