@@ -32,6 +32,14 @@
   background: #939393;
   }
 
+.course-description dt {
+  margin-bottom: .4em !important;
+  }
+
+.course-description dd {
+  margin-top: .4em !important;
+  }
+
 /* --- find work / job board / sidebar --- */
 
 /* find work header */
@@ -230,9 +238,10 @@
 
 #find-work .note {
   color: #939393;
-  padding-top: 1em;
+  padding: 1em 0;
   border-top: 1px dashed #ccc;
-  margin-top: 1em;
+  border-bottom: 1px dashed #ccc;
+  margin: 1em 0 2.4em;
   }
 
 #find-work .note p {
