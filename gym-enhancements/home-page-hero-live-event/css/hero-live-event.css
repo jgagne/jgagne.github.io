@@ -8,7 +8,7 @@
 
 .header-live-event {
   font-size: 114.2857142857143%;
-  padding: 1.6em 0;
+  padding: 1.6em 0 0;
   }
 
 .header-live-event,
@@ -52,8 +52,8 @@
 
 .promo-live-event .cta {
   text-align: center;
-  background: #444;
-  padding: 1.4em 1.2em 3.2em;
+  background: #764c9f;
+  padding: 1.4em 1.2em 3.6em;
   }
 
 .promo-live-event .cta .gym-button {
@@ -67,12 +67,19 @@
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
-  background: #f8971d;
+  background: #222;
   padding: 1em 2em !important; /* dangerous override */
-  border: 0;
+  border: 2px solid #fff;;
   border-radius: 2px;
   margin: 0 -1em;
   cursor: pointer;
+  }
+
+.promo-live-event .cta .gym-button:hover,
+.promo-live-event .cta .gym-button:focus,
+.promo-live-event .cta .gym-button:active {
+  background: none;
+  border: 2px solid #fff;
   }
 
 .cta .gym-button strong {
