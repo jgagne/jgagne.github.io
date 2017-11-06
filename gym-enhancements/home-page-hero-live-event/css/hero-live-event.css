@@ -1,9 +1,6 @@
-.home {
-  background-image: none;
-  }
-
-.promo-live-event .scripting {
-  background: #764c9f;
+.promo-live-event {
+  background-image: url("../img/live-event-scripting-hero-bg.png");
+  background-color: #764c9f;
   }
 
 .header-live-event {
@@ -52,7 +49,6 @@
 
 .promo-live-event .cta {
   text-align: center;
-  background: #764c9f;
   padding: 1.4em 1.2em 4em;
   }
 
