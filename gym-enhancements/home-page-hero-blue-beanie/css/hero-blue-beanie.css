@@ -8,6 +8,8 @@
   }
 
 .header-blue-beanie img {
+  position: relative;
+  z-index: 0;
   width: auto%;
   max-width: 100%;
   height: auto;
@@ -42,14 +44,33 @@
   white-space: nowrap;
   }
 
-@media (min-width: 40em) {
+.header-blue-beanie s {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  }
+
+.header-blue-beanie s:after {
+  display: inline-block;
+  position: absolute;
+  top: 54%;
+  left: -11.5%;
+  content: "";
+  width: 120%;
+  border-top: .15em solid #f8971d;
+  margin-top: -.15em;
+  transform: rotate(10deg);
+  }
+
+
+@media (min-width: 62em) {
 
 .header-blue-beanie .group {
   display: block;
   }
 
 .header-blue-beanie .cta {
-  margin-bottom: -2.4em;
+  margin-bottom: -2.8em;
   }
 
 }
@@ -62,6 +83,8 @@
   }
 
 .promo-blue-beanie .cta {
+  position: relative;
+  z-index: 1;
   text-align: center;
   padding: 1.4em 1.2em 0;
   }
