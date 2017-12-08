@@ -30,7 +30,7 @@
  }
 
 .header-net-neutrality h1 {
-  font-size: 4.8em;
+  font-size: 3em;
   color: #fff;
   line-height: 1.15;
   }
@@ -51,10 +51,10 @@
   }
 
 
-@media (min-width: 62em) {
+@media (min-width: 48em) {
 
-.header-net-neutrality .group {
-  display: block;
+.header-net-neutrality h1 {
+  font-size: 4.8em;
   }
 
 }
@@ -68,7 +68,7 @@
 
 .promo-net-neutrality .cta {
   text-align: center;
-  padding: 1.4em 1.2em 3.8em;
+  padding: 1.2em 1.2em 3.8em;
   }
 
 .promo-net-neutrality .cta .gym-button {
