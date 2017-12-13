@@ -1,4 +1,89 @@
 .home {
+  background: none;
+  }
+
+.promo-dfg {
+  position: relative;
+  height: 0;
+  padding-bottom: 46%;
+  overflow: hidden;
+  }
+
+.promo-dfg img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  vertical-align: none;
+  }
+
+img.hero-dfg {
+  position: absolute;
+  top: 0; left: -20%;
+  width: 140%;
+  max-width: none;
+  }
+
+.promo-dfg .cta {
+  position: absolute;
+  left: 0;
+  bottom: 21.25%;
+  width: 100%;
+  text-align: center;
+  }
+
+
+.promo-dfg .cta .hero-dfg-hotspot {
+  display: inline-block;
+  width: 18%;
+  height: 0;
+  padding-bottom: 5.5%;
+  }
+
+@media (min-width: 48em) {
+
+.promo-dfg {
+  padding-bottom: 33%;
+  }
+
+img.hero-dfg {
+  left: 0;
+  width: 100%;
+  }
+
+.promo-dfg .cta {
+  bottom: 22.25%;
+  }
+
+.promo-dfg .cta .hero-dfg-hotspot {
+  width: 12.5%;
+  padding-bottom: 4%;
+
+}
+
+@media (min-width: 58em) {
+
+.promo-dfg .cta {
+  bottom: 23%;
+  }
+
+}
+
+.promo-dfg .cta .hero-dfg-hotspot:hover {
+  border-bottom: none;
+  }
+
+/*
+.promo-dfg .cta .hero-dfg-hotspot {
+  display: inline-block;
+  width: 13.5%;
+  height: 0;
+  padding-bottom: 4.5%;
+  border: 1px solid #000;
+  }
+ */
+
+/*
+.home {
   background: #747472 url("../img/gym-dfg-960w.jpg") no-repeat center top;
   background-size: 140%;
   }
@@ -32,7 +117,6 @@
 @media (min-width: 48em) {
 
 .home {
-  background: #747472 url("../img/gym-dfg-960w.jpg") no-repeat center top;
   background-size: contain;
   }
 
@@ -44,11 +128,6 @@
 
 
 @media (min-width: 56em) {
-
-.home {
-  background: #747472 url("../img/gym-dfg-960w.jpg") no-repeat center top;
-  background-size: contain;
-  }
 
 .header-dfg {
   padding-bottom: 40%;
