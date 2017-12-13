@@ -28,6 +28,75 @@
   border-bottom: none;
   }
 
+
+@media (min-width: 48em) {
+
+.home {
+  background: #747472 url("../img/gym-dfg-960w.jpg") no-repeat center top;
+  background-size: contain;
+  }
+
+.header-dfg {
+  padding-bottom: 34.5%;
+  }
+
+}
+
+
+@media (min-width: 56em) {
+
+.home {
+  background: #747472 url("../img/gym-dfg-960w.jpg") no-repeat center top;
+  background-size: contain;
+  }
+
+.header-dfg {
+  padding-bottom: 40%;
+  }
+
+}
+
+@media (min-width: 62em) {
+
+.home {
+  background: #747472 url("../img/gym-dfg-1920w.jpg") no-repeat center top;
+  background-size: contain;
+  }
+
+.header-dfg {
+  padding-bottom: 34%;
+  }
+
+}
+
+@media (min-width: 68em) {
+
+.header-dfg {
+  padding-bottom: 35%;
+  }
+
+}
+
+@media (min-width: 75em) {
+
+.header-dfg {
+  padding-bottom: 34%;
+  }
+
+}
+
+
+@media (min-width: 80em) {
+
+.header-dfg {
+  padding-bottom: 36%;
+  }
+
+}
+
+
+
+/*
 @media (min-width: 50em) {
 
 .home {
@@ -48,3 +117,4 @@
   }
 
 }
+ */
