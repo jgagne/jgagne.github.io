@@ -1,0 +1,50 @@
+.home {
+  background: #747472 url("../img/gym-dfg-960w.jpg") no-repeat center top;
+  background-size: 140%;
+  }
+
+.header-dfg {
+  position: relative;
+  height: 0;
+  padding-bottom: 45%;
+  }
+
+.header-dfg .cta {
+  position: absolute;
+  left: 0;
+  bottom: 6%;
+  width: 100%;
+  text-align: center;
+  }
+
+.header-dfg .cta .hero-dfg-hotspot {
+  display: inline-block;
+  width: 20%;
+  height: 0;
+  padding-bottom: 12%;
+  }
+
+.header-dfg .cta .hero-dfg-hotspot:hover {
+  border-bottom: none;
+  }
+
+@media (min-width: 50em) {
+
+.home {
+  background: #747472 url("../img/gym-dfg-1920w.jpg") no-repeat center top;
+  background-size: contain;
+  }
+
+.header-dfg {
+  padding-bottom: 34%;
+  }
+
+.header-dfg .cta {
+  bottom: 8%;
+  }
+
+.header-dfg .cta .hero-dfg-hotspot {
+  padding-bottom: 8%;
+  }
+
+}
