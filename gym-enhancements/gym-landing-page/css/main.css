@@ -1,0 +1,229 @@
+html {
+  font-family: sans-serif;
+  }
+
+body {
+  background: #ebebeb;
+  }
+
+.framework {
+  width: 90%;
+  max-width: 70em;
+  margin: 0 auto;
+  }
+
+#banner {
+  background: #222;
+  padding: 1.2em 0;
+  }
+
+#banner .gym-mark {
+  vertical-align: middle;
+  }
+
+#banner nav,
+#banner nav ul,
+#banner nav li {
+  display: inline;
+  }
+
+#banner nav ul {
+  list-style: none;
+  padding-left: 6%;
+  }
+
+#banner nav li {
+  margin-left: .6em;
+  }
+
+#banner nav li:first-child {
+  margin-left: 0;
+  }
+
+#banner nav a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: .6em;
+  }
+
+#banner nav a:hover,
+#banner nav a:focus {
+  color: #f8971d;
+  }
+
+#access {
+  float: right;
+  position: relative;
+  top: 0em;
+  }
+
+#sign-in {
+  margin-right: .6em;
+  }
+
+#brief-about {
+  background: #fff;
+  padding: 1.2em 0;
+  border-bottom: 1px solid #ccc;
+  }
+
+#brief-about p {
+  /* max-width: 40em; */
+  line-height: 1.35;
+  }
+
+#main {
+  padding: 1.2em 0;
+  }
+
+#main header h2 {
+  margin-top: .6em;
+  }
+
+#main section {
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+  }
+
+#education ul,
+#blog ul {
+  list-style: none;
+  padding-left: 0;
+  }
+
+#education ul li,
+#blog ul li {
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
+  }
+
+@media (min-width: 48em) {
+
+#education ul,
+#blog ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.2em;
+  }
+
+}
+
+/* fallback */
+
+/*
+
+#education ul,
+#blog ul {
+  text-align: center;
+  }
+
+#blog ul li {
+  display: inline;
+  text-align: left;
+  margin-left: 1.2em;
+  }
+
+#blog ul li:first-child {
+  margin-left: 0;
+  }
+
+#blog ul a {
+  display: inline-block;
+  width: 31.875%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  }
+
+ */
+
+#blog a div {
+  background: #fff;
+  padding: 1.2em;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  }
+
+#blog figure {
+  position: relative;
+  height: 0;
+  padding-bottom: 50%;
+  border: 1px solid #ebebeb;
+  margin-bottom: 1.2em;
+  overflow: hidden;
+  }
+
+#blog figure img {
+  position: absolute;
+  right: -4%;
+  width: 280%;
+  max-width: none;
+  }
+
+/* --- link/button details --- */
+
+.gym-button {
+  color: #fff;
+  text-decoration: none;
+  background: #f8971d;
+  padding: .6em 1.2em;
+  border: 0;
+  border-radius: .1875em;
+  cursor: pointer;
+  }
+
+.gym-button:hover,
+.gym-button:focus {
+  background: #9a9a9a;
+  }
+
+.gym-button b {
+  vertical-align: baseline;
+  }
+
+main a {
+  display: inline-block;
+  color: #222;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #f8971d;
+  margin-bottom: -4px;
+  }
+
+/* --- image details --- */
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  }
+
+/* --- sectioning/grouping details --- */
+
+figure,
+figcaption {
+  margin: 0;
+  }
+
+
+
+/* --- typographic details --- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  }
+
+.all-caps {
+  font-style: normal;
+  font-size: 96%;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+  }
