@@ -1,0 +1,75 @@
+/* --- html5 elements --- */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+	}
+
+/* --- normalize / reset(s) --- */
+
+html {
+	font: 100%/1 sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	}
+
+body {
+	margin: 0;
+	}
+
+body,
+figure {
+	margin: 0;
+	}
+
+a {
+	text-decoration: none;
+	}
+
+abbr,
+a img {
+	border: 0;
+	}
+
+blockquote,
+dd {
+	margin-left: 0;
+	}
+
+dl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+menu,
+ol,
+ul,
+p {
+	margin-top: 0;
+	margin-bottom: 0;
+	}
+
+ol,
+ul {
+	padding-left: 0;
+	}
+
+img {
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	}
