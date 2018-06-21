@@ -1,0 +1,265 @@
+.hero-message {
+  background-color: #f4f9f8;
+  padding: 1.2em 5% 1.3em;
+}
+
+.hero-message .container {
+  max-width: 80em;
+}
+
+.hero-message h2,
+.hero-message p {
+  font: normal 1em/1.45 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hero-message h2 {
+  font-weight: bold;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: .2em;
+}
+
+.hero-message code {
+  font-size: inherit;
+  color: inherit;
+  padding: 0;
+  background: none;
+}
+
+.ux-design {
+  background-color: #5ca5a0;
+  background-color: linear-gradient(45deg, #4d8c88, #5ca5a0, #4d8c88);
+  padding: 0;
+}
+
+/*
+549994
+5ca5a0
+69aca7
+75b3af
+82bab6
+*/
+
+.ux-design header,
+.ux-design p a:link,
+.ux-design p a:visited,
+.ux-design p a:link:hover,
+.ux-design p a:link:focus,
+.ux-design p a:link:active {
+  font-family: inherit;
+  color: #fff;
+}
+
+.ux-design p a {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #f8971d;
+  margin-bottom: -2px;
+}
+
+.ux-design p a:hover,
+.ux-design p a:focus,
+.ux-design p a:active {
+  border-bottom: 2px solid #fff !important;
+}
+
+.hero-promo {
+  position: relative;
+  overflow: hidden;
+  background-image: url("../img/pattern-lab-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-promo .container {
+  max-width: 75em;
+  padding: 1.2em 0;
+}
+
+.hero-promo .row {
+  margin: 1.2% 5%;
+}
+
+#atomic-design-atom {
+  display: inline-block;
+  position: relative;
+  max-width: 20em;
+  vertical-align: middle;
+  padding: 3.2em;
+  border: .8em solid #fff;
+  border-radius: 50%;
+}
+
+#atomic-design-atom::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 1.6em;
+  content: "";
+  width: 3.6em;
+  height: 3.6em;
+  background: #f8971d;
+  border-radius: 50%;
+  animation: orbit 12s linear infinite;
+}
+
+@keyframes orbit {
+  from {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotate(0deg) translateX(6.8em) translateY(-6.8em) rotate(0deg);
+  }
+  to {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotate(360deg) translateX(6.8em) translateY(-6.8em) rotate(-360deg);
+  }
+}
+
+
+#atomic-design-atom img {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 1px solid #4d8c88;
+  border-radius: 50%;
+}
+
+/*
+.hero-promo header p.byline {
+  font: normal 1.2em/1.15 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.05em;
+  color: #fff;
+  margin-top: .8em;
+  margin-bottom: 0;
+  }
+ */
+
+.hero-promo header h1 {
+  line-height: 1.2;
+  }
+
+.hero-promo header p {
+  font: normal 1.25em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
+  margin-top: .8em;
+  margin-bottom: 0;
+  }
+
+.hero-promo .cta {
+  margin-top: 1.8em;
+  margin-bottom: 4em;
+}
+
+.block {
+  display: block;
+}
+
+a.gym-button-shrink-wrap {
+  width: auto !important;
+  padding: 1.2em 2.2em !important;
+}
+
+#badges .row,
+#badges .cta {
+  text-align: center;
+}
+
+#badges .col {
+  display: inline-block;
+  text-align: left;
+}
+
+#badges h1 {
+  font-size: 2.6em;
+  margin-bottom: .4em;
+}
+
+#badges p {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 0em;
+  margin-bottom: 0;
+}
+
+#badges .row {
+  background: transparent url("../img/exam-badges.png") no-repeat center 19.875em;
+  background-size: contain;
+  padding-bottom: 70%;
+}
+
+@media (min-width: 48em) {
+
+#atomic-design-atom {
+  float: left;
+  margin-top: 1.2em;
+  margin-right: 2.8em;
+  }
+
+#hero-gym-014 .content {
+  overflow: hidden;
+  }
+
+}
+
+/*
+@media (min-width: 32em) {
+
+.hero-promo {
+  position: relative;
+  padding: 2.5% 5% 2.5em;
+  overflow: hidden;
+}
+
+#badges .row {
+  background: none;
+  padding-bottom: 0;
+}
+
+#badges .col {
+  position: relative;
+  left: -7.6em;
+  padding: 0 2.4em;
+  margin: 0 auto;
+}
+
+#badges .col:before {
+  display: block;
+  position: absolute;
+  top: -1.2em;
+  left: -20.5em;
+  width: 20.5em;
+  height: 25em;
+  content: "";
+  background: transparent url("../img/badges.png") no-repeat right top;
+  margin-left: -5%;
+}
+
+#badges .col:after {
+  display: block;
+  position: absolute;
+  top: -1.2em;
+  right: -36.25em;
+  width: 36.25em;
+  height: 25em;
+  content: "";
+  background: transparent url("../img/exam-badges.png") no-repeat left top;
+  margin-right: -5%;
+}
+
+#badges .cta {
+  text-align: left;
+}
+
+}
+ */
