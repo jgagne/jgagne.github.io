@@ -105,6 +105,18 @@
   animation: orbit 12s linear infinite;
 }
 
+#atomic-design-atom.motion-16s::before  {
+  animation: orbit 16s linear infinite;
+}
+
+#atomic-design-atom.motion-24s::before  {
+  animation: orbit 24s linear infinite;
+}
+
+#atomic-design-atom.motion-30s::before  {
+  animation: orbit 30s linear infinite;
+}
+
 @keyframes orbit {
   from {
     top: 0;
