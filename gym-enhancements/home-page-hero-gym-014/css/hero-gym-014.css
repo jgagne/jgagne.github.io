@@ -87,19 +87,19 @@
   position: relative;
   max-width: 20em;
   vertical-align: middle;
-  padding: 3.2em;
-  border: .8em solid #fff;
+  padding: 3.4em;
+  border: 1em solid #fff;
   border-radius: 50%;
 }
 
 #atomic-design-atom::before {
   display: block;
   position: absolute;
-  top: 0;
-  right: 1.6em;
+  top: 1em;
+  right: -.6em;
   content: "";
-  width: 3.6em;
-  height: 3.6em;
+  width: 4.5em;
+  height: 4.5em;
   background: #f8971d;
   border-radius: 50%;
   animation: orbit 12s linear infinite;
@@ -112,7 +112,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    transform: rotate(0deg) translateX(6.8em) translateY(-6.8em) rotate(0deg);
+    transform: rotate(0deg) translateX(7.5em) translateY(-5.5em) rotate(0deg);
   }
   to {
     top: 0;
@@ -120,7 +120,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    transform: rotate(360deg) translateX(6.8em) translateY(-6.8em) rotate(-360deg);
+    transform: rotate(360deg) translateX(7.5em) translateY(-5.5em) rotate(-360deg);
   }
 }
 
@@ -131,7 +131,7 @@
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-  border: 1px solid #4d8c88;
+  border: 1px solid #5ca5a0;
   border-radius: 50%;
 }
 
