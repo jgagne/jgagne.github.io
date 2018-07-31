@@ -1,384 +1,923 @@
-<!doctype html>
-<html id="begin" lang="en-us">
-<head>
-  <meta charset="utf-8">
-  <!--   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/main.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>UX Design @ Gymasium · Free Online Courses</title>
-  <meta name="description" content="Free online UX design courses, webinars, and articles, with jobs and career resources from Aquent and Vitamin T.">
-  <meta name="subject" content="Online School">
-  <meta name="author" content="thegymnasium.com">
-  <meta name="format-detection" content="telephone=no">
-</head>
-<body>
+<!DOCTYPE html>
+<!--[if lte IE 9]><html class="ie ie9 lte9" lang="en"><![endif]-->
+<!--[if !IE]><!--><html lang="en"><!--<![endif]-->
+<head dir="ltr">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Gymnasium: Free UX Courses, UX Jobs and UX Design Resources</title>
 
-<header id="banner" aria-label="Gymnasium">
-  <div class="max-width" role="presentation">
-    <a href="https://thegymnasium.com" aria-label="Home">
-      <img id="banner-logo" title="Aquent Gymnasium [Home]" alt="Gymnasium" role="heading" aria-level="1" srcset="img/brand/gymnasium-logo-ko.svg" src="img/brand/gymnasium-logo-ko.png" width="210">
-    </a>
+      <script>
+        /* immediately break out of an iframe if coming from the marketing website */
+        (function(window) {
+          if (window.location !== window.top.location) {
+            window.top.location = window.location;
+          }
+        })(this);
+      </script>
+
+  <script src="https://thegymnasium.com/static/js/i18n/en/djangojs.b28203373cc1.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="https://thegymnasium.com/static/gymnasium/images/favicon.f729730b6e79.ico">
+
+    <link  rel="stylesheet" href="https://thegymnasium.com/static/gymnasium/css/lms-style-vendor.css">
+
+    <link rel="stylesheet" href="https://thegymnasium.com/static/gymnasium/css/lms-main-v1.css">
+
+    <script src="https://thegymnasium.com/static/gymnasium/js/lms-main_vendor.js" charset="utf-8"></script>
+
+    <script src="https://thegymnasium.com/static/gymnasium/js/lms-application.js" charset="utf-8"></script>
+
+  <script>
+    window.baseUrl = "https://thegymnasium.com/static/";
+    (function (require) {
+      require.config({
+          baseUrl: window.baseUrl
+      });
+    }).call(this, require || RequireJS.require);
+  </script>
+  <script src="https://thegymnasium.com/static/lms/js/require-config.js"></script>
+
+    <script>
+        (function (require) {
+          require.config({
+              paths: {
+                'js/courseware/courseware_factory': 'js/courseware/courseware_factory.61851a4d4909',
+'draggabilly': 'js/vendor/draggabilly.26caba6f7187',
+'js/courseware/toggle_element_visibility': 'js/courseware/toggle_element_visibility.e564e0ed228c',
+'js/courseware/course_home_events': 'js/courseware/course_home_events.4e8915731e7d',
+'js/courseware/link_clicked_events': 'js/courseware/link_clicked_events',
+'edxicons': 'edx-pattern-library/js/edx-icons.a9ab01bc44bf',
+'moment': 'js/vendor/moment-with-locales.min.cf6d65fe3e48',
+'js/student_profile/views/learner_profile_factory': 'js/student_profile/views/learner_profile_factory.5a339c9b269e',
+'jquery.url': 'js/vendor/url.min.0098a9ff3d53',
+'js/student_account/logistration_factory': 'js/student_account/logistration_factory.f3eba77aab43',
+'js/groups/views/cohorts_dashboard_factory': 'js/groups/views/cohorts_dashboard_factory.65bc243bc330',
+'afontgarde': 'edx-pattern-library/js/afontgarde.f6413e623704',
+'js/courseware/accordion_events': 'js/courseware/accordion_events.1bf82c871285',
+'js/bookmarks/views/bookmark_button': 'js/bookmarks/views/bookmark_button.f9d16d58a9d8',
+'js/views/message_banner': 'js/views/message_banner.13d853dc7834'
+            }
+          });
+        }).call(this, require || RequireJS.require);
+    </script>
+
+    <script src="https://thegymnasium.com/static/gymnasium/js/lms-modules.47eeba5c2874.js" charset="utf-8"></script>
+
+  <meta property="og:url" content="http://thegymnasium.com/">
+  <meta property="og:title" content="Aquent Gymnasium">
+  <meta property="og:image" content="https://thegymnasium.com/static/gymnasium/images/social-share-400.f9715ec47ea8.png">
+
+<meta property="og:description" content="Gymnasium offers free online courses on web development, design, user experience, and content creation.">
+<meta property="og:keywords" content="free online courses designers design user experience UX javascript node nodejs sketch wordpress drupal UI">
+
+<!-- insert typekit font references -->
+<script src="//use.typekit.net/rhf0qta.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+
+<!-- bootstrap! -->
+<!-- local reference for offline testing only -->
+<!-- <link rel="stylesheet" href="https://thegymnasium.com/static/gymnasium/css/bootstrap.e60e9bcfcac0.css" > -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+
+<script src="https://thegymnasium.com/static/gymnasium/js/cookiebanner.js" id="cookiebanner"
+	data-link="#f89820"
+	data-message="We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. Find out more about how we use cookies in our"
+	data-linkmsg="Privacy Policy."
+	data-moreinfo="/privacy">
+</script>
+
+<script>
+  var CLOUDWALL_ENV = "my";
+</script>
+
+<script src="https://thegymnasium.com/static/gymnasium/js/gymnasium.js"> </script>
+
+<script>
+  // check for unsupported browsers; display warning message if an old browser
+  // is in use
+
+  $(function(){
+    // This function returns Internet Explorer's major version number,
+    // or 0 for others. It works by finding the "MSIE " string and
+    // extracting the version number following the space, up to the decimal
+    // point, ignoring the minor version number
+    // for more info, see: https://support.microsoft.com/en-us/kb/167820
+    function msieversion()
+    {
+      var ua = window.navigator.userAgent
+      var msie = ua.indexOf ( "MSIE " )
+
+      if ( msie > 0 )      // If Internet Explorer, return version number
+         return parseInt (ua.substring (msie+5, ua.indexOf (".", msie )))
+      else                 // If another browser, return 0
+         return 0
+    }
+
+    function displayBrowserWarning()
+    {
+      $('#browserWarning').show();
+    }
+
+    var ieversion = msieversion();
+    // make sure that we are using IE > 9
+    if (ieversion > 0 && ieversion < 11)
+    {
+      displayBrowserWarning();
+    }
+
+  });
+
+
+	//this is a nonsense hack to make courseware subnavigation look like
+	//what we want it to look like until we move to Cypress
+	//TODO: Unhackify this.
+	$(function(){
+		$('.course-tabs li a b:contains("Course")').each(function(idx, value){
+			value.innerHTML = "Lessons";
+		});
+
+		$('.course-tabs li a b:contains("Home")').each(function(idx,value){
+			value.innerHTML = "Syllabus";
+		});
+
+    $('.course-tabs li a b:contains("Discussion")').each(function(idx, value) {
+      value.innerHTML = "Forum";
+    });
+
+    // make sure lessons tab comes first
+    var syllabusTab = $('.course-tabs li:contains("Lessons")');
+    $(syllabusTab).prependTo(
+      $(syllabusTab).parent()
+    );
+
+		$('.course-tabs li a:contains("Forum")').each(function(idx,value){
+			//TODO: Unhack this silly logic to hide forum tab for gym shorts
+
+			//we're looking at the href property of this anchor to see if it contains
+			//a course link that has "Gym/00" in it.  All gym shorts start with "0"
+			//so that should hide this link. Note that this does _not_ disable
+			//forums... those pages will still exist, but we won't like to them.
+			if ($(value).attr("href").toLowerCase().indexOf("gym/0") > 0)
+			{
+				$(value).parent().hide();
+			}
+		})
+
+		$('.course-tabs li:contains("Progress")').hide();
+		$('.course-tabs').show();
+	});
+</script>
+
+<!-- eloqua tracking code -->
+<script>
+  var _elqQ = _elqQ || [];
+  _elqQ.push(['elqSetSiteId', '386085125']);
+  _elqQ.push(['elqTrackPageView']);
+
+  (function() {
+    function async_load() {
+      var s = document.createElement('script'); s.type ='text/javascript';
+      s.async = true; s.src = '//img.en25.com/i/elqCfg.min.js';
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+
+    if (window.addEventListener) window.addEventListener('DOMContentLoaded', async_load, false);
+    else if (window.attachEvent) window.attachEvent('onload',async_load);
+  })();
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-684147-51', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>
+  var HW_config = {
+    selector: "#headway-changelog-anchor", // CSS selector where to inject the badge
+    account: "J3mN9x" // your account ID
+  };
+</script>
+<script async src="//cdn.headwayapp.co/widget.js"></script>
+
+<!-- dummy Segment -->
+<script>
+  var analytics = {
+    track: function() { return; },
+    trackLink: function() { return; },
+    pageview: function() { return; },
+    page: function() { return; }
+  };
+</script>
+<!-- end dummy Segment -->
+
+
+  <meta name="path_prefix" content="">
+  <meta name="google-site-verification" content="_mipQ4AtZQDNmbtOkwehQDOgCxUUV2fb_C0b6wbiRHY">
+
+</head>
+
+<body class="ltr lang_en">
+
+
+<div id="page-prompt"></div>
+  <div class="window-wrap" dir="ltr">
+    <a class="nav-skip" href="#main">Skip to main content</a>
+
+  <header class="global" aria-label="Global Navigation">
+    <nav id="primary-nav" class="black-background container-fluid">
+      <div class="container">
+        <div class="row">
+
+          <div class="navbar">
+            <div class="nav navbar navbar-nav navbar-left">
+                    <a class="gym-button" href="/register"><b>Sign Up</b></a>
+            </div>
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav navbar-right">
+
+
+                <li><a href="http://www.aquent.com" target="_blank" alt="Aquent" class="gym-nav-icon-container"> <i class="gym-nav-icon aquent-icon"></i></a></li>
+                <li><a href="http://www.vitamintalent.com" target="_blank" alt="Vitamin T" class="gym-nav-icon-container"> <i class="gym-nav-icon vitamin-t-icon"></i></a></li>
+
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <nav id="secondary-nav" class="container-fluid">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 navbar navbar-default">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#secondary-nav-items">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">
+
+  <img class="gymnasium-logo" src="https://thegymnasium.com/static/gymnasium/images/gymnasiumLogo.png" alt="Home Page">
+
+              </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="secondary-nav-items">
+              <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/jobs">Jobs</a></li>
+                <li><a href="/about">About</a></li>
+
+                  <li>
+                        <a class="gym-button" href="/login"><b>Log In</b></a>
+                  </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="wrapper-msg urgency-high" id="browserWarning" style="display:none;">
+        <div class="msg">
+            <div class="msg-content">
+                <h1>Improve your Gymnasium experience</h1>
+                <div class="copy">
+                    <p>It looks like you’re using an unsupported browser. To get the most out of your Gymnasium experience, we recommend that you use
+                      <a href="https://www.google.com/chrome/index.html" target="_blank">Chrome</a>,
+                      <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a>, or
+                      <a href="http://www.apple.com/safari/" target="_blank">Safari</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </header>
+
+<!-- //
+Generated at: 2018-07-18 10:32:41 -0400
+Served from: https://gymcms.xyzhttps://thegymnasium.com/static/system-status/
+Git Hash: 87a1312
+// -->
+
+<section id="forgot-password" class="modal" aria-hidden="true">
+  <div class="dialog" role="dialog" aria-labelledby="email-settings-title">
+
+    <button class="close-modal" tabindex="1" data-dismiss="modal">
+      <b class="close-modal-content gym-button">
+        Dismiss
+      </b>
+    </button>
+
+    <form id="pwd_reset_form" action="/password_reset/" method="post" data-remote="true">
+      <fieldset>
+        <legend>
+          <b role="heading">
+            Password Reset
+          </b>
+
+          <span class="sr">,
+            window open
+          </span>
+        </legend>
+
+
+        <ul class="list-input">
+            <label>
+              <b>Your E-mail Address*</b>
+            </label>
+            <input type="email" name="email" id="pwd_reset_email" aria-required="true" placeholder="username@domain.com" required>
+          </li>
+        </ul>
+        <p>
+          This is the e-mail address you used to register with Gymnasium
+        </p>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div id="error_message"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <button class="gym-button" tabindex="2" name="submit" type="submit" id="submit-password-reset-button">
+              <b>
+                Reset My Password
+              </b>
+            </button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+
+    <div class="row confirmation-message" hidden>
+      <legend>
+        <b role="heading">
+          Check your email
+        </b>
+      </legend>
+      <div class="col-md-12">
+        <p>We've e-mailed you instructions for setting your password to the e-mail address you submitted. You should be receiving it shortly.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<script>
+  (function() {
+
+    $('#pwd_reset_form').validate();
+
+    $('#forgot-password').on('show.bs.modal', function(){
+      //$('.confirmation-message').hide();
+      //$('#pwd_reset_form').show();
+    });
+
+    $('#submit-password-reset-button').click(function(){
+      //$('.confirmation-message').show();
+      //$('#pwd_reset_form').hide();
+    });
+
+    $(document).delegate('#pwd_reset_form', 'ajax:success', function(data, json, xhr) {
+      if(json.success) {
+        $("#pwd_reset_form").html(json.value);
+      } else {
+        if($('#pwd_error').length == 0) {
+          $('#error_message').html('<div id="pwd_error" class="modal-form-error error">Email address is incorrect or there is no account registered with this email address.</div>');
+        }
+        $('#pwd_error').stop().css("display", "block");
+      }
+    });
+
+  })(this)
+</script>
+
+<script async>
+  $(function(){
+    var button = document.getElementById("dropdown");
+
+    $(button).click(function(){
+      var menu = document.getElementById("dropdown-menu");
+
+      var caret=$(button).children('.caret');
+
+      if (menu.style.display !== "inline") {
+          menu.style.display = "inline";
+          $(caret).hide();
+      }
+      else {
+        menu.style.display = "none";
+        $(caret).show();
+      }
+    });
+  })
+</script>
+
+
+<!-- <main class="content-wrapper" id="content"> -->
+<main class="content-wrapper" id="main">
+
+<!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: Gymnasium HP
+URL of the webpage where the tag is expected to be placed: http://gymnasium.aquent.com/
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 12/02/2015
+-->
+<script>
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write('<iframe src="https://5255816.fls.doubleclick.net/activityi;src=5255816;type=count0;cat=gymna00;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+</script>
+<noscript>
+<iframe src="https://5255816.fls.doubleclick.net/activityi;src=5255816;type=count0;cat=gymna00;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
+<link rel="stylesheet" href="css/ux-design.css">
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="js/smooth-scroll.js" async></script>
+
+<header id="about">
+  <div class="container-fluid" role="presentation">
+    <div class="container" role="presentation">
+      <div class="row" role="presentation">
+        <div class="col-md-12" role="presentation">
+  <h1>UX Design</h1>
+  <p class="mission">Gymnasium offers free online <span class="no-wrap">UX Design</span> <a href="#courses" title="UX Courses"><b>courses</b></a>, <a href="#webinars" title="UX Webinars"><b>webinars</b></a>, and <a href="#articles" title="UX Articles"><b>articles</b></a> with career opportunities to find <a href="#jobs" title="UX Jobs"><b class="no-wrap">UX jobs</b></a> through Aquent, one of the largest staffing agencies in the world.</p>
+  <div class="card col col-3" id="feature">
+    <ul>
+      <li>
+        <article class="card-content feature-course">
+          <header class="card-header">
+            <h2><span class="visuallyhidden">UX</span> Courses</h2>
+          </header>
+          <section class="card-main bg-ux-design">
+          <figure class="course-artwork">
+            <img alt="UX Fundamentals" srcset="img/courses/course-artwork/svg/gym-103.svg" src="img/courses/course-artwork/png/gym-103.png">
+          </figure>
+            <header>
+              <h3>UX Fundamentals</h3>
+            </header>
+          </section>
+          <div class="card-cta" role="presentation">
+            <div class="structure" role="presentation">
+              <a class="gym-button" href="https://thegymnasium.com/courses/GYM/103/0/about" title="Free Online Course"><b>Get Started</b></a>
+            </div>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="card-content feature-webinar">
+          <header class="card-header">
+            <h2><span class="visuallyhidden">UX</span> Webinars</h2>
+          </header>
+          <section class="card-main">
+            <figure class="full-width">
+              <img alt="" srcset="" src="img/webinars/feature-webinar/ux-slide-erin-young.jpg">
+            </figure>
+            <header>
+              <h3>Right-Sizing Your Rapid Prototypes for Web & Mobile</h3>
+            </header>
+          </section>
+          <div class="card-cta" role="presentation">
+            <div class="structure" role="presentation">
+              <a class="gym-button" href="https://gymnasium.wistia.com/medias/unoycz25si" title="Free Webinar" target="_blank" rel="noopener"><b>Watch Now</b></a>
+            </div>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="card-content feature-article">
+          <header class="card-header">
+            <h2><span class="visuallyhidden">UX</span> Articles</h2>
+          </header>
+          <section class="card-main">
+            <header>
+              <h3>Approaches to Successful Rapid Prototyping</h3>
+            </header>
+          </section>
+          <div class="card-cta" role="presentation">
+            <div class="structure" role="presentation">
+              <a class="gym-button" href="https://medium.com/gymnasium/https-medium-com-gymnasiumtweets-approaches-to-successful-rapid-prototyping-320361571f83" title="The Gymnasium Blog — Medium" target="_blank" rel="noopener"><b>Learn More</b></a>
+            </div>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </div>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
 
-<main id="ux-design">
-<div class="max-width" role="presentation">
+<div class="main-content container-fluid" role="presentation">
+  <div class="container" role="presentation">
+    <div class="row" role="presentation">
+      <div class="col-md-12" role="presentation">
 
-<section class="hero">
-  <header>
-    <h1>UX Design</h1>
-  </header>
+<section class="section" id="jobs">
+  <div class="section-content">
+    <header>
+      <h2>UX Jobs</h2>
+    </header>
+    <form method="get" id="find-jobs">
+      <div class="select-search">
+        <label class="visuallyhidden" for="market" aria-label="Choose a Location"></label>
+        <select id="market" name="market" class="form-control" required="" aria-required="true">
+        <option selected="">Select a Location:</option>
+        <option disabled="">——————</option>
+        <optgroup label="USA">
+          <option value="23">Atlanta</option>
+          <option value="60">Austin</option>
+          <option value="46">Baltimore</option>
+          <option value="102">Boise</option>
+          <option value="10">Boston</option>
+          <option value="61">Charlotte</option>
+          <option value="14">Chicago</option>
+          <option value="34">Connecticut</option>
+          <option value="22">Dallas</option>
+          <option value="27">Denver</option>
+          <option value="24">Detroit</option>
+          <option value="826">Houston</option>
+          <option value="58">Indianapolis</option>
+          <option value="13">Los Angeles</option>
+          <option value="33">Miami</option>
+          <option value="20">Minneapolis</option>
+          <option value="807">Moline</option>
+          <option value="30">New Jersey</option>
+          <option value="11">New York City</option>
+          <option value="51">Northern Virginia</option>
+          <option value="32">Ohio</option>
+          <option value="19">Orange County</option>
+          <option value="72">Orlando</option>
+          <option value="18">Philadelphia</option>
+          <option value="31">Phoenix</option>
+          <option value="41">Portland, OR</option>
+          <option value="803">Raleigh/Durham</option>
+          <option value="73">Rhode Island</option>
+          <option value="78">Richmond</option>
+          <option value="16">San Diego</option>
+          <option value="12">San Francisco</option>
+          <option value="17">Seattle</option>
+          <option value="15">Silicon Valley</option>
+          <option value="37">St. Louis</option>
+          <option value="68">Tampa</option>
+          <option value="25">Washington, DC</option>
+          <option value="881">Wisconsin</option>
+        </optgroup>
+          <option disabled="">——————</option>
+        <optgroup label="Canada">
+          <option value="40">Toronto</option>
+          <option value="47">Vancouver</option>
+        </optgroup>
+          <option disabled="">——————</option>
+        <optgroup label="France">
+          <option value="35">Paris</option>
+        </optgroup>
+          <option disabled="">——————</option>
+        <optgroup label="UK">
+          <option value="29">London</option>
+        </optgroup>
+          <option disabled="">——————</option>
+        <optgroup label="Netherlands">
+          <option value="43">Amsterdam</option>
+        </optgroup>
+          <option disabled="">——————</option>
+        <optgroup label="Australia">
+          <option value="36">Melbourne</option>
+          <option value="39">Sydney</option>
+        </optgroup>
+          <option disabled="">——————</option>
+        <optgroup label="Japan">
+          <option value="92">Fukuoka</option>
+          <option value="79">Nagoya</option>
+          <option value="64">Osaka</option>
+          <option value="44">Tokyo</option>
+        </optgroup>
+    </select>
+        <button class="gym-button" id="view-jobs-button"><b id="view-jobs-search">Find UX Jobs</b><b id="view-jobs-status">Loading…</b></button>
+      </div>
+      <div id="view-jobs-results">
+        <div class="col">
+          <ul>
+            <li class="job-post">
+              <h3 class="job-title"><a href="https://aquent.com/find-work/?k=&l=all&ux=on#content">UX Designer/ Usability Designer</a></h3>
+              <p class="job-market">Framingham, MA</p>
+              <div class="job-link">
+                <a href="https://aquent.com/find-work/?k=&l=all&ux=on#content" target="_blank" rel="noopener">
+                  <b>Learn More</b>
+                </a>
+              </div>
+            </li>
+            <li class="job-post">
+              <h3 class="job-title"><a href="https://aquent.com/find-work/?k=&l=all&ux=on#content">UX / UI Designer</a></h3>
+              <p class="job-market">Woonsocket, RI or Boston, MA</p>
+              <div class="job-link">
+                <a href="https://aquent.com/find-work/?k=&l=all&ux=on#content" target="_blank" rel="noopener">
+                  <b>Learn More</b>
+                </a>
+              </div>
+            </li>
+            <li class="job-post">
+              <h3 class="job-title"><a href="https://aquent.com/find-work/?k=&l=all&ux=on#content">Mid / Senior UX Designer</a></h3>
+              <p class="job-market">Greater Boston Area</p>
+              <div class="job-link">
+                <a href="https://aquent.com/find-work/?k=&l=all&ux=on#content" target="_blank" rel="noopener">
+                  <b>Learn More</b>
+                </a>
+              </div>
+            </li>
+            <li class="job-post">
+              <h3 class="job-title"><a href="https://aquent.com/find-work/?k=&l=all&ux=on#content">UX Designer</a></h3>
+              <p class="job-market">Watertown, MA</p>
+              <div class="job-link">
+                <a href="https://aquent.com/find-work/?k=&l=all&ux=on#content" target="_blank" rel="noopener">
+                  <b>Learn More</b>
+                </a>
+              </div>
+            </li>
+            <li class="job-post">
+              <h3 class="job-title"><a href="https://aquent.com/find-work/?k=&l=all&ux=on#content">Senior UX / UI Designer</a></h3>
+              <p class="job-market">Burlington, MA</p>
+              <div class="job-link">
+                <a href="https://aquent.com/find-work/?k=&l=all&ux=on#content" target="_blank" rel="noopener">
+                  <b>Learn More</b>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="cta" role="presentation">
+          <a class="gym-button" href="https://aquent.com/find-work/?k=&l=all&ux=on#content" title="Find Work — Aquent" target="_blank" rel="noopener"><b>View More Jobs</b></a>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="to-top-link" role="presentation">
+    <a href="#main"><b>Back to top</b></a>
+  </div>
 </section>
 
-<article class="" id="courses">
-  <header>
-    <h2>Courses</h2>
-  </header>
-  <ul class="">
-    <li class="feature">
-      <section>
-        <header>
+<section class="section" id="courses">
+  <div class="section-content">
+    <script src="json/ux-courses.json" type="application/ld+json"></script>
+    <header>
+      <h2>UX Courses</h2>
+      <p>Earn certificates and badges by taking free online UX design courses taught by industry experts and trailblazers in the web community — from Capital One and The New York Times to Microsoft and Slide UX.</p>
+    </header>
+    <div class="col col-2">
+      <ul>
+        <li>
+          <a class="img-link" href="https://thegymnasium.com/courses/GYM/103/0/about" title="Get Started">
+            <figure class="course-artwork bg-ux-design">
+              <img alt="UX Fundamentals" srcset="img/courses/course-artwork/svg/gym-103.svg" src="img/courses/course-artwork/png/gym-103.png">
+            </figure>
+          </a>
+          <h3><a href="https://thegymnasium.com/courses/GYM/103/0/about" title="Get Started">UX Fundamentals</a></h3>
+        </li>
+        <li>
+          <a class="img-link" href="https://thegymnasium.com/courses/GYM/005/0/about" title="Get Started">
+            <figure class="course-artwork bg-ux-design">
+              <img alt="Introducing Sketch for UX and UI" srcset="img/courses/course-artwork/svg/gym-005.svg" src="img/courses/course-artwork/png/gym-005.png">
+            </figure>
+          </a>
+          <h3><a href="https://thegymnasium.com/courses/GYM/005/0/about" title="Get Started">Introducing Sketch for UX <span class="no-wrap">and UI</span></a></h3>
+        </li>
+        <li>
+          <a class="img-link" href="https://thegymnasium.com/courses/GYM/008/0/about" title="Get Started">
+            <figure class="course-artwork bg-ux-design">
+              <img alt="Advanced Rapid Prototyping with Axure" srcset="img/courses/course-artwork/svg/gym-008.svg" src="img/courses/course-artwork/png/gym-008.png">
+            </figure>
+          </a>
+          <h3><a href="https://thegymnasium.com/courses/GYM/008/0/about" title="Get Started">Advanced Rapid Prototyping <span class="no-wrap">with Axure</span></a></h3>
+        </li>
+        <li>
+          <a class="img-link" href="https://thegymnasium.com/courses/course-v1:GYM+014+0/about" title="Get Started">
+            <figure class="course-artwork bg-ux-design">
+              <img alt="Working with Atomic Design and Pattern Lab" srcset="img/courses/course-artwork/svg/gym-014.svg" src="img/courses/course-artwork/png/gym-014.png">
+            </figure>
+          </a>
+          <h3><a href="https://thegymnasium.com/courses/course-v1:GYM+014+0/about" title="Get Started">Working with Atomic Design and <span class="no-wrap">Pattern Lab</span></a></h3>
+        </li>
+        <li>
+          <a class="img-link" href="https://thegymnasium.com/courses/GYM/105/0/about" title="Get Started">
+            <figure class="course-artwork bg-ux-content">
+              <img alt="Writing for Web & Mobile" srcset="img/courses/course-artwork/svg/gym-105.svg" src="img/courses/course-artwork/png/gym-105.png">
+            </figure>
+          </a>
+          <h3><a href="https://thegymnasium.com/courses/GYM/105/0/about" title="Get Started">Writing for Web & Mobile</a></h3>
+        </li>
+        <li>
+          <a class="img-link" href="https://thegymnasium.com/courses/GYM/106/0/about" title="Get Started">
+            <figure class="course-artwork bg-ux-content">
+              <img alt="Information Design and Visualization Fundamentals" srcset="img/courses/course-artwork/svg/gym-106.svg" src="img/courses/course-artwork/png/gym-106.png">
+            </figure>
+          </a>
+          <h3><a href="https://thegymnasium.com/courses/GYM/106/0/about" title="Get Started">Information Design and Visualization Fundamentals</a></h3>
+         </li>
+      </ul>
+    </div>
+    <div class="cta" role="presentation">
+      <a class="gym-button" href="https://thegymnasium.com/courses" title="Free Online Courses"><b>View More Courses</b></a>
+    </div>
+  </div>
+  <div class="to-top-link" role="presentation">
+    <a href="#main"><b>Back to top</b></a>
+  </div>
+</section>
+
+<section class="section" id="webinars">
+  <div class="section-content">
+    <header>
+      <h2>UX Webinars</h2>
+    </header>
+    <div class="col col-3">
+      <ul>
+      <li>
+        <section class="webinar">
           <figure>
-            <img alt="" srcset="" src="img/course-artwork/png/gym-103.png" width="256">
+            <div class="poster-mask">
+              <a href="https://gymnasium.wistia.com/medias/unoycz25si" title="Watch Now" target="_blank" rel="noopener"><img alt="" src="img/webinars/video-poster/right-sizing-rapid-prototypes.jpg"></a>
+            </div>
           </figure>
-          <h3>UX Fundamentals</h3>
-        </header>
-        <div class="cta">
-          <a href="https://thegymnasium.com/courses/GYM/103/0/about" title="Free Course" target="_blank" rel="noopener"><b>Get Started</b></a>
-        </div>
-      </section>
-    </li>
-    <li>
-      <section>
-        <header>
-          <h3>Introducing Sketch for UX and UI</h3>
-        </header>
-        <div class="cta">
-          <a href="https://thegymnasium.com/courses/GYM/005/0/about" title="Free Course" target="_blank" rel="noopener"><b>Get Started</b></a>
-        </div>
-      </section>
-    </li>
-    <li>
-      <section>
-        <header>
-          <h3>Advanced Prototyping with Axure</h3>
-        </header>
-        <div class="cta">
-          <a href="https://thegymnasium.com/courses/GYM/008/0/about" title="Free Course" target="_blank" rel="noopener"><b>Get Started</b></a>
-        </div>
-      </section>
-    </li>
-  </ul>
-  <details close class="related">
-    <summary><b>View All Courses</b></summary>
-    <ul class="">
-      <li>
-        <section>
           <header>
-            <h3>UX Fundamentals</h3>
+            <h3><a href="https://gymnasium.wistia.com/medias/unoycz25si" title="Watch Now" target="_blank" rel="noopener">Right-Sizing Your Rapid Prototypes for Web & Mobile</a></h3>
+            <p>with Erin Young</p>
           </header>
-          <div class="cta">
-            <a href="https://thegymnasium.com/courses/GYM/103/0/about" title="Free Course" target="_blank" rel="noopener"><b>Get Started</b></a>
-          </div>
         </section>
       </li>
       <li>
-        <section>
+        <section class="webinar">
+          <figure>
+            <div class="poster-mask">
+              <a href="https://gymnasium.wistia.com/medias/cisy2lhyxp" title="Watch Now" target="_blank" rel="noopener"><img alt="" src="img/webinars/video-poster/designing-for-real-people.jpg"></a>
+            </div>
+          </figure>
           <header>
-            <h3>Introducing Sketch for UX and UI</h3>
+            <h3><a href="https://gymnasium.wistia.com/medias/cisy2lhyxp" title="Watch Now" target="_blank" rel="noopener">Designing for Real People</a></h3>
+            <p>with Eric Meyer</p>
           </header>
-          <div class="cta">
-            <a href="https://thegymnasium.com/courses/GYM/005/0/about" title="Free Course" target="_blank" rel="noopener"><b>Get Started</b></a>
-          </div>
         </section>
       </li>
       <li>
-        <section>
+        <section class="webinar">
+          <figure>
+            <div class="poster-mask">
+              <a href="https://gymnasium.wistia.com/medias/unoycz25si" title="Watch Now" target="_blank" rel="noopener"><img alt="" src="img/webinars/video-poster/designing-for-understanding.jpg"></a>
+            </div>
+          </figure>
           <header>
-            <h3>Advanced Prototyping with Axure</h3>
+            <h3><a href="https://gymnasium.wistia.com/medias/kq4zjos3fi" title="Watch Now" target="_blank" rel="noopener">Designing for Understanding</a></h3>
+            <p>with Stephanie Hay</p>
           </header>
-          <div class="cta">
-            <a href="https://thegymnasium.com/courses/GYM/008/0/about" title="Free Course" target="_blank" rel="noopener"><b>Get Started</b></a>
-          </div>
         </section>
       </li>
     </ul>
-  </details>
-</article>
-
-<article class="" id="webinars">
-  <header>
-    <h2>Webinars</h2>
-  </header>
-  <ul class="">
-    <li class="feature">
-      <section>
-        <header>
-          <!--
-          <figure>
-            <img alt="" srcset="" src="img/course-artwork/png/gym-103.png" width="256">
-          </figure>
-          -->
-          <h3>Right-Sizing Your Rapid Prototypes for Web & Mobile</h3>
-        </header>
-        <div class="cta">
-          <a href="https://gymnasium.wistia.com/medias/unoycz25si" title="Free Webinar" target="_blank" rel="noopener"><b>Watch Now</b></a>
-        </div>
-      </section>
-    </li>
-    <li>
-      <section>
-        <header>
-          <h3>Designing for Real People</h3>
-        </header>
-        <div class="cta">
-          <a href="https://gymnasium.wistia.com/medias/cisy2lhyxp" title="Free Webinar" target="_blank" rel="noopener"><b>Watch Now</b></a>
-        </div>
-      </section>
-    </li>
-    <li>
-      <section>
-        <header>
-          <h3>Designing for Understanding</h3>
-        </header>
-        <div class="cta">
-          <a href="#" title="Free Webinar" target="_blank" rel="noopener"><b>Watch Now</b></a>
-        </div>
-      </section>
-    </li>
-  </ul>
-</article>
-
-<article class="" id="articles">
-  <header>
-    <h2>Articles</h2>
-  </header>
-  <ul class="">
-    <li class="feature">
-      <section>
-        <header>
-          <!--
-          <figure>
-            <img alt="" srcset="" src="img/course-artwork/png/gym-103.png" width="256">
-          </figure>
-          -->
-          <h3>Approaches to Successful Rapid Prototyping</h3>
-        </header>
-        <div class="cta">
-          <a href="https://medium.com/gymnasium/https-medium-com-gymnasiumtweets-approaches-to-successful-rapid-prototyping-320361571f83" title="" target="_blank" rel="noopener"><b>Learn More</b></a>
-        </div>
-      </section>
-    </li>
-    <li>
-      <section>
-        <header>
-          <h3>Are You Designing for Real People or Just Personas?</h3>
-        </header>
-        <div class="cta">
-          <a href="https://medium.com/gymnasium/are-you-designing-for-real-people-or-just-personas-2ffdb6c3cd9b" title="" target="_blank" rel="noopener"><b>Learn More</b></a>
-        </div>
-      </section>
-    </li>
-    <li>
-      <section>
-        <header>
-          <h3>Creating a Vector Logo in Sketch</h3>
-        </header>
-        <div class="cta">
-          <a href="https://medium.com/gymnasium/creating-a-vector-logo-in-sketch-3-6d67e72a1449" title="" target="_blank" rel="noopener"><b>Learn More</b></a>
-        </div>
-      </section>
-    </li>
-  </ul>
-</article>
-
-<article class="" id="jobs">
-  <header>
-    <h2>Jobs</h2>
-    <select id="market" name="market" class="form-control" required="" aria-required="true">
-      <option disabled="">Select A Location:</option>
-      <option disabled="">——————</option>
-      <optgroup label="USA">
-        <option value="23">Atlanta</option>
-        <option value="60">Austin</option>
-        <option value="46">Baltimore</option>
-        <option value="102">Boise</option>
-        <option value="10" selected="">Boston</option>
-        <option value="61">Charlotte</option>
-        <option value="14">Chicago</option>
-        <option value="34">Connecticut</option>
-        <option value="22">Dallas</option>
-        <option value="27">Denver</option>
-        <option value="24">Detroit</option>
-        <option value="826">Houston</option>
-        <option value="58">Indianapolis</option>
-        <option value="13">Los Angeles</option>
-        <option value="33">Miami</option>
-        <option value="20">Minneapolis</option>
-        <option value="807">Moline</option>
-        <option value="30">New Jersey</option>
-        <option value="11">New York City</option>
-        <option value="51">Northern Virginia</option>
-        <option value="32">Ohio</option>
-        <option value="19">Orange County</option>
-        <option value="72">Orlando</option>
-        <option value="18">Philadelphia</option>
-        <option value="31">Phoenix</option>
-        <option value="41">Portland, OR</option>
-        <option value="803">Raleigh/Durham</option>
-        <option value="73">Rhode Island</option>
-        <option value="78">Richmond</option>
-        <option value="16">San Diego</option>
-        <option value="12">San Francisco</option>
-        <option value="17">Seattle</option>
-        <option value="15">Silicon Valley</option>
-        <option value="37">St. Louis</option>
-        <option value="68">Tampa</option>
-        <option value="25">Washington, DC</option>
-        <option value="881">Wisconsin</option>
-      </optgroup>
-        <option disabled="">——————</option>
-      <optgroup label="Canada">
-        <option value="40">Toronto</option>
-        <option value="47">Vancouver</option>
-      </optgroup>
-        <option disabled="">——————</option>
-      <optgroup label="France">
-        <option value="35">Paris</option>
-      </optgroup>
-        <option disabled="">——————</option>
-      <optgroup label="UK">
-        <option value="29">London</option>
-      </optgroup>
-        <option disabled="">——————</option>
-      <optgroup label="Netherlands">
-        <option value="43">Amsterdam</option>
-      </optgroup>
-        <option disabled="">——————</option>
-      <optgroup label="Australia">
-        <option value="36">Melbourne</option>
-        <option value="39">Sydney</option>
-      </optgroup>
-        <option disabled="">——————</option>
-      <optgroup label="Japan">
-        <option value="92">Fukuoka</option>
-        <option value="79">Nagoya</option>
-        <option value="64">Osaka</option>
-        <option value="44">Tokyo</option>
-      </optgroup>
-  </select>
-  </header>
-  <ul class="jobs-list">
-    <li>
-      <div>
-        <h3><a href="#">UX Designer/ Usability Designer</a></h3>
-        <p>Framingham, MA</p>
-      </div>
-      <a href="#" class="cta" target="_blank" rel="noopener"><b>Learn More</b></a>
-    </li>
-    <li>
-      <div>
-        <h3><a href="#">UX / UI Designer</a></h3>
-        <p>Woonsocket, RI or Boston, MA</p>
-      </div>
-      <a href="#" class="cta" target="_blank" rel="noopener"><b>Learn More</b></a>
-    </li>
-    <li>
-      <div>
-        <h3><a href="#">Mid / Senior UX Designer</a></h3>
-        <p>Greater Boston Area</p>
-      </div>
-      <a href="#" class="cta" target="_blank" rel="noopener"><b>Learn More</b></a>
-    </li>
-    <li>
-      <div>
-        <h3><a href="#">UX Designer</a></h3>
-        <p>Watertown, MA</p>
-      </div>
-      <a href="#" class="cta" target="_blank" rel="noopener"><b>Learn More</b></a>
-    </li>
-    <li>
-      <div>
-        <h3><a href="#">Senior UX / UI Designer</a></h3>
-        <p>Burlington, MA</p>
-      </div>
-      <a href="#" class="cta" target="_blank" rel="noopener"><b>Learn More</b></a>
-    </li>
-  </ul>
-  <div class="cta"><a href="#"><b>View All Jobs</b></a></div>
-</article>
-
-<section class="related">
-  <header>
-    <h3>Related Content</h3>
-  </header>
-  <ul>
-    <li>
-      <h4>Considering Contract Work? Here’s Why You Should Go for It</h4>
-      <a class="cta" href="https://medium.com/gymnasium/considering-contract-work-heres-why-you-should-go-for-it-7ec5eb246175" title="" target="_blank" rel="noopener"><b>Learn More</b></a>
-    </li>
-    <li>
-      <h4>Working Toward Closing the Gender Gap in Tech</h4>
-      <a class="cta" href="https://medium.com/gymnasium/working-toward-closing-the-gender-gap-in-tech-eb43d17a72ab" title="" target="_blank" rel="noopener"><b>Learn More</b></a>
-    </li>
-    <li>
-      <h4>Learning New Skills Can Change Your Life… A Lot</h4>
-      <a class="cta" href="https://medium.com/gymnasium/learning-new-skills-can-change-your-life-a-lot-87e1c9ec20f5" title="" target="_blank" rel="noopener"><b>Learn More</b></a>
-    </li>
-  </ul>
+    </div>
+    <div class="cta">
+      <a class="gym-button" href="https://gymnasium.wistia.com/projects/zzkttkw2rh" title="Previously Recorded Webinars" target="_blank" rel="noopener"><b>View More Webinars</b></a>
+    </div>
+  </div>
+  <div class="to-top-link" role="presentation">
+    <a href="#main"><b>Back to top</b></a>
+  </div>
 </section>
 
-<article class="" id="resources">
-  <header>
-    <h2>Resources</h2>
-  </header>
-  <ul class="">
-    <li class="feature">
-      <section>
-        <header>
-          <!--
-          <figure>
-            <img alt="" srcset="" src="https://cdn-images-1.medium.com/max/1200/1*gNKdf-F_NwHcfZELWihSxg.gif" width="256">
-          </figure>
-          -->
-          <h3>UX Design Tools for 2018 (For Mac AND PC) – Prototypr</h3>
-        </header>
-        <div class="cta">
-          <a href="https://blog.prototypr.io/ux-design-tools-for-2018-for-mac-and-pc-320a7be230c9" title="" target="_blank" rel="noopener"><b>Learn More</b></a>
-        </div>
-      </section>
-    </li>
-    <li>
-      <section>
-        <header>
-          <h3>Toybox | Make Your UI Consistent</h3>
-        </header>
-        <div class="cta">
-          <a href="http://toyboxsystems.com/roller" title="" target="_blank" rel="noopener"><b>Learn More</b></a>
-        </div>
-      </section>
-    </li>
-    <li>
-      <section>
-        <header>
-          <h3>12 Character Traits of Great UX Designers</h3>
-        </header>
-        <div class="cta">
-          <a href="https://uxplanet.org/12-character-traits-of-great-ux-designers-573d616d2d57" title="" target="_blank" rel="noopener"><b>Learn More</b></a>
-        </div>
-      </section>
-    </li>
-  </ul>
-</article>
+<section class="section" id="articles">
+  <div class="section-content">
+    <header>
+      <h2>UX Articles</h2>
+    </header>
+    <div class="col">
+      <ul>
+        <li>
+          <h3><a href="https://medium.com/gymnasium/https-medium-com-gymnasiumtweets-approaches-to-successful-rapid-prototyping-320361571f83" title="Learn More" target="_blank" rel="noopener">Approaches to Successful Rapid Prototyping</a></h3>
+        </li>
+        <li>
+          <h3><a href="https://medium.com/gymnasium/are-you-designing-for-real-people-or-just-personas-2ffdb6c3cd9b" title="Learn More" target="_blank" rel="noopener">Are You Designing for Real People or Just Personas?</a></h3>
+        </li>
+        <li>
+          <h3><a href="https://medium.com/gymnasium/creating-a-vector-logo-in-sketch-3-6d67e72a1449" title="Learn More" target="_blank" rel="noopener">Creating a Vector Logo in Sketch</a></h3>
+        </li>
+      </ul>
+    </div>
+    <div class="cta" role="presentation">
+      <a class="gym-button" href="https://medium.com/gymnasium" title="The Gymnasium Blog — Medium" target="_blank" rel="noopener"><b>View More Articles</b></a>
+    </div>
+  </div>
+  <div class="to-top-link" role="presentation">
+    <a href="#main"><b>Back to top</b></a>
+  </div>
+</section>
 
-<footer role="note">
-  <small><a href="#begin" title="↑"><b>Go back to top of the page?<b></a></small>
-</footer>
-
+      </div>
+    </div>
+  </div>
 </div>
-</main>
+
+  </main>
+
+<div class="wrapper-footer">
+  <footer class="container">
+    <div class="row">
+      <nav>
+        <div class="col-md-3">
+          <a href="/">
+            <img class="gymnasium-logo"  src="https://thegymnasium.com/static/gymnasium/images/gymnasiumLogo.png" alt="Aquent Gymnasium" >
+          </a>
+        </div>
+        <div class="col-md-6">
+          <ol class="list-inline text-center footer-link-list">
+            <li><a href="https://medium.com/gymnasium" target="_blank">Blog</a></li>
+            <li><a href="/jobs">Jobs</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/support">Support</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li id="headway-changelog-anchor">
+              <a href="https://headwayapp.co/the-gymnasium-changelog" target="_blank">Changelog</a>
+            </li>
+          </ol>
+          <div class="copyright">&copy; 2018 Aquent Gymnasium</div>
+        </div>
+      </nav>
+
+      <div class="built-on col-md-3 text-center">
+        <span>
+          <a href="http://openedx.org" target="_blank">
+            <img
+              src="https://files.edx.org/openedx-logos/edx-openedx-logo-tag-light.png"
+              width="150" height="50" alt="Powered by Open edX">
+          </a>
+
+        </span>
+      </div>
+    </div>
+    <div class="row">
+
+    </div>
+  </footer>
+</div>
+
+
+
+  </div>
+
+
+  <script>
+      $(window).on('load',function() {
+        if(getParameterByName('next')) {
+              $('#login').trigger("click");
+        }
+
+        Gymnasium.injectFBTrackingPixel();
+
+        //load jobs into the jobs page
+        Gymnasium.LoadJobsForMarket();
+
+        $('#view-jobs-button').click(function(event){
+          event.preventDefault();
+          var market = $('#market').val();
+          var market_label = $('#market option:selected').text();
+
+          // update the "View all jobs in [market]" url to point to this market
+          var viewJobsLinkURL = 'http://aquent.com/find-work/?utm_source=gymnasium&utm_medium=web&utm_campaign=homepagejobs&utm_content=viewall&l=' + market;
+          var viewJobsLink = $('#view-jobs-link')[0];
+          viewJobsLink.href = viewJobsLinkURL;
+
+          Gymnasium.LoadJobsForMarket(market);
+          $('#find-jobs-market-name, .job-location').text(market_label);
+
+
+        });
+      })
+  </script>
+
+  <script src="https://thegymnasium.com/static/js/vendor/noreferrer.js" charset="utf-8"></script>
+  <script src="https://thegymnasium.com/static/js/utils/navigation.js" charset="utf-8"></script>
 
 </body>
 </html>
+
+<!-- Performance beacon for onload times -->
