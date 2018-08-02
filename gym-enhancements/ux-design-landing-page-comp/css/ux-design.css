@@ -419,14 +419,6 @@ p.job-market {
     min-height: 24em;
   }
 
-
-  /* --- section / header paragraph --- */
-
-  #about .mission,
-  .section header p {
-    width: 82%;
-  }
-
   /* --- #feature --- */
 
   #feature {
@@ -520,6 +512,17 @@ p.job-market {
       margin-bottom: 0;
     }
 
+  }
+
+}
+
+@media (min-width: 75em) {
+
+  /* --- section / header paragraph --- */
+
+  #about .mission,
+  .section header p {
+    width: 88%;
   }
 
 }
