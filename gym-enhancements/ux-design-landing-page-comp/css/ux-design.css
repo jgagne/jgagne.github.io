@@ -117,6 +117,19 @@
   cursor: pointer;
 }
 
+/* gym text */
+
+.content-wrapper a.gym-link-secondary {
+  color: inherit;
+  border-bottom: 2px solid #f8971d;
+}
+
+.content-wrapper a.gym-link-secondary:hover,
+.content-wrapper a.gym-link-secondary:focus {
+  color: inherit;
+  border-bottom: 2px solid #444 !important; /* ! */
+}
+
 /* --- main --- */
 
 #main.content-wrapper {
@@ -164,11 +177,6 @@
   font: normal 1.45em/1.55 "Helvetica Neue", Helvetica, sans-serif;
   color: #222;
   margin-top: .6em;
-}
-
-#about a {
-  color: inherit;
-  border-bottom: 2px solid #f8971d;
 }
 
 /* --- columns --- */
