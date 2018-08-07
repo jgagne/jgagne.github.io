@@ -315,6 +315,8 @@ header.card-header,
 
 /* job status */
 
+/* start --- for comp only */
+
 #view-jobs-status {
   display: none;
 }
@@ -326,6 +328,8 @@ header.card-header,
 #find-jobs:target #view-jobs-status {
   display: inline;
 }
+
+/* end --- for comp only */
 
 #view-jobs-button b {
   font-size: 1.371428571428571em;
