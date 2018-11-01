@@ -1,6 +1,10 @@
+/* --- reset/rescale Bootstrap (3) handiwork --- */
+
 .section-featured-courses {
   font-size: 114.2857142857143%;
 }
+
+/* --- course type(s) --- */
 
 .list-featured-courses .design-development {
   background-color: #d73158;
@@ -18,16 +22,15 @@
   background-color: #2c9959;
 }
 
-/* --- course type --- */
-
 .featured-course .course-type {
+  position: relative;
+  top: -.4em;
   font: bold .85em/1.15 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #fff;
   letter-spacing: .075em;
   word-spacing: .1em;
   text-transform: uppercase;
   text-align: left;
-  margin-left: 0;
 }
 
 /* --- artwork mask --- */
@@ -115,7 +118,7 @@
   font: bold 1.6em/1.4 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #444 !important; /* ! */
   margin-bottom: 0;
-  }
+}
 
 /* --- typographic details --- */
 
@@ -123,7 +126,7 @@
 
 .no-wrap {
   white-space: nowrap;
-  }
+}
 
 /* --- card --- */
 
@@ -196,26 +199,26 @@
 
 }
 
-@media (min-width: 60em) {
+@media (min-width: 62em) {
 
   .cols ul li {
     width: 33.333333333333333%;
   }
 
   .cols ul li:last-child {
-    !display: none;
+    display: none;
   }
 
 }
 
-@media (min-width: 75em) {
+@media (min-width: 78em) {
 
   .cols ul li {
     width: 25%;
   }
 
   .cols ul li:last-child {
-    !display: inline-block;
+    display: inline-block;
   }
 
 }
@@ -291,8 +294,7 @@
 
 /* --- gym-button --- */
 
-.list-featured-courses .gym-button,
-.about-featured-courses .gym-button {
+.section-featured-courses .gym-button {
   display: inline-block;
   width: auto !important; /* ! */
   color: #fff;
@@ -307,8 +309,7 @@
   cursor: pointer;
 }
 
-.list-featured-courses .gym-button b,
-.about-featured-courses .gym-button b {
+.section-featured-courses .gym-button b {
   font: bold 1.4em/1.15 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #fff !important; /* ! */
   letter-spacing: .02em;
@@ -320,15 +321,6 @@
 .list-featured-courses a:hover {
   border-bottom: 0 !important;
 }
-
-
-/*
-.featured-course header,
-.about-featured-courses,
-.section-featured-courses .gym-button b {
-  font-size: 114.2857142857143%;
-}
- */
 
 .featured-course header * {
   color: #fff !important;
