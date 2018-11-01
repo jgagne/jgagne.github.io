@@ -84,31 +84,9 @@
   margin-left: 0;
 }
 
-/*
-.list-featured-courses .design-development .instructor {
-  color: #d73158;
-  border-bottom-color: #d73158;
-}
-
-.list-featured-courses .development .instructor {
-  color: #764c9f;
-  border-bottom-color: #764c9f;
-}
-
-.list-featured-courses .user-experience .instructor {
-  color: #5ca5a0;
-  border-bottom-color: #5ca5a0;
-}
-
-.list-featured-courses .content-creation .instructor {
-  color: #2c9959;
-  border-bottom-color: #2c9959;
-}
- */
-
 .featured-course .instructor dt,
 .featured-course .instructor dd {
-  font: normal 1.1em/1.25 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: normal 1.0625em/1.25 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* --- call-to-action / featured courses --- */
