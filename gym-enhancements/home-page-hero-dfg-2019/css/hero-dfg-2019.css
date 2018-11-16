@@ -6,7 +6,7 @@
   white-space: nowrap;
 }
 
-#hero-gfd-2019 {
+#hero-dfg-2019 {
   background-color: #dcd2b9;
   background-image: url("../img/designing-for-good-2019-hero-1000w.jpg"), linear-gradient(#e5e2d3, #c9b09c);
   background-repeat: no-repeat;
@@ -88,7 +88,7 @@
 
 @media (min-width: 36em) {
 
-  #hero-gfd-2019 {
+  #hero-dfg-2019 {
     padding-top: 1.75em;
     padding-bottom: 1.75em;
   }
@@ -102,7 +102,7 @@
 
 @media (min-width: 48em) {
 
-  #hero-gfd-2019 {
+  #hero-dfg-2019 {
     background-color: #dcd2b9;
     background-image: url("../img/designing-for-good-2019-hero-1500w.jpg"), linear-gradient(#e5e2d3, #c9b09c);
     background-repeat: no-repeat;
@@ -143,7 +143,7 @@
 (min-width: 76em) and
 (min-resolution: 1.25dppx) {
 
-  #hero-gfd-2019 {
+  #hero-dfg-2019 {
     background-image: url("../img/designing-for-good-2019-hero-2000w.jpg"), linear-gradient(#e5e2d3, #c9b09c);
     }
 
