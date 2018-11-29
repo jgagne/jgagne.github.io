@@ -69,7 +69,7 @@
   max-width: 66.666666666666667%;
   height: auto;
   margin: 0 auto;
-  animation: sway 24s cubic-bezier(0.420, 0.000, 0.580, 1.000) 3s infinite alternate;
+  animation: sway 24s cubic-bezier(0.420, 0.000, 0.580, 1.000) 5s infinite alternate;
 }
 
 @keyframes sway {
