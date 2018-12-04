@@ -25,7 +25,7 @@
   height: 100%;
   background: #2C9959 url("../img/hero-webinar-12-2018-1920w-pxlt.png") no-repeat center center;
   background-size: cover;
-  animation: fade 4s ease-in-out 4s forwards;
+  animation: fade 5s ease-in-out 3s forwards;
 }
 
 @keyframes fade {
