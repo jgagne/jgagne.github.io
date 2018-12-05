@@ -97,9 +97,9 @@
 
 .webinar-12-2018 a.gym-button-secondary {
   width: auto;
-  color: #222 !important;
-  background-color: #fff !important;
-  border: 2px solid #222 !important;
+  color: #fff !important;
+  background-color: transparent !important;
+  border: 2px solid #fff !important;
   padding: 1.2em 1.6em !important;
   vertical-align: bottom;
 }
@@ -108,6 +108,6 @@ a.gym-button-secondary:hover,
 a.gym-button-secondary:focus,
 a.gym-button-secondary:active {
   color: #fff !important;
-  background-color: transparent !important;
+  background-color: #a6a6a6 !important;
   border: 2px solid #fff !important;
 }
