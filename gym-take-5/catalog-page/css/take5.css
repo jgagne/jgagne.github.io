@@ -136,7 +136,10 @@ main figcaption {
 
 /* typographical details */
 
-#main .all-caps,
+#main .all-caps {
+  text-transform: uppercase;
+}
+
 b.all-caps {
   text-transform: uppercase;
 }
@@ -231,6 +234,10 @@ main h3 {
   margin-top: .6em;
 }
 
+.tutorial h3 {
+  line-height: 1.15;
+}
+
 [data-duration] {
   position: relative;
   overflow: hidden;
@@ -238,13 +245,13 @@ main h3 {
 
 [data-duration]::after {
   position: absolute;
-  bottom: .3125em;
-  right: .3125em;
+  bottom: .5rem;
+  right: .5rem;
   content: attr(data-duration);
   font: normal 80%/.9375 "Helvetica Neue", Helvetica, sans-serif;
   letter-spacing: .065rem;
   text-indent: .1rem;
-  color: #e1e1e1;
+  color: #fff;
   background-color: #222;
   padding: .6rem;
   border: 1px solid #ccc;
@@ -268,8 +275,32 @@ main h3 {
   padding-bottom: 1.6em;
 }
 
+@media (min-width: 62em) {
+
+#main .take5--featured {
+  margin-right: 1.2em;
+}
+
+}
+
+#main .take5--featured > header {
+  margin-bottom: 1.6em;
+}
+
+#main .take5--featured .tutorial {
+  margin-bottom: 1.2em;
+}
+
+#main .take5--featured .title {
+  font-size: 1.85em
+}
+
 .take5--info .title {
   font-size: 2.05em;
+}
+
+#main .take5--featured .title {
+  margin-top: .8rem;
 }
 
 .take5--info .desscription {
@@ -286,6 +317,7 @@ main h3 {
 
 /* add #main for specificity override */
 
+#main .take5--featured h2,
 #main .take5--resources h2,
 #main .take5--recommended h2 {
   font-size: 1.55em;
@@ -302,14 +334,61 @@ main h3 {
   margin-top: 1.4em;
 }
 
+.take5--resources-list header + ul {
+  margin-top: 1em;
+}
+
 .take5--resources-list ul {
   list-style: disc;
   padding-left: 1.2em;
-  margin-top: 1em;
 }
 
 .take5--resources-list li {
   margin-top: .5em;
+}
+
+.take5--upcoming-list {
+  border-top-color: #f8971d;
+  padding-top: 0;
+}
+
+.take5--upcoming-list ul {
+  list-style: none url();
+  padding-left: 0;
+}
+
+.take5--upcoming-list .weekday {
+  padding-top: .8em;
+  padding-bottom: .8em;
+  border-bottom: 1px dashed #f8971d;
+  margin-top: 0;
+}
+
+.weekday {
+  line-height: 1;
+}
+
+.weekday time {
+  display: inline-block;
+  font-size: 80%;
+  font-weight: bold;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: .035rem;
+  word-spacing: .035rem;
+  vertical-align: middle;
+  margin-bottom: .8rem;
+}
+
+.weekday time b {
+  display: inline-block;
+  text-indent: .165rem;
+}
+
+.weekday h4 {
+  font-weight: normal;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: none;
 }
 
 details.take5--transcript {
@@ -436,6 +515,10 @@ details.take5--transcript {
 .cta-message,
 .cta-message h2 {
   text-align: center;
+}
+
+.cta-left {
+  text-align: left;
 }
 
 .cta {
