@@ -113,9 +113,11 @@ main figcaption {
   letter-spacing: .025em;
 }
 
+/*
 [role="main"] h2 {
   letter-spacing: .015em;
 }
+ */
 
 #featured h3 {
   letter-spacing: .035em;
@@ -140,10 +142,6 @@ main figcaption {
   text-transform: uppercase;
 }
 
-b.all-caps {
-  text-transform: uppercase;
-}
-
 .tutorial b.all-caps {
   font-size: 80%;
   letter-spacing: .05rem;
@@ -151,6 +149,10 @@ b.all-caps {
 
 .tutorial b.all-caps + h3 {
   margin-top: .6rem;
+}
+
+.take5--recent-content {
+  border-top: 1px dashed #ccc;
 }
 
 #main .no-wrap {
@@ -180,10 +182,12 @@ b.all-caps {
   padding-bottom: 0;
 }
 
+/*
 #main h1,
 #main h2 {
   font-weight: 900;
 }
+ */
 
 #main h1 {
   font-size: 2.25em;
@@ -194,14 +198,17 @@ b.all-caps {
   margin-top: .6em;
 }
 
+/*
 #main h2 {
   font-size: 1.8em;
   color: #222;
 }
 
+ */
+
 main h3 {
   font-size: 1.4em;
-  line-height: 1.35;
+  line-height: 1.15;
 }
 
 #main .section header p {
@@ -254,7 +261,7 @@ main h3 {
   color: #fff;
   background-color: #222;
   padding: .6rem;
-  border: 1px solid #ccc;
+  border: 1px solid #fff;
   border-radius: 2px;
 }
 
@@ -317,10 +324,35 @@ main h3 {
 
 /* add #main for specificity override */
 
-#main .take5--featured h2,
+#main .take5--featured > header h2,
+#main .take5--recent-tutorials > header h2,
 #main .take5--resources h2,
 #main .take5--recommended h2 {
   font-size: 1.55em;
+}
+
+.course header,
+.tutorial header {
+  margin-top: .8em;
+}
+
+.subhead-topic,
+.subhead-datetime {
+  font: bold .85em/1.15 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  color: #222;
+  letter-spacing: .05rem;
+  word-spacing: .05rem;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.tutorial .subhead-topic,
+.tutorial .subhead-datetime {
+  margin-bottom: .6rem;
+}
+
+.subhead-datetime {
+  display: inline-block;
 }
 
 #tutorial-resources p {
@@ -348,7 +380,6 @@ main h3 {
 }
 
 .take5--upcoming-list {
-  border-top-color: #f8971d;
   padding-top: 0;
 }
 
@@ -357,38 +388,23 @@ main h3 {
   padding-left: 0;
 }
 
-.take5--upcoming-list .weekday {
+.take5--upcoming-list li {
   padding-top: .8em;
   padding-bottom: .8em;
-  border-bottom: 1px dashed #f8971d;
+  border-bottom: 1px dashed #ccc;
   margin-top: 0;
 }
 
-.weekday {
-  line-height: 1;
-}
-
-.weekday time {
-  display: inline-block;
-  font-size: 80%;
-  font-weight: bold;
-  color: #222;
-  text-transform: uppercase;
-  letter-spacing: .035rem;
-  word-spacing: .035rem;
-  vertical-align: middle;
+.take5--upcoming-list .subhead-datetime {
   margin-bottom: .8rem;
 }
 
-.weekday time b {
-  display: inline-block;
-  text-indent: .165rem;
+.take5--upcoming-list h4 {
+  text-transform: none;
 }
 
-.weekday h4 {
-  font-weight: normal;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  text-transform: none;
+.subhead-datetime time b {
+  display: inline-block;
 }
 
 details.take5--transcript {
@@ -464,6 +480,13 @@ details.take5--transcript {
     border-bottom: 0 none;
   }
 
+}
+
+
+.take5--hero-content,
+.take5--recent-content {
+  padding-top: 1.6em;
+  padding-bottom: 1.6em;
 }
 
 .take5--recommended-content {
@@ -555,6 +578,8 @@ details.take5--transcript {
 }
 
 .cols li {
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
   margin-top: 1.2em;
   overflow: hidden;
 }
@@ -571,8 +596,6 @@ details.take5--transcript {
   position: relative;
   top: -1px;
   border-top: 1px solid #ddd;
-  padding-top: 1.2em;
-  padding-bottom: 1.2em;
 }
 
 .cols-hr li::before {
