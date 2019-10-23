@@ -25,6 +25,10 @@
   padding: 0 30px 3em;
 }
 
+.hero-content-art {
+  display: none;
+}
+
 @media (min-width: 62em) {
 
   .hero-promo .container {
@@ -35,107 +39,15 @@
     min-height: 25.125em;
   }
 
-  .hero-content-copy::before {
-    content: "";
+  .hero-content-art {
     display: block;
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #333;
     background-repeat: no-repeat;
     background-position: left center;
-    background-size: cover;
-    border-right: 2px solid #ccc;
-  }
-
-  /* gym-5001–5020 */
-
-  #hero-gym-5001 .hero-content-copy::before {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5001-hero.jpg");
-  }
-
-  #hero-gym-5002 .hero-content-copy::before {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5002-hero.jpg");
-  }
-
-  #hero-gym-5003 .hero-content-copy::before {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5003-hero.jpg");
-  }
-
-  #hero-gym-5004 .hero-content-copy::before {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5004-hero.jpg");
-  }
-
-  #hero-gym-5005 .hero-content-copy::before {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5005-hero.jpg");
-  }
-
-  #hero-gym-5006 .hero-content-copy::before {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5006-hero.jpg");
-  }
-
-  #hero-gym-5007 .hero-content-copy::before {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5007-hero.jpg");
-  }
-
-  #hero-gym-5008 .hero-content-copy::before {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5008-hero.jpg");
-  }
-
-  #hero-gym-5009 .hero-content-copy::before {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5009-hero.jpg");
-  }
-
-  #hero-gym-5010 .hero-content-copy::before {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5001-hero.jpg");
-  }
-
-  #hero-gym-5011 .hero-content-copy::before {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5011-hero.jpg");
-  }
-
-  #hero-gym-5012 .hero-content-copy::before {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5012-hero.jpg");
-  }
-
-  #hero-gym-5013 .hero-content-copy::before {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5013-hero.jpg");
-  }
-
-  #hero-gym-5014 .hero-content-copy::before {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5014-hero.jpg");
-  }
-
-  #hero-gym-5015 .hero-content-copy::before {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5015-hero.jpg");
-  }
-
-  #hero-gym-5016 .hero-content-copy::before {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5016-hero.jpg");
-  }
-
-  #hero-gym-5017 .hero-content-copy::before {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5017-hero.jpg");
-  }
-
-  #hero-gym-5018 .hero-content-copy::before {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5018-hero.jpg");
-  }
-
-  #hero-gym-5019 .hero-content-copy::before {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5019-hero.jpg");
-  }
-
-  #hero-gym-5020 .hero-content-copy::before {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5020-hero.jpg");
-  }
-
-  /* !override / for comp only */
-
-  #hero-gym-5002 .hero-content-copy::before {
-    background-image: url("../img/gym-5002-hero.jpg");
   }
 
 }
