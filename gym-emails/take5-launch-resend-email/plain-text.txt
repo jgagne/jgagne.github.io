@@ -1,15 +1,15 @@
 Gymnasium - Bridging the gap between education and opportunity.
 
-Today we're launching Take 5 tutorials - free video tutorials that cover useful skills in just 5 minutes.
+ICYMI: We launched Take 5 tutorials - free videos that cover practical skills in just 5 minutes.
 
-To kick things off, we'll be dropping a new Take 5 tutorial every day this month with a different theme each week.
+To kick things off, we've dropped a new video every day with a new theme each week. So far we've released 10+ videos on CSS and prototyping.
 
-- Week 1: CSS Image Effects
-- Week 2: Prototyping
-- Week 3: Career Skills
-- Week 4: User Research
+Next up:
 
-What are you waiting for?
+- Career Skills (like storytelling and self-promotion)
+- User Research (from card sorting to writing survey questions)
+
+Trust us - you do not want to miss this.
 
 Watch and Learn <https://thegymnasium.com/take5>
 
