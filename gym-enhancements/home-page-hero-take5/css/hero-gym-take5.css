@@ -39,15 +39,31 @@
     min-height: 25.125em;
   }
 
-  .hero-content-art {
+  .hero-promo .hero-content-art {
     display: block;
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
+    background-color: #333;
     background-repeat: no-repeat;
     background-position: left center;
+    background-size: cover;
+    border-right: 2px solid #ccc;
+    border-image-slice: 1;
+    border-image-width: 0 0 0 999em;
+    border-image-repeat: stretch;
+    border-image-outset: 0 0 0 999em;
+  }
+
+  .hero-promo .hero-content-art::after {
+    display: block;
+    position: relative;
+    left: 2px;
+    content: "";
+    height: 100%;
+    border-right: 2px solid #ccc;
   }
 
 }
@@ -81,14 +97,6 @@
 
 .take5-brand-kern {
   word-spacing: -.1rem;
-}
-
-.hero-content-copy header mark {
-  font-style: normal;
-  font-weight: 900;
-  color: #f8971d;
-  background-color: transparent;
-  padding: 0;
 }
 
 .hero-content-copy .subhead-topic {

@@ -2,16 +2,16 @@
 
 @font-face {
 	font-family: "brandon-grotesque";
-	src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_reg-webfont.woff") format("woff"),
-	url("https://thegymnasium.com/static/gymnasium/fonts/brandon_reg-webfont.woff2") format("woff2");
+	src: url("../fonts/brandon_reg-webfont.woff") format("woff"),
+	url("../fonts/brandon_reg-webfont.woff2") format("woff2");
 	font-style: normal;
 	font-weight: normal;
 	}
 
 @font-face {
 	font-family: "brandon-grotesque";
-	src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_reg_it-webfont.woff") format("woff"),
-	url("https://thegymnasium.com/static/gymnasium/fonts/brandon_reg_it-webfont.woff2") format("woff2");
+	src: url("../fonts/brandon_reg_it-webfont.woff") format("woff"),
+	url("../fonts/brandon_reg_it-webfont.woff2") format("woff2");
 	font-style: italic;
 	font-weight: normal;
 	}
@@ -20,16 +20,16 @@
 
 @font-face {
 	font-family: "brandon-grotesque";
-	src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_bld-webfont.woff") format("woff"),
-	url("https://thegymnasium.com/static/gymnasium/fonts/brandon_bld-webfont.woff2") format("woff2");
+	src: url("../fonts/brandon_bld-webfont.woff") format("woff"),
+	url("../fonts/brandon_bld-webfont.woff2") format("woff2");
 	font-style: normal;
 	font-weight: bold;
 	}
 
 @font-face {
 	font-family: "brandon-grotesque";
-	src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_bld_it-webfont.woff") format("woff"),
-	url("https://thegymnasium.com/static/gymnasium/fonts/brandon_bld_it-webfont.woff2") format("woff2");
+	src: url("../fonts/brandon_bld_it-webfont.woff") format("woff"),
+	url("../fonts/brandon_bld_it-webfont.woff2") format("woff2");
 	font-style: italic;
 	font-weight: bold;
 	}
@@ -38,16 +38,16 @@
 
 @font-face {
 	font-family: "brandon-grotesque";
-	src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_blk-webfont.woff") format("woff"),
-	url("https://thegymnasium.com/static/gymnasium/fonts/brandon_blk-webfont.woff2") format("woff2");
+	src: url("../fonts/brandon_blk-webfont.woff") format("woff"),
+	url("../fonts/brandon_blk-webfont.woff2") format("woff2");
 	font-style: normal;
 	font-weight: 900;
 	}
 
 @font-face {
 	font-family: "brandon-grotesque";
-	src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_blk_it-webfont.woff") format("woff"),
-	url("https://thegymnasium.com/static/gymnasium/fonts/brandon_blk_it-webfont.woff2") format("woff2");
+	src: url("../fonts/brandon_blk_it-webfont.woff") format("woff"),
+	url("../fonts/brandon_blk_it-webfont.woff2") format("woff2");
 	font-style: italic;
 	font-weight: 900;
 	}
