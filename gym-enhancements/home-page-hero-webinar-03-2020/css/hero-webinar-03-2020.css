@@ -20,7 +20,7 @@
 .webinar-03-2020 {
   position: relative;
   background-color: #2c9959;
-  background-image: radial-gradient(circle, #237b47 1px, rgba(0, 0, 0, 0) 1px);
+  background-image: radial-gradient(circle, #237b47 1px, transparent 1px);
   background-position: 0 0;
   background-size: 1.375em 1.375em;
   padding-top: 15px;
