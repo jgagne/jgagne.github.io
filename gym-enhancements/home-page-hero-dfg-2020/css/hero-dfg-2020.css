@@ -108,7 +108,7 @@
 
   .hero-promo header {
     float: left;
-    width: 30em;
+    width: 32em;
   }
 
   .hero-promo .content .date {
@@ -137,7 +137,7 @@
 
 .hero-promo a.gym-button-secondary {
   width: auto !important;
-  background-color: #ff5f14;
+  background-color: #009cde;
   padding-left: 2.2em;
   padding-right: 2.2em;
   vertical-align: bottom;
