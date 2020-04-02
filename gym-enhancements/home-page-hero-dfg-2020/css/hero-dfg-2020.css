@@ -40,7 +40,7 @@
   font-family: Poppins, "Arial Black", Gadget, sans-serif;
   font-weight: bold;
   font-size: 3.428571428571429em;
-  line-height: 1.12;
+  line-height: 1.1;
   color: #333;
   letter-spacing: 0;
   word-spacing: -.015em;
@@ -108,7 +108,7 @@
 
   .hero-promo header {
     float: left;
-    width: 33em;
+    width: 34em;
   }
 
   .hero-promo .content .date {
