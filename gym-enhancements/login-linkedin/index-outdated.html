@@ -59,14 +59,14 @@
         (function (require) {
           require.config({
               paths: {
-                'js/courseware/courseware_factory': 'js/courseware/courseware_factory.61851a4d4909',
+                'js/courseware/courseware_factory': 'js/courseware/courseware_factory.79c507070080',
 'draggabilly': 'js/vendor/draggabilly.26caba6f7187',
 'js/courseware/toggle_element_visibility': 'js/courseware/toggle_element_visibility.e564e0ed228c',
 'js/courseware/course_home_events': 'js/courseware/course_home_events.4e8915731e7d',
 'js/courseware/link_clicked_events': 'js/courseware/link_clicked_events',
 'edxicons': 'edx-pattern-library/js/edx-icons.a9ab01bc44bf',
 'moment': 'js/vendor/moment-with-locales.min.cf6d65fe3e48',
-'js/student_profile/views/learner_profile_factory': 'js/student_profile/views/learner_profile_factory.5a339c9b269e',
+'js/student_profile/views/learner_profile_factory': 'js/student_profile/views/learner_profile_factory.a37af816bdc9',
 'jquery.url': 'js/vendor/url.min.0098a9ff3d53',
 'js/student_account/logistration_factory': 'js/student_account/logistration_factory.f3eba77aab43',
 'js/groups/views/cohorts_dashboard_factory': 'js/groups/views/cohorts_dashboard_factory.65bc243bc330',
@@ -87,8 +87,12 @@
 
 
 
-<meta property="og:description" content="Gymnasium offers free online courses on web development, design, user experience, and content creation." />
-<meta property="og:keywords" content="free online courses designers design user experience UX javascript node nodejs sketch wordpress drupal UI" />
+<meta property="og:url" content="http://thegymnasium.com/" />
+<meta property="og:title" content="Aquent Gymnasium" />
+<meta property="og:image" content="https://thegymnasium.com/static/gymnasium/images/social-share-400.f9715ec47ea8.png" />
+<meta property="og:description" content="At Aquent Gymnasium, we offer free online courses focused on HTML and CSS, responsive design, UX design, and an array of front-end development tools." />
+<meta property="og:keywords" content="free online courses" />
+
 
 <!-- insert typekit font references -->
 <script src="//use.typekit.net/rhf0qta.js"></script>
@@ -102,12 +106,6 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.js"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
-
-<!-- iframe resize script for responsive job modules-->
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.6.0/iframeResizer.js"></script>
-
 
 <script src="https://thegymnasium.com/static/gymnasium/js/prism.19f6a94bf245.js"> </script>
 <script src="https://thegymnasium.com/static/gymnasium/js/cookiebanner.1f4136cf4977.js" id="cookiebanner"
@@ -129,8 +127,6 @@
   // is in use
 
   $(function(){
-    iFrameResize({ log:false }, '.gymnasium-resizable-iframe');
-
     // This function returns Internet Explorer's major version number,
     // or 0 for others. It works by finding the "MSIE " string and
     // extracting the version number following the space, up to the decimal
@@ -241,16 +237,17 @@
 
 
 
-<!-- begin Segment -->
+
+<!-- dummy Segment -->
 <script type="text/javascript">
-  // Asynchronously load Segment's analytics.js library
-  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
-  analytics.load("vL1prbVSWZov8TfTUGHAu5QhXiwAWDnz");
-  analytics.page();
-  }}();
-  // Note: user tracking moved to segment-io-footer.html
+  var analytics = {
+    track: function() { return; },
+    trackLink: function() { return; },
+    pageview: function() { return; },
+    page: function() { return; }
+  };
 </script>
-<!-- end Segment -->
+<!-- end dummy Segment -->
 
 
   <meta name="path_prefix" content="">
@@ -280,14 +277,13 @@
 
 
 
-
   <header class="global" aria-label="Global Navigation">
     <nav id="primary-nav" class="black-background container-fluid">
       <div class="container">
         <div class="row">
           <div class="navbar">
             <div class="nav navbar navbar-nav navbar-left">
-                    <a class="gym-button" href="/register"><b>Sign Up</b></a>
+                    <a class="gym-button" href="/register"><b>Sign up for an account</b></a>
             </div>
             <div class="collapse navbar-collapse">
               <ul class="nav navbar-nav navbar-right">
@@ -332,7 +328,7 @@
                 <li><a href="/about">About</a></li>
 
                   <li>
-                        <a class="gym-button" href="/login?next=%2Fdashboard"><b>Log In</b></a>
+                        <a class="gym-button" href="/login?next=%2Fdashboard"><b>Log in</b></a>
                   </li>
               </ul>
             </div><!-- /.navbar-collapse -->
@@ -356,17 +352,7 @@
     </div>
   </header>
 
-
-
-
-
-
-<!-- //
-Generated at: 2020-04-15 15:53:35 -0400
-Served from: https://thegymcms.comhttps://thegymnasium.com/static/system-status/
-Git Hash: ff882d2
-// -->
-
+    <!-- PRODUCTION PRODUCTION PRODUCTION -->
 
 
 
@@ -625,7 +611,7 @@ Git Hash: ff882d2
     <% } %>
 
     <% if( form === 'login' && name === 'password' ) { %>
-        <a href="#" class="forgot-password"><%- gettext("Forgot password?") %></a>
+        <a href="#" class="forgot-password field-link"><%- gettext("Forgot password?") %></a>
     <% } %>
 </div>
 
@@ -644,7 +630,7 @@ Git Hash: ff882d2
         <h4 class="message-title"><%- gettext("Password Reset Email Sent") %></h4>
         <div class="message-copy">
             <p>
-                <%- gettext("We've sent instructions for resetting your password to the email address you provided.") %>
+                <%- gettext("We’ve sent instructions for resetting your password to the email address you provided.") %>
             </p>
         </div>
     </div>
@@ -662,12 +648,13 @@ Git Hash: ff882d2
     </div>
 <% } %>
 
-<form id="login" class="login-form course-content" tabindex="-1">
+<form id="login" class="login-form" tabindex="-1">
 
-    <br />
-    <h1>
-        <span class="text">Sign In</span>
-    </h1>
+    <div class="section-title lines">
+        <h2>
+            <span class="text">Sign In</span>
+        </h2>
+    </div>
 
     <p class="sr">
         <% if ( context.providers.length > 0 && !context.currentProvider || context.hasSecondaryProviders ) { %>
@@ -680,15 +667,14 @@ Git Hash: ff882d2
 
     <%= context.fields %>
 
-    <button type="submit" class="gym-button js-login logistration-button"><%- gettext("Sign in") %></button>
+    <button type="submit" class="gym-button js-login login-button"><%- gettext("Sign in") %></button>
 
     <% if ( context.providers.length > 0 && !context.currentProvider || context.hasSecondaryProviders ) { %>
     <div class="login-providers">
-
         <div class="section-title lines">
-          <h2>
-            <span class="text"><%- gettext("or sign in with") %></span>
-          </h2>
+            <h2>
+                <span class="text"><%- gettext("or sign in with") %></span>
+            </h2>
         </div>
 
         <% _.each( context.providers, function( provider ) {
@@ -714,30 +700,13 @@ Git Hash: ff882d2
     <% } %>
 </form>
 
-<style>
-
-/*
-Update font-family "Brandon Grotesque" to "brandon-grotesque".
-
-See https://github.com/gymnasium/edx-theme/blob/c87cf6d556e880b6bfdddf7528d167d9e20ccc11/lms/static/sass/_register.scss#L82
-
-See line 21894:
-https://thegymnasium.com/static/gymnasium/css/lms-main-v1.css
-*/
-
-.login-register .logistration-bottom h2, .financial-assistance-wrapper .financial-assistance-form .logistration-bottom h2, .login-register .logistration-bottom .home > header .title > .heading-group p, .home > header .title > .heading-group .login-register .logistration-bottom p, .financial-assistance-wrapper .financial-assistance-form .logistration-bottom .home > header .title > .heading-group p, .home > header .title > .heading-group .financial-assistance-wrapper .financial-assistance-form .logistration-bottom p, .login-register .logistration-bottom section.outside-app h1, section.outside-app .login-register .logistration-bottom h1, .financial-assistance-wrapper .financial-assistance-form .logistration-bottom section.outside-app h1, section.outside-app .financial-assistance-wrapper .financial-assistance-form .logistration-bottom h1 {
-  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, sans-serif;
-  padding: .5em 0 .75em;
-}
-</style>
-
-<div class="toggle-form course-content logistration-bottom">
+<div class="toggle-form">
     <div class="section-title">
         <h2>
             <span class="text"><%- _.sprintf( gettext("New to %(platformName)s?"), context ) %></span>
         </h2>
     </div>
-    <button class="gym-button form-toggle logistration-button" data-type="register"><%- gettext("Create an account") %></button>
+    <button class="gym-button form-toggle" data-type="register"><%- gettext("Create an account") %></button>
 </div>
 
         </script>
@@ -747,7 +716,7 @@ https://thegymnasium.com/static/gymnasium/css/lms-main-v1.css
     <ul class="message-copy"></ul>
 </div>
 
-<form id="register" class="register-form course-content" autocomplete="off" tabindex="-1" style="background:white;">
+<form id="register" class="register-form" autocomplete="off" tabindex="-1" style="background:white;">
 
     <% if (context.errorMessage) { %>
         <div class="status submission-error">
@@ -765,10 +734,18 @@ https://thegymnasium.com/static/gymnasium/css/lms-main-v1.css
         </div>
     <% } else if ( context.providers.length > 0 || context.hasSecondaryProviders ) {  %>
         <div class="login-providers">
-            <br />
-            <h1>
-              <span class="text">Create an account using</span>
-            </h1>
+            <!-- start added markup -->
+            <div class="section-title lines">
+                <h2>
+                    <span class="text">Register</span>
+                </h2>
+            </div>
+            <!-- end added markup -->
+            <div class="section-title lines">
+                <h2>
+                    <span class="text"><%- gettext("Create an account using") %></span>
+                </h2>
+            </div>
             <%
             _.each( context.providers, function( provider) {
                 if ( provider.registerUrl ) { %>
@@ -805,19 +782,17 @@ https://thegymnasium.com/static/gymnasium/css/lms-main-v1.css
 
     <%= context.fields %>
 
-    <button type="submit" class="gym-button js-register logistration-button"><%- gettext("Create your account") %></button>
+    <button type="submit" class="gym-button js-register register-button"><%- gettext("Create your account") %></button>
     <p class="note">* <%- gettext("Required field") %></p>
 </form>
 
-<br />
-
-<div class="toggle-form course-content logistration-bottom">
+<div class="toggle-form">
     <div class="section-title">
         <h2>
             <span class="text"><%- gettext("Already have an account?") %></span>
         </h2>
     </div>
-    <button class="gym-button form-toggle logistration-button" data-type="login"><%- gettext("Sign in") %></button>
+    <button class="gym-button form-toggle" data-type="login"><%- gettext("Sign in") %></button>
 </div>
 
         </script>
@@ -897,16 +872,17 @@ https://thegymnasium.com/static/gymnasium/css/lms-main-v1.css
 
 <form id="password-reset" class="password-reset-form" tabindex="-1">
 
-    <BR />
-    <h1>
-        <span class="text"><%- gettext("Password assistance") %></span>
-    </h1>
+    <div class="section-title lines">
+        <h2>
+            <span class="text"><%- gettext("Password assistance") %></span>
+        </h2>
+    </div>
 
     <p class="action-label"><%- gettext("Please enter your email address below and we will send you instructions for setting a new password.") %></p>
 
     <%= fields %>
 
-    <button type="submit" class="gym-button logistration-button js-reset"><%- gettext("Reset my password") %></button>
+    <button type="submit" class="gym-button js-reset"><%- gettext("Reset my password") %></button>
 </form>
 
         </script>
@@ -942,138 +918,455 @@ https://thegymnasium.com/static/gymnasium/css/lms-main-v1.css
 
         </script>
 
+<style>
+
+/* --- general form styles (overrides) --- */
+
+.login-register form {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  }
+
+form.register-form {
+  margin-bottom: 1.6em;
+  }
+
+.login-register .section-title.lines:after {
+  background: #ccc;
+  }
+
+#register .login-providers .lines:first-child:after,
+#register-form .login-providers .section-title + .lines:after,
+.login-form > .lines:after,
+.password-reset-form > .lines:after {
+ display: none;
+ }
+
+ /* --- headings --- */
+
+ /* sign in / register (general to specific) */
+
+.login-register .section-title h2 {
+  font-family: "brandon-grotesque", "Helvetia Neue", Helvetica, sans-serif;
+  font-weight: bold;
+  }
+
+.login-form .section-title h2,
+.toggle-form .section-title h2 {
+  font: bold 2.2em/1.15 "brandon-grotesque", "Helvetia Neue", Helvetica, sans-serif;
+  }
+
+#register .login-providers .section-title,
+#register-form .login-providers .section-title,
+.login-form > .section-title,
+.password-reset-form .section-title {
+  margin-top: 1.6em;
+  }
+
+#register .login-providers .section-title:first-child h2,
+#register-form .login-providers .section-title + .section-title h2,
+.login-form > .section-title h2,
+.password-reset-form .section-title > h2 {
+  font: 900 2.4em/1.15 "brandon-grotesque", "Helvetia Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-align: left;
+  }
+
+#register .login-providers .section-title.lines:first-child .text,
+#register-form .login-providers .section-title.lines + .section-title.lines .text,
+.login-form > .section-title.lines .text,
+.password-reset-form .section-title.lines .text {
+  padding: 0;
+  }
+
+/* new to gymnasium */
+
+.login-register .toggle-form {
+  background: #fff;
+  padding: 1.8em;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  }
+
+.login-register .toggle-form .section-title {
+  margin: 0;
+  }
+
+.login-register .toggle-form .section-title h2 {
+  font-weight: 900;
+  margin-bottom: .8em;
+  }
+
+/* --- linkedin / login providers ---s */
+
+.login-providers .section-title h2 {
+  font-size: 1.8em;
+  }
+
+/* --- form fields --- */
+
+.login-register .form-field label {
+  font: bold 1.1em/1.15 "brandon-grotesque", "Helvetia Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  }
+
+.login-register .form-field input {
+  font: normal 1em/1.15 "Helvetia Neue", Helvetica, sans-serif;
+  height: auto;
+  padding: 1.2em;
+  border: 1px solid #ccc;
+  border-bottom: 2px solid #f8971d;
+  margin-bottom: .6em;
+  }
+
+.login-register .form-field input:focus {
+  outline: 2px solid #f8971d;
+  box-shadow: none;
+  }
+
+/* select market */
+
+#register-market {
+  font-size: 2em; /* revisit */
+  }
+
+/* tips */
+
+.login-register .form-field .tip {
+  color: #444;
+  }
+
+.login-register .form-field .tip-input,
+.login-register .form-field .field-link {
+  font: normal 1em/1.15 "Helvetia Neue", Helvetica, sans-serif;
+  }
+
+.login-register .form-field .field-link {
+  font-weight: bold;
+  }
+
+/* --- message text / paragraph --- */
+
+.login-register p.action-label,
+.login-register .status p.message-copy {
+  font: normal 1.6em/1.4 "brandon-grotesque", "Helvetia Neue", Helvetica, sans-serif;
+  margin-bottom: 1em;
+  }
+
+/* --- forget password link --- */
+
+.login-register .form-field .forgot-password {
+  display: inline-block;
+  color: #f8971d;
+  border: 0;
+  margin-top: 0;
+  vertical-align: middle;
+  }
+
+.login-register .form-field .forgot-password:hover,
+.login-register .form-field .forgot-password:focus {
+  text-decoration: underline !important;
+  }
+
+.login-register .gym-button {
+  font-size: 1.6em;
+  font-weight: 900;
+  letter-spacing: .01em;
+  }
+
+/* --- status message --- */
+
+.login-register .status {
+  padding: 1.8em;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: none;
+  }
+
+.login-register .status .message-title {
+  font: bold 2em/1.25 "brandon-grotesque", "Helvetia Neue", Helvetica, sans-serif;
+  color: #fff!important;
+  text-transform: capitalize;
+  margin-top: 0;
+  margin-bottom: .625em;
+  }
+
+.login-register .status ul {
+  margin-top: 1.4em;
+  }
+
+.login-register .status li {
+  font: bold 1em/1.5 "Helvetica Neue", Helvetica, sans-serif;
+  letter-spacing: .01em;
+  color: #fff;
+  margin-top: 1em;
+  }
+
+/*--- create an account ---*/
+
+#register-form .login-providers .section-title:first-child {
+  display: none;
+  }
+
+#register-form .login-providers + .section-title h2 {
+  font-size: 2em;
+  }
+
+/*--- linkedin button  ---*/
+
+.login-register .login-provider {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 0 0 .2em;
+  }
+
+.login-register .login-provider.button-oa2-linkedin-oauth2 {
+  padding: 0 1em 0 0 !important;
+  border: 1px solid #0077B5;
+  border-radius: 2px;
+  }
+
+.login-register .login-provider.button-oa2-linkedin-oauth2,
+.login-register .login-provider.button-oa2-linkedin-oauth2:hover,
+.login-register .login-provider.button-oa2-linkedin-oauth2:focus,
+.login-register .login-provider.button-oa2-linkedin-oauth2:active {
+  box-shadow: none;
+  }
+
+.fa-linkedin {
+  position: static !important;
+  width: auto !important;
+  line-height: 1 !important;
+  padding: .8em .6em .8em 1em;
+  }
+
+/* --- success --- */
+
+.login-register .submission-success {
+  background: #1c7f1f;
+  }
+
+/* --- error --- */
+
+.login-register .submission-error {
+  background: #d43f3a;
+  }
+
+.login-register .form-field label.error {
+  display: inline-block;
+  color: #fff;
+  padding: .5em;
+  background: #d43f3a;
+  border-radius: 2px;
+  }
+
+.login-register .form-field input.error {
+  border: 2px solid #d43f3a;
+  }
+
+</style>
 
 <div class="section-bkg-wrapper">
     <main id="main" aria-label="Content" tabindex="-1">
-        <div id="login-and-registration-container" class="login-register" style="background:transparent;" />
-    </main>
+        <div id="login-and-registration-container" class="login-register" style="background:transparent;">
+            <section id="login-anchor" class="form-type">
+    <div id="login-form" class="form-wrapper ">
+            <div class="status already-authenticated-msg hidden">
+
+</div>
+
+<div aria-live="polite">
+    <div class="js-reset-success status submission-success hidden">
+        <h4 class="message-title">Password Reset Email Sent</h4>
+        <div class="message-copy">
+            <p>
+                We’ve sent instructions for resetting your password to the email address you provided.
+            </p>
+        </div>
+    </div>
+
+    <div class="status submission-error hidden">
+        <h4 class="message-title">We couldn’t sign you in.</h4>
+        <ul class="message-copy"></ul>
+    </div>
 </div>
 
 
 
+<form id="login" class="login-form" tabindex="-1">
+
+    <div class="section-title lines">
+        <h2>
+            <span class="text">Sign In</span>
+        </h2>
+    </div>
+
+    <p class="sr">
+
+            Sign in here using your email address and password, or use one of the providers listed below.
+
+        If you do not yet have an account, use the button below to register.
+    </p>
+
+
+            <div class="form-field email-email">
+
+        <label for="login-email">
+            Email
+
+        </label>
+
+
+
+        <input id="login-email" type="email" name="email" class="input-block " aria-describedby="login-email-desc" minlength="3" maxlength="254" aria-required="true" required="" placeholder="username@domain.com" value="">
+
+         <span class="tip tip-input" id="login-email-desc">The email address you used to register with Gymnasium</span>
+
+
+
+</div>
+
+
+            <div class="form-field password-password">
+
+        <label for="login-password">
+            Password
+
+        </label>
+
+
+
+        <input id="login-password" type="password" name="password" class="input-block " minlength="2" maxlength="75" aria-required="true" required="" value="">
 
 
 
 
 
+        <a href="#" class="forgot-password field-link">Forgot password?</a>
+
+</div>
+
+
+            <div class="form-field checkbox-remember">
+
+
+
+        <input id="login-remember" type="checkbox" name="remember" class="input-block checkbox" aria-describedby="login-remember-desc" value="false">
+
+            <label for="login-remember">
+                Remember me
+
+            </label>
 
 
 
 
-    <link rel="stylesheet" href="https://thegymcms.com/css/footer.css">
+
+</div>
+
+
+
+    <button type="submit" class="gym-button js-login login-button">Sign in</button>
+
+
+    <div class="login-providers">
+        <div class="section-title lines">
+            <h2>
+                <span class="text">or sign in with</span>
+            </h2>
+        </div>
+
+
+                <button type="button" class="gym-button button-oa2-linkedin-oauth2 login-provider login-oa2-linkedin-oauth2" data-provider-url="/auth/login/linkedin-oauth2/?auth_entry=login&amp;next=%2Fdashboard">
+                    <div class="icon fa fa-linkedin" aria-hidden="true">
+
+                    </div>
+                    <span aria-hidden="true">LinkedIn</span>
+                    <span class="sr">Sign in with LinkedIn</span>
+                </button>
+
+
+
+    </div>
+
+</form>
+
+<div class="toggle-form">
+    <div class="section-title">
+        <h2>
+            <span class="text">New to Gymnasium?</span>
+        </h2>
+    </div>
+    <button class="gym-button form-toggle" data-type="register">Create an account</button>
+</div>
+
+        </div>
+</section>
+
+<section id="register-anchor" class="form-type">
+  <div class="row">
+    <div class="col-md-12">
+      <div id="register-form" class="form-wrapper hidden"></div>
+    </div>
+  </div>
+</section>
+
+<section id="password-reset-anchor" class="form-type">
+    <div id="password-reset-form" class="form-wrapper hidden"></div>
+</section>
+
+<section id="institution_login-anchor" class="form-type">
+    <div id="institution_login-form" class="form-wrapper hidden"></div>
+</section>
+
+<section id="hinted-login-anchor" class="form-type">
+    <div id="hinted-login-form" class="form-wrapper hidden"></div>
+</section>
+
+        </div></main>
+</div>
+
 
 <div class="wrapper-footer">
-  <footer class="container" id="contentinfo">
+  <footer class="container">
     <div class="row">
-      <nav aria-label="Footer Navigation">
-        <div class="col-xs-12 col-sm-10 col-md-3">
-          <div class="gym-brand">
-            <a href="/" title="Gymnasium Homepage">
-              <img class="gymnasium-logo" alt="Aquent Gymnasium" src="https://thegymcms.com/img/brand/png/gymnasium-logo-white-4x.png" srcset="https://thegymcms.com/img/brand/svg/gymnasium-logo-white.svg" width="200" height="23" decoding="async" role="heading">
-            </a>
-            <p>Bridging the gap between education and opportunity with free online courses.</p>
-          </div>
+      <nav>
+        <div class="col-md-4">
+          <a href="/">
+            <img class="gymnasium-logo"  src="https://thegymnasium.com/static/gymnasium/images/gymnasiumLogo.png" alt="Aquent Gymnasium" >
+          </a>
         </div>
-        <div class="col-xs-6 col-md-2 what-we-do">
-          <section class="footer-link-list" id="what-we-do">
-            <h2>What We Do</h2>
-            <ul>
-              <li><a href="/courses">Courses</a></li>
-              <li><a href="/take5">Tutorials</a></li>
-              <li><a href="/jobs">Jobs</a></li>
-              <li><a href="/webinars">Webinars</a></li>
-              <li><a href="https://medium.com/gymnasium" target="_blank" rel="noopener">Articles</a></li>
-              <li><a href="/about">About</a></li>
-            </ul>
-          </section>
-        </div>
-        <div class="col-xs-6 col-md-3 our-focus">
-          <section class="footer-link-list" id="our-focus">
-            <h2>Opportunity Awaits</h2>
-            <ul>
-              <li><a href="/web-development">Web Development</a></li>
-              <li><a href="/ux-design">UX Design</a></li>
-              <li><a href="/prototyping">Prototyping</a></li>
-              <!-- <li><a href="/career-skills">Career Skills</a></li> -->
-            </ul>
-          </section>
-        </div>
-        <div class="col-xs-6 col-md-3 resources">
-          <section class="footer-link-list" id="resources">
-            <h2>Resources</h2>
-            <ul>
-              <li><a href="/faq">FAQ</a></li>
-              <li><a href="/support">Support</a></li>
-              <li><a href="/privacy">Privacy Policy</a></li>
-              <li><a href="https://aquent.com/csr-policy" target="_blank" rel="noopener">Corporate Social Responsibility</a></li>
-            </ul>
-          </section>
-        </div>
-        <div class="col-xs-6 col-md-1 social">
-          <section class="footer-link-list" id="social">
-            <h2>Social</h2>
-            <ul>
-              <li>
-                <a title="Twitter" href="https://twitter.com/AquentGymnasium" target="_blank" rel="noopener">
-                  <img alt="Twitter" src="https://thegymcms.com/img/social/icons/png/icon-twitter-4x.png" srcset="https://thegymcms.com/img/social/icons/svg/icon-twitter.svg" width="24" height="24" decoding="async">
-                </a>
-              </li>
-              <li>
-                <a title="Facebook" href="https://www.facebook.com/aquentgymnasium/" target="_blank" rel="noopener">
-                  <img alt="Facebook" src="https://thegymcms.com/img/social/icons/png/icon-facebook-4x.png" srcset="https://thegymcms.com/img/social/icons/svg/icon-facebook.svg" width="24" height="24" decoding="async">
-                </a>
-              </li>
-              <li>
-                <a title="Instagram" href="https://www.instagram.com/aquent_gymnasium/" target="_blank" rel="noopener">
-                  <img alt="Instagram" src="https://thegymcms.com/img/social/icons/png/icon-instagram-4x.png" srcset="https://thegymcms.com/img/social/icons/svg/icon-instagram.svg" width="24" height="24" decoding="async">
-                </a>
-              </li>
-              <li>
-                <a  title="YouTube" href="https://www.youtube.com/channel/UCsAAa0dL-ZJpq4gN1zEcXYw" target="_blank" rel="noopener">
-                  <img alt="YouTube" src="https://thegymcms.com/img/social/icons/png/icon-youtube-4x.png" srcset="https://thegymcms.com/img/social/icons/svg/icon-youtube.svg" width="24" height="24" decoding="async">
-                </a>
-              </li>
-              <li>
-                <a title="LinkedIn" href="https://www.linkedin.com/school/gymnasium/" target="_blank" rel="noopener">
-                  <img alt="LinkedIn" src="https://thegymcms.com/img/social/icons/png/icon-linkedin-4x.png" srcset="https://thegymcms.com/img/social/icons/svg/icon-linkedin.svg" width="24" height="24" decoding="async">
-                </a>
-              </li>
-              <li>
-                <a title="Medium" href="https://medium.com/gymnasium" target="_blank" rel="noopener">
-                  <img alt="Medium" src="https://thegymcms.com/img/social/icons/png/icon-medium-4x.png" srcset="https://thegymcms.com/img/social/icons/svg/icon-medium.svg" width="24" height="24" decoding="async">
-                </a>
-              </li>
-              <li>
-                <a title="GitHub" href="https://github.com/gymnasium" target="_blank" rel="noopener">
-                  <img alt="GitHub" src="https://thegymcms.com/img/social/icons/png/icon-github-4x.png" srcset="https://thegymcms.com/img/social/icons/svg/icon-github.svg" width="24" height="24" decoding="async">
-                </a>
-              </li>
-            </ul>
-          </section>
+        <div class="col-md-4">
+          <ol class="list-inline text-center footer-link-list">
+            <li><a href="https://medium.com/gymnasium" target="_blank">Blog</a></li>
+            <li><a href="/jobs">Jobs</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/support">Support</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+          </ol>
+          <div class="copyright">&copy; 2017 Aquent Gymnasium</div>
         </div>
       </nav>
+
+      <div class="built-on col-md-4 text-center">
+        <span>
+          <a href="http://openedx.org" target="_blank">
+            <img
+              src="https://files.edx.org/openedx-logos/edx-openedx-logo-tag-light.png"
+              width="150" height="50" alt="Powered by Open edX" />
+          </a>
+
+        </span>
+      </div>
     </div>
     <div class="row">
-      <div class="col-xs-12">
-        <a title="Open edX" href="http://openedx.org" target="_blank" rel="noopener">
-          <img class="open-edx-logo" alt="Powered by Open edX" src="https://files.edx.org/openedx-logos/edx-openedx-logo-tag-light.png"
-            width="150" height="50" decoding="async">
-        </a>
-        <div class="copyright"><small>© 2020  <a href="https://thegymnasium.com">Aquent Gymnasium</a></small></div>
-      </div>
+
     </div>
   </footer>
 </div>
-
-
-<!-- //
-Generated at: 2020-04-15 15:53:35 -0400
-Served from: https://thegymcms.comhttps://thegymnasium.com/static/footer/
-Git Hash: ff882d2
-// -->
-
-
-
 
 
     </div>
@@ -1109,10 +1402,6 @@ Git Hash: ff882d2
 
 
 
-    <!-- begin segment footer -->
-    <script type="text/javascript">
-    </script>
-    <!-- end segment footer -->
 
   <script type="text/javascript" src="https://thegymnasium.com/static/js/vendor/noreferrer.aa62a3e70ffa.js" charset="utf-8"></script>
   <script type="text/javascript" src="https://thegymnasium.com/static/js/utils/navigation.17df676f9045.js" charset="utf-8"></script>
@@ -1123,3 +1412,5 @@ Git Hash: ff882d2
 
 
 <!-- Performance beacon for onload times -->
+
+
