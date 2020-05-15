@@ -1,20 +1,22 @@
 Gymnasium - Bridging the gap between education and opportunity.
 
-Remote Work: Can It Work for You?
+A Decade of Responsive Web Design
 
-Wondering if working remotely is right for you and your creative team?
+Join us on Tuesday, May 26, at 2 p.m. EDT for a webinar with Ethan Marcotte — the fellow who started that whole "responsive design" thing.
 
-Join us on Tuesday, March 17 at 3 p.m. EDT for an hour-long webinar about the benefits and challenges of remote work - from communication and collaboration to time zones and transparency.
+Let's celebrate the past decade of his groundbreaking work, its impact, and the future of responsive web design.
 
-Register to Attend: <https://thegymnasium.com/webinars/remote-work>
+We'll discuss topics like:
 
-GUEST SPEAKERS
+- How the web industry has evolved over the course of the past decade
 
-- Richard Banfield: VP of Design Transformation at Invision and co-owner of Out of Office coworking space.
+- How to decode the blurred lines that exist between native and web apps
 
-- Darren Buckner: Founder and CEO of Workfrom, an app connecting remote workers worldwide.
+- How designers should be thinking about inclusivity and accessibility
 
-If you can’t attend the webinar, register to be sent a link to the recording: <https://thegymnasium.com/webinars/remote-work>
+Register to Attend: <https://thegymnasium.com/webinars/decade-of-responsive-web-design>
+
+If you can’t attend the webinar, register to be sent a link to the recording: <https://thegymnasium.com/webinars/decade-of-responsive-web-design>
 
 See you there!
 
