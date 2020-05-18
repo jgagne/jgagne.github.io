@@ -2,7 +2,7 @@ Gymnasium - Bridging the gap between education and opportunity.
 
 A Decade of Responsive Web Design
 
-Join us on Tuesday, May 26, at 2 p.m. EDT for a webinar with Ethan Marcotte — the fellow who started that whole "responsive design" thing.
+Join us on Tuesday, May 26, at 2 p.m. EDT for a webinar with Ethan Marcotte - the fellow who started that whole "responsive design" thing.
 
 Let's celebrate the past decade of his groundbreaking work, its impact, and the future of responsive web design.
 
@@ -16,7 +16,7 @@ We'll discuss topics like:
 
 Register to Attend: <https://thegymnasium.com/webinars/decade-of-responsive-web-design>
 
-If you can’t attend the webinar, register to be sent a link to the recording: <https://thegymnasium.com/webinars/decade-of-responsive-web-design>
+If you can't attend the webinar, register to be sent a link to the recording: <https://thegymnasium.com/webinars/decade-of-responsive-web-design>
 
 See you there!
 
