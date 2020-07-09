@@ -2,7 +2,7 @@ Gymnasium
 
 Our new short course Designing Accessible and Responsive Websites breaks down a handful of inclusive design techniques from the best in the biz - Ethan Marcotte, creator of "responsive web design."
 
-In under 35 minutes, you'll learn how to:
+In under 30 minutes, you'll learn how to:
 
 - Use the VoiceOver screen reader on macOS
 
