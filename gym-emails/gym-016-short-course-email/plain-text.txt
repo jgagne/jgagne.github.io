@@ -2,6 +2,8 @@ Gymnasium
 
 Designing Accessible and Responsive Websites breaks down a handful of inclusive design techniques from the best in the biz - Ethan Marcotte, creator of responsive web design.
 
+It's our job as designers and developers to make the web work for everyone - and this course is a great way to get started.
+
 In the time it takes to step away for lunch, learn how to:
 
 - Use the VoiceOver screen reader on macOS
@@ -15,8 +17,6 @@ In the time it takes to step away for lunch, learn how to:
 - Create compelling and accessible drop caps
 
 Enroll Now for Free: <https://thegymnasium.com/courses/course-v1:GYM+016+0/about>
-
-It's our job as designers and developers to make the web work for everyone - and this course is a great way to get started.
 
 Plus, when you pass the final exam, you'll earn a badge to share on social media. (You've got this!)
 
