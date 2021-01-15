@@ -1,30 +1,25 @@
 Gymnasium
 
-Designing Accessible and Responsive Websites breaks down a handful of inclusive design techniques from the best in the biz - Ethan Marcotte, creator of responsive web design.
+After the year we just had, it's time for a system reboot. Explore our latest collections of courses and tutorials to refresh your skills in 2021.
 
-In the time it takes to step away for lunch, learn how to:
+Accessibility:
+Learn how improve the accessibility of your website for an inclusive web.
 
-- Use the VoiceOver screen reader on macOS
+UX Design:
+Learn how to design better prototypes and write effective surveys.
 
-- Design beautiful link focus states
+Web Development:
+Learn how to build fast, responsive, and accessible websites from experts.
 
-- Set flexible and accessible text sizes
+Refresh Your Skills: <https://thegymnasium.com>
 
-- Build responsive viewport-aware layouts
-
-- Create compelling and accessible drop caps
-
-Enroll Now for Free: <https://thegymnasium.com/courses/course-v1:GYM+016+0/about>
-
-It's our job as designers and developers to make the web work for everyone - and this course is a great way to get started.
-
-Plus, when you pass the final exam, you'll earn a badge to share on social media. (You've got this!)
+Check out the rest of our free online courses on web design and development, user experience, accessibility, career skills, prototyping, and content creation.
 
 Happy learning!
 
 - The Gymnasium Team
 
-Gymnasium - Bridging the gap between education and opportunity.
+Gymnasium - Design a career you love with free online courses.
 
 <https://thegymnasium.com>
 
