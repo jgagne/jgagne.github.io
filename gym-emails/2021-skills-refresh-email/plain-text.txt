@@ -3,7 +3,7 @@ Gymnasium
 After the year we just had, it's time for a system reboot. Explore our latest collections of courses and tutorials to refresh your skills in 2021.
 
 Accessibility:
-Learn how to boost your UX by building better prototypes and writing effective surveys.
+Learn how to improve the accessibility of your website and make the web a more inclusive space.
 
 UX Design:
 Learn how to design better prototypes and write effective surveys.
