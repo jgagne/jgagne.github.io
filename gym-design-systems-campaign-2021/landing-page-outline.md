@@ -12,7 +12,7 @@ Design, develop, and collaborate as a community at scale.
   - [For Product Managers](#design-systems-for-product-managers)
 - [What is a Design System](#what-is-a-design-system)
 - [The important of Design Systems](#the-importance-of-design-systems)
-- [Design Systems Myths](#design-system-myths)
+- [Design Systems Myths](#design-systems-myths)
 - [Common Questions about Design Systems](#frequently-asked-questions)
 
 - - -
