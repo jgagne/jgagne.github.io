@@ -5,7 +5,7 @@
 
 Design, develop, and collaborate as a community at scale.
 
-- [Design Systems Courses](#design-system-courses)
+- [Design Systems Courses](#design-systems-courses)
   - [For Everyone](#design-systems-for-everyone)
   - [For Designers](#design-systems-for-designers)
   - [For Developers](#design-systems-for-developers)
