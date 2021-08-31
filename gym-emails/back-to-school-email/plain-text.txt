@@ -1,0 +1,50 @@
+Gymnasium
+
+Whether it's sooner or later, design systems will change the way you work. The good news is, you can prepare for the future now. Not sure where to start? Don't sweat it.
+
+No matter what your title is, we've got you covered. We just dropped four free courses on design systems for designers, developers, product managers, and everyone.
+
+Trust us, design systems aren't going anywhere, and it's better to think ahead now than play catch-up later.
+
+Explore Design Systems: <https://thegymnasium.com/design-systems>
+
+Happy learning!
+
+-- The Gymnasium Team
+
+Gymnasium -- Design a career you love with free online courses.
+
+<https://thegymnasium.com>
+
+- - -
+
+Aquent Gymnasium
+501 Boylston Street, 3rd Floor
+Boston, MA 02116
+
+View online
+%%view_email_url%%
+
+This email was sent to %%email%%
+mailto:%%emailaddr%%
+ by Aquent Gymnasium
+
+ You are receiving this message because you are registered with Aquent Gymnasium.
+
+PRIVACY POLICY
+http://thegymnasium.com/privacy
+ | MANAGE SUBSCRIPTIONS
+%%profile_center_url%%
+ | UNSUBSCRIBE
+%%unsub_center_url%%
+
+Aquent Gymnasium is a division of %%Member_Busname%%.
+
+%%Member_Addr%% %%Member_City%%, %%Member_State%%, %%Member_PostalCode%%, %%Member_Country%%
+
+Phone: (617) 535-5000
+tel:+6175355000
+ | aquent.com
+https://aquent.com/?utm_source=sfmc&utm_medium=email&utm_campaign=AQ_NA_GYM&utm_content=gym-footer-brand
+ | thegymnasium.com
+https://thegymnasium.com?utm_source=sfmc&utm_medium=email&utm_campaign=AQ_NA_GYM&utm_content=gym-footer-brand
